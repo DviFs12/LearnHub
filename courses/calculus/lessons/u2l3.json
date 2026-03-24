@@ -1,0 +1,15 @@
+{
+  "id": "u2l3", "title": "Regra da Cadeia",
+  "steps": [
+    { "type": "theory", "title": "Regra da Cadeia", "blocks": [
+      { "type": "para", "heading": "Para funções compostas", "text": "Quando uma função está 'dentro' de outra (composição), use a Regra da Cadeia — a mais importante do Cálculo diferencial." },
+      { "type": "formula", "text": "d/dx [f(g(x))] = f'(g(x)) · g'(x)\n\n'Derivada de fora × derivada de dentro'" },
+      { "type": "example", "label": "d/dx sin(x²)", "body": "Fora: f(u) = sin(u)  →  f'(u) = cos(u)\nDentro: g(x) = x²    →  g'(x) = 2x\n\nCadeia: cos(x²) · 2x = 2x·cos(x²)" },
+      { "type": "callout", "kind": "tip", "icon": "🎯", "text": "Identifique a função 'de fora' e a 'de dentro'. Derive a de fora (mantendo o argumento) e multiplique pela derivada de dentro." }
+    ]},
+    { "type": "mcq", "formula": "d/dx sin(x²)", "stem": "Fora = sin(u), dentro = x². Aplique a Regra da Cadeia.", "opts": ["cos(x²)","2x·cos(x)","2x·cos(x²)","sin(2x)"], "correct": 2, "exp": "cos(x²) · 2x = 2x·cos(x²) ✓" },
+    { "type": "mcq", "formula": "d/dx e^(3x)", "stem": "Fora = eᵘ (derivada = eᵘ), dentro = 3x (derivada = 3).", "opts": ["e^(3x)","3e^(3x)","3x·eˣ","e^(3x)/3"], "correct": 1, "exp": "e^(3x) · 3 = 3e^(3x). A derivada de eᵘ é eᵘ — mantém-se igual." },
+    { "type": "mcq", "formula": "d/dx (x² + 1)⁵", "stem": "Fora = u⁵ (deriv = 5u⁴), dentro = x²+1 (deriv = 2x).", "opts": ["5(x²+1)⁴","10x(x²+1)⁴","5x(x²+1)","2x·5(x²+1)"], "correct": 1, "exp": "5(x²+1)⁴ · 2x = 10x(x²+1)⁴ ✓" },
+    { "type": "input", "formula": "d/dx ln(x³)\n\n(Dica: d/dx ln(u) = 1/u · u')", "stem": "Aqui u = x³. Calcule d/dx ln(x³) e simplifique. Se resultar em a/x, digite o valor de a.", "correct": "3", "exp": "d/dx ln(x³) = 1/x³ · 3x² = 3/x. O numerador é 3." }
+  ]
+}

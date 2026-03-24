@@ -1,0 +1,15 @@
+{
+  "id": "u3l2", "title": "Integral Definida",
+  "steps": [
+    { "type": "theory", "title": "Integral Definida e o Teorema Fundamental", "blocks": [
+      { "type": "para", "heading": "Área sob a curva", "text": "A integral definida calcula a <strong>área com sinal</strong> sob f(x) no intervalo [a, b]. É calculada pelo Teorema Fundamental do Cálculo." },
+      { "type": "formula", "text": "∫[a,b] f(x) dx = F(b) − F(a)\n\n// F'(x) = f(x)\n// Notação: [F(x)]ₐᵇ = F(b) − F(a)" },
+      { "type": "example", "label": "∫[0,2] x² dx", "body": "F(x) = x³/3\n\nF(2) − F(0) = 8/3 − 0 = 8/3 ≈ 2.67" },
+      { "type": "callout", "kind": "info", "icon": "📐", "text": "Se f(x) < 0, a integral fica negativa (área abaixo do eixo). A área geométrica total usa |∫f dx| em cada intervalo." }
+    ]},
+    { "type": "mcq", "formula": "∫[1,3] 2x dx", "stem": "Antiderivada de 2x é x². Calcule F(3) − F(1).", "opts": ["4","6","8","12"], "correct": 2, "exp": "[x²]₁³ = 9 − 1 = 8 ✓" },
+    { "type": "input", "formula": "∫[0,π] sin(x) dx", "stem": "Antiderivada de sin(x) é −cos(x). Calcule: −cos(π) − (−cos(0)). Lembre: cos(π) = −1, cos(0) = 1.", "correct": "2", "exp": "−(−1) − (−1) = 1 + 1 = 2. Área do primeiro arco do seno." },
+    { "type": "mcq", "formula": "∫[−1,1] x³ dx", "stem": "x³ é uma função ímpar f(−x)=−f(x). O que ocorre na integral sobre intervalo simétrico?", "opts": ["2/4 = 0.5","1","0","−1"], "correct": 2, "exp": "Para funções ímpares: ∫[−a,a] f(x)dx = 0. As áreas acima e abaixo se cancelam." },
+    { "type": "mcq", "formula": "∫[0,1] eˣ dx", "stem": "Antiderivada de eˣ é eˣ. Calcule e¹ − e⁰.", "opts": ["e − 1","e","e + 1","1"], "correct": 0, "exp": "[eˣ]₀¹ = e − 1 ≈ 1.718. Representa o crescimento exponencial de 0 a 1." }
+  ]
+}

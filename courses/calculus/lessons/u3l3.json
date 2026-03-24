@@ -1,0 +1,16 @@
+{
+  "id": "u3l3", "title": "Técnicas de Integração",
+  "steps": [
+    { "type": "theory", "title": "Substituição e Integração por Partes", "blocks": [
+      { "type": "para", "heading": "Substituição (u-sub)", "text": "Quando o integrando tem uma função composta, faça u = função interna e substitua:" },
+      { "type": "formula", "text": "u = g(x),  du = g'(x) dx\n\n∫ f(g(x))·g'(x) dx = ∫ f(u) du" },
+      { "type": "example", "label": "∫ 2x·cos(x²) dx", "body": "u = x²  →  du = 2x dx\n\n∫ cos(u) du = sin(u) + C = sin(x²) + C" },
+      { "type": "para", "heading": "Integração por Partes", "text": "Para produtos de funções de 'tipos' diferentes:" },
+      { "type": "formula", "text": "∫ u dv = u·v − ∫ v du\n\nEscolha u pela regra LIATE:\nLog → Inverso trig → Algébrico →\nTrigon → Exponencial" }
+    ]},
+    { "type": "mcq", "formula": "∫ 3x²·(x³ + 1)⁴ dx", "stem": "Faça u = x³+1. Qual é du?", "opts": ["x² dx","3x² dx","x³ dx","3x dx"], "correct": 1, "exp": "u = x³+1 → du = 3x² dx. A integral vira ∫u⁴du = u⁵/5 + C = (x³+1)⁵/5 + C" },
+    { "type": "mcq", "formula": "∫ x · eˣ dx", "stem": "Use integração por partes com u = x, dv = eˣ dx.", "opts": ["x·eˣ + C","eˣ(x−1) + C","x·eˣ + eˣ + C","eˣ/x + C"], "correct": 1, "exp": "u=x, du=dx; v=eˣ. Partes: x·eˣ − ∫eˣdx = x·eˣ − eˣ + C = eˣ(x−1) + C" },
+    { "type": "mcq", "formula": "∫ sin(x)·cos(x) dx", "stem": "Faça u = sin(x), du = cos(x) dx. A integral vira ∫u du.", "opts": ["sin²(x) + C","sin²(x)/2 + C","cos²(x)/2 + C","1 + C"], "correct": 1, "exp": "∫u du = u²/2 + C = sin²(x)/2 + C" },
+    { "type": "input", "formula": "∫ (2x+1)⁷ dx\n\n(use u = 2x+1, du = 2 dx)", "stem": "A integral fica (1/2)∫u⁷ du = u⁸/16 + C = (2x+1)⁸/16 + C. Qual é o denominador?", "correct": "16", "exp": "(1/2)·u⁸/8 = u⁸/16. O denominador é 16." }
+  ]
+}

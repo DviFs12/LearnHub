@@ -1,0 +1,14 @@
+{
+  "id": "u2l2", "title": "Regras de Derivação",
+  "steps": [
+    { "type": "theory", "title": "Regras Principais de Derivação", "blocks": [
+      { "type": "formula", "text": "Potência:    d/dx xⁿ = n·xⁿ⁻¹\nProduto:     d/dx [f·g] = f'g + fg'\nQuociente:   d/dx [f/g] = (f'g - fg') / g²" },
+      { "type": "para", "heading": "Derivadas especiais — memorize!", "text": "Estas funções aparecem em praticamente todo problema de Cálculo:" },
+      { "type": "formula", "text": "d/dx sin(x) =  cos(x)\nd/dx cos(x) = -sin(x)\nd/dx eˣ     =  eˣ\nd/dx ln(x)  =  1/x\nd/dx tg(x)  =  sec²(x)" }
+    ]},
+    { "type": "mcq", "formula": "d/dx [x² · sin(x)]", "stem": "Use a Regra do Produto: d/dx[f·g] = f'g + fg'. Aqui f = x², g = sin(x).", "opts": ["2x·cos(x)","x²·cos(x)","2x·sin(x) + x²·cos(x)","2x·cos(x) − x²·sin(x)"], "correct": 2, "exp": "f'=2x, g'=cos(x). → 2x·sin(x) + x²·cos(x) ✓" },
+    { "type": "mcq", "formula": "d/dx [eˣ / x]", "stem": "Use a Regra do Quociente: (f'g − fg')/g². Aqui f = eˣ, g = x.", "opts": ["eˣ/x","eˣ(x−1)/x²","eˣ + 1/x","eˣ/x²"], "correct": 1, "exp": "f'=eˣ, g'=1. → (eˣ·x − eˣ·1)/x² = eˣ(x−1)/x²" },
+    { "type": "input", "formula": "d/dx [3x⁴ − x² + 5]\nem x = 1", "stem": "Derive e substitua x = 1. Derivada: 12x³ − 2x. Calcule em x = 1.", "correct": "10", "exp": "12(1)³ − 2(1) = 12 − 2 = 10 ✓" },
+    { "type": "mcq", "formula": "d/dx [ln(x) · x²]", "stem": "Produto: f = ln(x), g = x². Aplique a regra do produto.", "opts": ["2x·ln(x) + x","x + 2x·ln(x)","2x·ln(x) − 1","ln(x)/x²"], "correct": 1, "exp": "f'=1/x, g'=2x. → (1/x)·x² + ln(x)·2x = x + 2x·ln(x)" }
+  ]
+}

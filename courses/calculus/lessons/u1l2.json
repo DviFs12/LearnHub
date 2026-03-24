@@ -1,0 +1,15 @@
+{
+  "id": "u1l2", "title": "Limites Laterais",
+  "steps": [
+    { "type": "theory", "title": "Limites pelo Lado Esquerdo e Direito", "blocks": [
+      { "type": "para", "heading": "Definição", "text": "Podemos nos aproximar de um ponto pela <strong>esquerda</strong> (x→a⁻, valores menores que a) ou pela <strong>direita</strong> (x→a⁺, valores maiores que a)." },
+      { "type": "formula", "text": "Limite pela esquerda:  lim f(x)   (x→a⁻)\nLimite pela direita:   lim f(x)   (x→a⁺)\n\nO limite bilateral existe  ⟺\n  lim(x→a⁻) f(x) = lim(x→a⁺) f(x) = L" },
+      { "type": "example", "label": "f(x) = 1/x em x = 0", "body": "Pela DIREITA (x→0⁺):  1/0.01 = 100   → +∞\nPela ESQUERDA (x→0⁻): 1/(-0.01) = -100 → -∞\n\nComo +∞ ≠ -∞ → o limite NÃO EXISTE." },
+      { "type": "callout", "kind": "warn", "icon": "⚠️", "text": "Se os limites laterais forem diferentes, o limite bilateral não existe naquele ponto." }
+    ]},
+    { "type": "mcq", "formula": "f(x) = |x| / x\nlim quando x→0⁺", "stem": "Para x > 0: |x| = x, logo f(x) = x/x. Qual é o limite pela direita?", "opts": ["-1","0","1","Indefinido"], "correct": 2, "exp": "Para x > 0: |x|/x = x/x = 1. Lim(x→0⁺) = 1." },
+    { "type": "mcq", "formula": "f(x) = |x| / x\nlim quando x→0⁻", "stem": "Para x < 0: |x| = −x, logo f(x) = −x/x = −1. Qual é o limite pela esquerda?", "opts": ["-1","0","1","Indefinido"], "correct": 0, "exp": "Para x < 0: |x|/x = (−x)/x = −1. Lim(x→0⁻) = −1." },
+    { "type": "mcq", "formula": "lim  |x| / x  (bilateral)\n x→0", "stem": "Com base nas questões anteriores, o limite bilateral existe?", "opts": ["Sim, vale 0","Sim, vale 1","Não existe","Sim, vale −1"], "correct": 2, "exp": "Lim(x→0⁺) = 1 ≠ −1 = Lim(x→0⁻). Limites laterais diferentes → NÃO EXISTE." },
+    { "type": "input", "formula": "lim  (x² + 1)\n x→3", "stem": "Polinômio — substitua diretamente. Digite o resultado.", "correct": "10", "exp": "3² + 1 = 9 + 1 = 10. Como é contínuo, os limites laterais coincidem." }
+  ]
+}

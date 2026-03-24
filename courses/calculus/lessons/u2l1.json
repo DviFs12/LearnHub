@@ -1,0 +1,16 @@
+{
+  "id": "u2l1", "title": "Definição de Derivada",
+  "steps": [
+    { "type": "theory", "title": "O que é uma Derivada?", "blocks": [
+      { "type": "para", "heading": "Taxa de variação instantânea", "text": "A derivada de f em x representa a <strong>taxa de variação instantânea</strong> — geometricamente, a inclinação da reta tangente ao gráfico naquele ponto." },
+      { "type": "formula", "text": "f'(x) = lim  [f(x+h) - f(x)] / h\n        h→0" },
+      { "type": "para", "heading": "Notações equivalentes", "text": "Todas representam a mesma coisa:" },
+      { "type": "formula", "text": "f'(x)   (Lagrange)\ndf/dx   (Leibniz — mais usada em física)\ny'      (quando y = f(x))" },
+      { "type": "callout", "kind": "info", "icon": "📌", "text": "Se f(x) = posição, então f'(x) = velocidade. Se f(x) = velocidade, f'(x) = aceleração." }
+    ]},
+    { "type": "mcq", "formula": "f(x) = x²\nCalcule f'(x) pela definição", "stem": "Expanda [(x+h)² − x²]/h e simplifique para h→0.", "opts": ["x","2x","2x + h","x²"], "correct": 1, "exp": "[(x²+2xh+h²)−x²]/h = (2xh+h²)/h = 2x+h → h→0: f'(x) = 2x ✓" },
+    { "type": "mcq", "formula": "f(x) = c  (constante)", "stem": "Qual a derivada de uma função constante?", "opts": ["c","1","0","x"], "correct": 2, "exp": "Uma constante não varia — taxa de variação zero. f'(x) = 0." },
+    { "type": "input", "formula": "Regra da potência:\nd/dx xⁿ = n·xⁿ⁻¹\n\nd/dx x⁵ = ?·x⁴", "stem": "Aplique a regra da potência para n = 5. Digite o coeficiente.", "correct": "5", "exp": "d/dx x⁵ = 5x⁴. Baixa o expoente como coeficiente e subtrai 1 do expoente." },
+    { "type": "mcq", "formula": "f(x) = 4x³ − 2x² + 7x − 3", "stem": "Derive cada termo separadamente.", "opts": ["12x² − 4x + 7","4x² − 2x + 7","12x³ − 4x + 7","3x² − 2x"], "correct": 0, "exp": "d/dx(4x³)=12x², d/dx(−2x²)=−4x, d/dx(7x)=7, d/dx(−3)=0. Total: 12x² − 4x + 7." }
+  ]
+}

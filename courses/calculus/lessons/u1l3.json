@@ -1,0 +1,15 @@
+{
+  "id": "u1l3", "title": "Continuidade",
+  "steps": [
+    { "type": "theory", "title": "Funções Contínuas", "blocks": [
+      { "type": "para", "heading": "3 condições para continuidade", "text": "Uma função f é <strong>contínua em x = a</strong> se e somente se:" },
+      { "type": "formula", "text": "1.  f(a) está definida\n2.  lim(x→a) f(x) existe\n3.  lim(x→a) f(x) = f(a)" },
+      { "type": "para", "heading": "Tipos de descontinuidade", "text": "<strong>Removível:</strong> limite existe mas ≠ f(a). <strong>De salto:</strong> limites laterais ≠. <strong>Essencial:</strong> ao menos um limite é ∞." },
+      { "type": "callout", "kind": "tip", "icon": "✅", "text": "Polinômios, sin(x), cos(x) e eˣ são contínuos em todo o seu domínio natural." }
+    ]},
+    { "type": "mcq", "formula": "f(x) = (x² − 4) / (x − 2)", "stem": "Em x = 2 há 0/0 (indefinido), mas lim(x→2) = 4. Qual tipo de descontinuidade?", "opts": ["Essencial","De salto","Removível","Não há"], "correct": 2, "exp": "O limite existe (= 4), mas f(2) é indefinida → descontinuidade removível. Pode ser corrigida definindo f(2) = 4." },
+    { "type": "mcq", "formula": "f(x) = { 1,  se x ≥ 0\n        {-1,  se x < 0", "stem": "Qual tipo de descontinuidade há em x = 0?", "opts": ["Removível","De salto","Essencial","Contínua"], "correct": 1, "exp": "Lim(x→0⁺) = 1 e Lim(x→0⁻) = −1. Existem mas são diferentes → descontinuidade de salto." },
+    { "type": "input", "formula": "f(x) = x² + 5x − 6  em  x = 1", "stem": "Calcule f(1) para confirmar continuidade do polinômio. Digite o valor.", "correct": "0", "exp": "f(1) = 1 + 5 − 6 = 0. Polinômios são contínuos em todo ponto." },
+    { "type": "mcq", "formula": "f(x) = 1 / (x − 3)", "stem": "Em qual ponto há descontinuidade essencial?", "opts": ["x = 0","x = 1","x = 3","x = −3"], "correct": 2, "exp": "Em x = 3: 1/0. Lim(x→3⁺) = +∞ e Lim(x→3⁻) = −∞ → descontinuidade essencial." }
+  ]
+}

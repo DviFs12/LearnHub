@@ -1,0 +1,15 @@
+{
+  "id": "u1l4", "title": "Regra de L'Hôpital",
+  "steps": [
+    { "type": "theory", "title": "Regra de L'Hôpital", "blocks": [
+      { "type": "para", "heading": "Formas Indeterminadas", "text": "Quando a substituição direta resulta em <strong>0/0</strong> ou <strong>∞/∞</strong>, aplique L'Hôpital: derive numerador e denominador separadamente." },
+      { "type": "formula", "text": "Se lim f(x)/g(x) = 0/0 ou ∞/∞:\n\nlim f(x)/g(x) = lim f'(x)/g'(x)" },
+      { "type": "example", "label": "lim(x→0) sin(x)/x", "body": "Substituição: 0/0 → indeterminado!\n\nf'(x) = cos(x),  g'(x) = 1\n\nlim cos(x)/1 = cos(0)/1 = 1" },
+      { "type": "callout", "kind": "warn", "icon": "⚠️", "text": "L'Hôpital só vale para 0/0 ou ∞/∞. Nunca aplique em outros casos!" }
+    ]},
+    { "type": "mcq", "formula": "lim  (x² − 1) / (x − 1)\n x→1", "stem": "Dá 0/0. Aplique L'Hôpital: derive numerador e denominador.", "opts": ["1","2","3","4"], "correct": 1, "exp": "f'(x) = 2x → f'(1) = 2. g'(x) = 1. Resultado: 2/1 = 2." },
+    { "type": "mcq", "formula": "lim  (eˣ − 1) / x\n x→0", "stem": "Dá 0/0. Derivada de eˣ é eˣ. Aplique L'Hôpital.", "opts": ["0","e","1","∞"], "correct": 2, "exp": "f'(x) = eˣ → e⁰ = 1. g'(x) = 1. Resultado: 1. Limite fundamental!" },
+    { "type": "input", "formula": "lim  sin(3x) / x\n x→0", "stem": "Aplique L'Hôpital. Derivada de sin(3x) é 3·cos(3x). Avalie em x = 0. Digite.", "correct": "3", "exp": "f'(0) = 3·cos(0) = 3. g'(x) = 1. Resultado = 3." },
+    { "type": "mcq", "formula": "lim  ln(x) / (x − 1)\n x→1", "stem": "Dá 0/0. Derivada de ln(x) é 1/x. Aplique L'Hôpital.", "opts": ["0","1","ln(1)","∞"], "correct": 1, "exp": "f'(x) = 1/x → f'(1) = 1. g'(x) = 1. Resultado = 1." }
+  ]
+}

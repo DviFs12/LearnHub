@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnHub — Plataforma de Cursos</title>
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.hero {
+  max-width: 900px; margin: 0 auto;
+  padding: 56px 32px 40px;
+  text-align: center;
+}
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800; letter-spacing: -1.5px;
+  line-height: 1.1; margin-bottom: 16px;
+}
+.hero-title .sym { color: var(--accent); font-style: italic; }
+.hero-sub { color: var(--ink3); font-size: 1rem; max-width: 500px; margin: 0 auto 32px; font-weight: 300; }
+.hero-pills { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+
+/* STATS BAR */
+.stats-bar {
+  max-width: 900px; margin: 0 auto 48px;
+  padding: 0 32px;
+  display: flex; gap: 16px; flex-wrap: wrap;
+}
+.stat-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 20px;
+  flex: 1; min-width: 130px;
+  display: flex; align-items: center; gap: 12px;
+}
+.stat-icon { font-size: 1.5rem; }
+.stat-val {
+  font-family: 'Fraunces', serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--ink); line-height: 1;
+}
+.stat-lbl { font-size: 0.72rem; color: var(--ink3); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
+
+/* COURSES SECTION */
+.courses-section { max-width: 900px; margin: 0 auto 64px; padding: 0 32px; }
+.courses-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+
+.course-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+.course-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.course-card-header {
+  padding: 24px 24px 16px;
+  display: flex; align-items: flex-start; gap: 12px;
+}
+.course-emoji {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fraunces', serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--accent); flex-shrink: 0;
+}
+.course-info { flex: 1; }
+.course-title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.05rem; font-weight: 700;
+  margin-bottom: 3px;
+}
+.course-subtitle { font-size: 0.78rem; color: var(--ink3); }
+.course-body { padding: 0 24px 20px; }
+.course-desc { font-size: 0.84rem; color: var(--ink3); line-height: 1.6; margin-bottom: 14px; }
+.course-meta { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 14px; }
+.course-prog-wrap { height: 4px; }
+.course-footer {
+  padding: 14px 24px;
+  border-top: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 0.8rem; color: var(--ink3);
+}
+.course-prog-text { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-weight: 600; }
+
+/* ADD COURSE CARD */
+.course-card-add {
+  background: var(--paper2);
+  border: 1.5px dashed var(--line);
+  border-radius: 16px;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 10px; cursor: pointer;
+  padding: 40px 24px; text-align: center;
+  transition: all 0.18s; min-height: 220px;
+  color: var(--ink3);
+}
+.course-card-add:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+.course-card-add .add-icon { font-size: 2rem; }
+.course-card-add .add-label { font-size: 0.88rem; font-weight: 600; }
+.course-card-add .add-sub { font-size: 0.78rem; }
+
+/* ACTIVITY */
+.activity-section { max-width: 900px; margin: 0 auto 48px; padding: 0 32px; }
+.streak-grid {
+  display: grid; grid-template-columns: repeat(28, 1fr);
+  gap: 3px; margin-top: 12px;
+}
+.streak-cell {
+  aspect-ratio: 1; border-radius: 3px;
+  background: var(--paper3);
+  transition: background 0.2s;
+  cursor: default;
+  position: relative;
+}
+.streak-cell.done { background: var(--accent); opacity: 0.7; }
+.streak-cell.today { background: var(--accent); opacity: 1; box-shadow: 0 0 0 2px var(--accent-border); }
+.streak-cell[title]:hover::after {
+  content: attr(title);
+  position: absolute; bottom: 120%; left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: var(--bg); padding: 3px 7px; border-radius: 5px;
+  font-size: 0.65rem; white-space: nowrap; pointer-events: none;
+}
+
+/* ADD COURSE MODAL */
+.modal-body { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+.form-label { font-size: 0.8rem; font-weight: 600; color: var(--ink2); margin-bottom: 5px; display: block; }
+.form-input {
+  width: 100%; padding: 10px 14px;
+  background: var(--paper2); border: 1.5px solid var(--line);
+  border-radius: 9px; font-size: 0.9rem; color: var(--ink);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  outline: none; transition: border-color 0.15s;
+}
+.form-input:focus { border-color: var(--accent); }
+.form-hint { font-size: 0.75rem; color: var(--ink3); margin-top: 4px; line-height: 1.5; }
+.form-group { display: flex; flex-direction: column; }
+
+/* LEADERBOARD / POINTS PANEL */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; margin: 0 auto 48px; padding: 0 32px; }
+@media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } .stats-bar { flex-direction: column; } }
+
+.panel { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 20px; }
+.panel-title { font-family: 'Fraunces', serif; font-size: 0.95rem; font-weight: 700; margin-bottom: 14px; }
+
+.recent-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 8px 0; border-bottom: 1px solid var(--line);
+  font-size: 0.83rem;
+}
+.recent-item:last-child { border-bottom: none; }
+.recent-icon { font-size: 1rem; }
+.recent-label { flex: 1; color: var(--ink2); }
+.recent-pts { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--gold); }
+
+@media (max-width: 700px) {
+  .hero { padding: 40px 20px 28px; }
+  .stats-bar, .courses-section, .activity-section, .two-col { padding: 0 20px; }
+  .streak-grid { grid-template-columns: repeat(14, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="navbar-brand" href="index.html"><span class="sym">L</span>earnHub</a>
+  <div class="navbar-links hide-mobile">
+    <a class="nav-link active" href="index.html">Cursos</a>
+    <a class="nav-link" href="store.html">Loja</a>
+  </div>
+  <div class="navbar-right">
+    <div class="pill pill-points">⭐ <span id="pts-display">0</span> pts</div>
+    <div class="pill pill-streak hide-mobile">🔥 <span id="streak-display">0</span>d</div>
+    <button class="theme-toggle" onclick="toggleDark()" title="Alternar tema" id="theme-btn">🌙</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero anim-fade-up">
+  <h1 class="hero-title">Aprenda no seu <span class="sym">ritmo</span>,<br>com profundidade.</h1>
+  <p class="hero-sub">Cursos interativos offline, sistema de pontos, apostila integrada e muito mais — tudo em um único arquivo HTML.</p>
+  <div class="hero-pills">
+    <span class="badge badge-accent">100% offline</span>
+    <span class="badge badge-green">Progresso salvo</span>
+    <span class="badge badge-muted">GitHub Pages ready</span>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-card">
+    <div class="stat-icon">⭐</div>
+    <div>
+      <div class="stat-val" id="stat-pts">0</div>
+      <div class="stat-lbl">Pontos totais</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">📚</div>
+    <div>
+      <div class="stat-val" id="stat-lessons">0</div>
+      <div class="stat-lbl">Lições concluídas</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">🔥</div>
+    <div>
+      <div class="stat-val" id="stat-streak">0</div>
+      <div class="stat-lbl">Dias seguidos</div>
+    </div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-icon">🎓</div>
+    <div>
+      <div class="stat-val" id="stat-courses">0</div>
+      <div class="stat-lbl">Cursos iniciados</div>
+    </div>
+  </div>
+</div>
+
+<!-- COURSES -->
+<div class="courses-section">
+  <div class="section-label">Biblioteca</div>
+  <div class="section-title">Cursos disponíveis</div>
+  <div class="courses-grid" id="courses-grid">
+    <!-- injected by JS -->
+  </div>
+</div>
+
+<!-- ACTIVITY -->
+<div class="activity-section">
+  <div class="section-label">Histórico</div>
+  <div class="section-title">Atividade — últimos 28 dias</div>
+  <div class="streak-grid" id="streak-grid"></div>
+</div>
+
+<!-- RECENT + TIPS -->
+<div class="two-col">
+  <div class="panel">
+    <div class="panel-title">📋 Atividade recente</div>
+    <div id="recent-list"></div>
+  </div>
+  <div class="panel">
+    <div class="panel-title">💡 Como adicionar cursos</div>
+    <div style="font-size:0.83rem;color:var(--ink3);line-height:1.7">
+      Crie uma pasta em <code style="font-family:'JetBrains Mono',monospace;background:var(--paper3);padding:1px 5px;border-radius:4px">courses/meu-curso/</code> com:<br><br>
+      • <code style="font-family:'JetBrains Mono',monospace">course.json</code> — manifest do curso<br>
+      • <code style="font-family:'JetBrains Mono',monospace">lessons/*.json</code> — lições<br><br>
+      Depois clique em <strong>"+ Adicionar curso"</strong> e informe o caminho. Funciona no GitHub Pages sem nenhuma configuração!
+    </div>
+  </div>
+</div>
+
+<!-- ADD COURSE MODAL -->
+<div class="modal-overlay" id="add-modal">
+  <div class="modal">
+    <h3>Adicionar curso</h3>
+    <p>Informe o caminho para o <code style="font-family:'JetBrains Mono',monospace">course.json</code> do seu curso. Pode ser um caminho local (relativo a esta pasta) ou uma URL.</p>
+    <div class="modal-body">
+      <div class="form-group">
+        <label class="form-label">Caminho do course.json</label>
+        <input class="form-input" id="course-path" type="text" placeholder="courses/meu-curso/course.json" />
+        <div class="form-hint">Exemplos:<br>
+          • <code>courses/algebra/course.json</code> (na mesma pasta)<br>
+          • <code>https://usuario.github.io/repo/courses/fisica/course.json</code>
+        </div>
+      </div>
+    </div>
+    <div id="add-error" style="display:none;color:var(--red);font-size:0.82rem;margin-bottom:12px"></div>
+    <div class="modal-btns">
+      <button class="btn btn-ghost btn-sm" onclick="closeAddModal()">Cancelar</button>
+      <button class="btn btn-primary btn-sm" onclick="loadExternalCourse()">Carregar curso</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span id="toast-icon"></span><span id="toast-text"></span></div>
+
+<script src="js/state.js"></script>
+<script src="js/themes.js"></script>
+<script>
+// ─── BUILT-IN COURSES (paths) ───
+const BUILTIN_COURSES = ['courses/calculus/course.json'];
+
+// ─── INIT ───
+initTheme();
+updateThemeBtn();
+renderAll();
+
+function updateThemeBtn() {
+  document.getElementById('theme-btn').textContent = APP_STATE.theme === 'dark' ? '☀️' : '🌙';
+}
+
+function renderAll() {
+  document.getElementById('pts-display').textContent = APP_STATE.points;
+  document.getElementById('stat-pts').textContent = APP_STATE.points;
+  document.getElementById('stat-streak').textContent = APP_STATE.streak;
+  document.getElementById('streak-display').textContent = APP_STATE.streak;
+
+  let totalLessons = 0;
+  let coursesStarted = 0;
+  Object.values(APP_STATE.courses).forEach(c => {
+    const done = Object.keys(c.completedLessons || {}).length;
+    totalLessons += done;
+    if (done > 0) coursesStarted++;
+  });
+  document.getElementById('stat-lessons').textContent = totalLessons;
+  document.getElementById('stat-courses').textContent = coursesStarted;
+
+  buildStreakGrid();
+  loadAllCourses();
+  buildRecentActivity();
+}
+
+// ─── STREAK ───
+function buildStreakGrid() {
+  const grid = document.getElementById('streak-grid');
+  grid.innerHTML = '';
+  const today = new Date().toISOString().slice(0,10);
+  for (let i = 27; i >= 0; i--) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const ds = d.toISOString().slice(0,10);
+    const cell = document.createElement('div');
+    cell.className = 'streak-cell';
+    cell.title = ds;
+    if (ds === today) cell.classList.add('today');
+    else if (APP_STATE.activityLog?.includes(ds)) cell.classList.add('done');
+    grid.appendChild(cell);
+  }
+}
+
+// ─── LOAD COURSES ───
+async function loadAllCourses() {
+  const paths = [...BUILTIN_COURSES, ...(APP_STATE.customCourses || [])];
+  const grid = document.getElementById('courses-grid');
+  grid.innerHTML = '<div style="color:var(--ink3);font-size:0.85rem;padding:8px 0">Carregando cursos...</div>';
+
+  const courses = [];
+  for (const path of paths) {
+    try {
+      const resp = await fetch(path);
+      if (!resp.ok) continue;
+      const data = await resp.json();
+      data._path = path;
+      data._dir = path.substring(0, path.lastIndexOf('/') + 1);
+      courses.push(data);
+    } catch(e) { console.warn('Could not load', path, e); }
+  }
+
+  grid.innerHTML = '';
+  courses.forEach(c => grid.appendChild(buildCourseCard(c)));
+
+  // Add course button
+  const addCard = document.createElement('div');
+  addCard.className = 'course-card-add';
+  addCard.innerHTML = `<div class="add-icon">+</div><div class="add-label">Adicionar curso</div><div class="add-sub">Via caminho local ou URL</div>`;
+  addCard.onclick = () => document.getElementById('add-modal').classList.add('open');
+  grid.appendChild(addCard);
+}
+
+function buildCourseCard(course) {
+  const cs = getCourseState(course.id);
+  const totalLessons = course.units.reduce((a, u) => a + u.lessons.length, 0);
+  const doneLessons = Object.keys(cs.completedLessons || {}).length;
+  const pct = totalLessons > 0 ? Math.round((doneLessons / totalLessons) * 100) : 0;
+
+  const card = document.createElement('a');
+  card.className = 'course-card';
+  card.href = `course.html?course=${encodeURIComponent(course._dir)}`;
+  card.innerHTML = `
+    <div class="course-card-header">
+      <div class="course-emoji">${course.emoji || '📖'}</div>
+      <div class="course-info">
+        <div class="course-title">${course.title}</div>
+        <div class="course-subtitle">${course.subtitle || ''}</div>
+      </div>
+    </div>
+    <div class="course-body">
+      <div class="course-desc">${course.description}</div>
+      <div class="course-meta">
+        <span class="badge badge-muted">${course.level || 'Todos os níveis'}</span>
+        <span class="badge badge-muted">~${course.estimatedHours}h</span>
+        <span class="badge badge-accent">${course.pointsTotal} pts</span>
+      </div>
+      <div class="progress-wrap course-prog-wrap">
+        <div class="progress-fill ${pct === 100 ? 'green' : ''}" style="width:${pct}%"></div>
+      </div>
+    </div>
+    <div class="course-footer">
+      <span>${totalLessons} lições · ${course.units.length} unidades</span>
+      <span class="course-prog-text">${doneLessons}/${totalLessons} concluídas</span>
+    </div>
+  `;
+  return card;
+}
+
+// ─── RECENT ACTIVITY ───
+function buildRecentActivity() {
+  const list = document.getElementById('recent-list');
+  const recent = [];
+  Object.values(APP_STATE.courses).forEach(cs => {
+    Object.entries(cs.completedLessons || {}).forEach(([lid, data]) => {
+      recent.push({ lid, ...data });
+    });
+  });
+  recent.sort((a,b) => new Date(b.date) - new Date(a.date));
+
+  if (recent.length === 0) {
+    list.innerHTML = '<div class="empty-state" style="padding:20px 0"><div class="icon">📭</div><p>Nenhuma atividade ainda.<br>Comece um curso!</p></div>';
+    return;
+  }
+
+  list.innerHTML = recent.slice(0, 5).map(r => `
+    <div class="recent-item">
+      <div class="recent-icon">✅</div>
+      <div class="recent-label">${r.lid}</div>
+      <div class="recent-pts">+${r.points || 0} pts</div>
+    </div>
+  `).join('');
+}
+
+// ─── ADD COURSE ───
+async function loadExternalCourse() {
+  const path = document.getElementById('course-path').value.trim();
+  const errEl = document.getElementById('add-error');
+  errEl.style.display = 'none';
+
+  if (!path) { errEl.textContent = 'Informe um caminho.'; errEl.style.display = 'block'; return; }
+
+  try {
+    const resp = await fetch(path);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    if (!data.id || !data.title) throw new Error('Arquivo inválido — faltam campos obrigatórios.');
+
+    if (!APP_STATE.customCourses) APP_STATE.customCourses = [];
+    if (!APP_STATE.customCourses.includes(path)) APP_STATE.customCourses.push(path);
+    saveState();
+    closeAddModal();
+    showToast('✅', `Curso "${data.title}" adicionado!`);
+    loadAllCourses();
+  } catch(e) {
+    errEl.textContent = 'Erro ao carregar: ' + e.message;
+    errEl.style.display = 'block';
+  }
+}
+
+function closeAddModal() {
+  document.getElementById('add-modal').classList.remove('open');
+  document.getElementById('course-path').value = '';
+  document.getElementById('add-error').style.display = 'none';
+}
+
+// ─── TOAST ───
+let toastTimer;
+function showToast(icon, text) {
+  document.getElementById('toast-icon').textContent = icon + ' ';
+  document.getElementById('toast-text').textContent = text;
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+// ─── THEME ───
+const _origToggle = window.toggleDark;
+window.toggleDark = function() {
+  _origToggle();
+  updateThemeBtn();
+};
+
+// Listen for theme changes from other pages
+window.addEventListener('storage', e => {
+  if (e.key === 'lh_theme_signal') {
+    try {
+      const { mode, colorKey } = JSON.parse(e.newValue);
+      applyTheme(mode, colorKey);
+      updateThemeBtn();
+    } catch(_) {}
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "id": "u2l4", "title": "Máximos e Mínimos",
+  "steps": [
+    { "type": "theory", "title": "Otimização — Máximos e Mínimos", "blocks": [
+      { "type": "para", "heading": "Pontos críticos", "text": "Um <strong>ponto crítico</strong> ocorre onde f'(x) = 0 ou f'(x) não existe. Nesses pontos pode haver máximo local, mínimo local ou ponto de inflexão." },
+      { "type": "formula", "text": "Teste da 2ª Derivada:\n\nSe f'(a) = 0, calcule f''(a):\n• f''(a) > 0  →  mínimo local  (concavidade ↑)\n• f''(a) < 0  →  máximo local  (concavidade ↓)\n• f''(a) = 0  →  inconclusivo" },
+      { "type": "example", "label": "f(x) = x³ − 3x", "body": "f'(x) = 3x² − 3 = 0  →  x = ±1\n\nf''(x) = 6x\n  f''(1) =  6 > 0  →  mínimo em x = 1  → f(1) = −2\n  f''(-1) = -6 < 0  →  máximo em x = −1 → f(-1) = 2" }
+    ]},
+    { "type": "mcq", "formula": "f(x) = x² − 6x + 8", "stem": "Resolva f'(x) = 0 para encontrar o ponto crítico.", "opts": ["x = 2","x = 3","x = 4","x = 6"], "correct": 1, "exp": "f'(x) = 2x − 6 = 0 → x = 3." },
+    { "type": "mcq", "formula": "f(x) = x² − 6x + 8\nf''(x) = 2 (em todo ponto)", "stem": "f''(3) = 2 > 0. O que isso indica?", "opts": ["Máximo local","Mínimo local","Ponto de inflexão","Inconclusivo"], "correct": 1, "exp": "f''(3) > 0 → concavidade para cima → mínimo local em x = 3. f(3) = 9 − 18 + 8 = −1." },
+    { "type": "input", "formula": "f(x) = −x² + 4x − 1", "stem": "Encontre o valor máximo de f (calcule f no ponto crítico). Digite o valor máximo.", "correct": "3", "exp": "f'(x) = −2x + 4 = 0 → x = 2. f(2) = −4 + 8 − 1 = 3. f''(x) = −2 < 0 → máximo." },
+    { "type": "mcq", "formula": "f(x) = x⁴ − 4x²", "stem": "f'(x) = 4x³ − 8x = 4x(x²−2) = 0 → x = 0, x = ±√2. f''(0) = −8 < 0. O que é x = 0?", "opts": ["Mínimo local","Máximo local","Ponto de inflexão","Descontinuidade"], "correct": 1, "exp": "f''(0) = −8 < 0 → máximo local em x = 0. f(0) = 0. Os mínimos estão em x = ±√2." }
+  ]
+}

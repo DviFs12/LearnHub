@@ -1,0 +1,19 @@
+{
+  "id": "u1l1", "title": "O que é um Limite?",
+  "steps": [
+    {
+      "type": "theory", "title": "O que é um Limite?",
+      "blocks": [
+        { "type": "para", "heading": "Intuição", "text": "Um <strong>limite</strong> descreve o valor que uma função <strong>se aproxima</strong> conforme sua entrada se aproxima de um certo ponto — mesmo que a função não esteja definida exatamente naquele ponto." },
+        { "type": "formula", "text": "lim  f(x) = L\n x→a\n\n// Lê-se: 'o limite de f(x) quando x tende a a é L'" },
+        { "type": "para", "heading": "Exemplo concreto", "text": "Considere <strong>f(x) = (x² − 1)/(x − 1)</strong>. Em x = 1 há divisão por zero — indefinido. Mas conforme x se aproxima de 1 (por qualquer lado), f(x) se aproxima de 2." },
+        { "type": "example", "label": "Verificando numericamente", "body": "x = 0.9   →  f(x) = 1.90\nx = 0.99  →  f(x) = 1.99\nx = 0.999 →  f(x) = 1.999\nx = 1.001 →  f(x) = 2.001\n\n⟹  lim(x→1) (x²-1)/(x-1) = 2" },
+        { "type": "callout", "kind": "info", "icon": "💡", "text": "O limite trata do comportamento próximo a um ponto, não no ponto em si. A função pode estar indefinida em x = a e mesmo assim ter limite." }
+      ]
+    },
+    { "type": "mcq", "formula": "lim  (3x + 2)\n x→4", "stem": "Para funções contínuas como polinômios, basta substituir x = 4. Qual é o resultado?", "opts": ["10","12","14","16"], "correct": 2, "exp": "3(4) + 2 = 12 + 2 = 14. Para funções contínuas, substituição direta sempre funciona." },
+    { "type": "mcq", "formula": "lim  sin(x) / x\n x→0", "stem": "Um dos <strong>limites fundamentais</strong> do Cálculo — substituição direta dá 0/0. Qual é o valor?", "opts": ["0","1","∞","Não existe"], "correct": 1, "exp": "lim(x→0) sin(x)/x = 1 — resultado provado geometricamente. Memorize!" },
+    { "type": "input", "formula": "lim  x³ − x\n x→2", "stem": "A função é um polinômio (contínuo). Substitua diretamente x = 2. Digite o resultado.", "correct": "6", "exp": "2³ − 2 = 8 − 2 = 6 ✓" },
+    { "type": "mcq", "formula": "lim  1/x\n x→∞", "stem": "O que acontece com 1/x quando x cresce indefinidamente?", "opts": ["1","∞","0","-1"], "correct": 2, "exp": "Quanto maior x, menor é 1/x. Quando x→∞, 1/x→0. Ex: 1/1.000.000 ≈ 0." }
+  ]
+}

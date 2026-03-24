@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LearnHub — Loja de Temas</title>
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.page-header {
+  max-width: 860px; margin: 0 auto;
+  padding: 40px 32px 24px;
+}
+.page-header h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 1.9rem; font-weight: 800;
+  letter-spacing: -0.5px; margin-bottom: 6px;
+}
+.page-header p { color: var(--ink3); font-size: 0.88rem; }
+
+/* MODE SWITCHER */
+.mode-section { max-width: 860px; margin: 0 auto 32px; padding: 0 32px; }
+.mode-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+.mode-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mode-card {
+  border: 2px solid var(--line);
+  border-radius: 14px; padding: 18px 20px;
+  cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; gap: 14px;
+}
+.mode-card:hover { border-color: var(--accent); }
+.mode-card.selected { border-color: var(--accent); background: var(--accent-soft); }
+.mode-preview {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.mode-preview.light-prev { background: #faf8f4; border: 1px solid #ddd; }
+.mode-preview.dark-prev { background: #1a1916; border: 1px solid #333; }
+.mode-info .mode-name { font-weight: 700; font-size: 0.9rem; }
+.mode-info .mode-sub { font-size: 0.78rem; color: var(--ink3); }
+.mode-check { margin-left: auto; font-size: 1.1rem; opacity: 0; }
+.mode-card.selected .mode-check { opacity: 1; color: var(--accent); }
+
+/* COLORS GRID */
+.colors-section { max-width: 860px; margin: 0 auto 40px; padding: 0 32px; }
+.colors-title { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+.colors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+
+.color-card {
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 14px; overflow: hidden;
+  cursor: pointer; transition: all 0.15s;
+  position: relative;
+}
+.color-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.color-card.selected { border-color: var(--accent); }
+.color-card.locked { cursor: not-allowed; opacity: 0.7; }
+
+.color-preview {
+  height: 72px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.8rem;
+  position: relative; overflow: hidden;
+}
+.color-preview::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--prev-c1) 0%, var(--prev-c2) 100%);
+}
+.color-preview .prev-emoji { position: relative; z-index: 1; }
+.color-preview .preview-dots {
+  position: absolute; bottom: 8px; right: 8px;
+  display: flex; gap: 4px; z-index: 1;
+}
+.preview-dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid rgba(255,255,255,.5); }
+
+.color-body { padding: 12px 14px; }
+.color-name { font-weight: 700; font-size: 0.88rem; margin-bottom: 2px; }
+.color-price { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--gold); }
+.color-badge {
+  position: absolute; top: 8px; right: 8px; z-index: 2;
+  background: rgba(0,0,0,.55); color: #fff;
+  font-size: 0.65rem; font-weight: 700; padding: 3px 7px;
+  border-radius: 100px; backdrop-filter: blur(4px);
+}
+.color-selected-mark {
+  position: absolute; top: 8px; left: 8px; z-index: 2;
+  background: rgba(0,0,0,.55); color: #fff;
+  font-size: 0.75rem; padding: 3px 7px;
+  border-radius: 100px;
+}
+
+/* CONFIRM MODAL */
+.confirm-preview {
+  height: 80px; border-radius: 10px; margin-bottom: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  .mode-cards { grid-template-columns: 1fr; }
+  .colors-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .page-header, .mode-section, .colors-section { padding: 0 20px; }
+  .page-header { padding-top: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a class="navbar-brand" href="index.html"><span class="sym">L</span>earnHub</a>
+  <div class="navbar-links hide-mobile">
+    <a class="nav-link" href="index.html">Cursos</a>
+    <a class="nav-link active" href="store.html">Loja</a>
+  </div>
+  <div class="navbar-right">
+    <div class="pill pill-points">⭐ <span id="pts-display">0</span> pts</div>
+    <button class="theme-toggle" onclick="toggleDark(); renderAll()" id="theme-btn">🌙</button>
+  </div>
+</nav>
+
+<div class="page-header anim-fade-up">
+  <h1>🎨 Loja de Temas</h1>
+  <p>Use seus pontos para desbloquear esquemas de cores exclusivos. O tema atual se adapta automaticamente ao modo claro ou escuro.</p>
+</div>
+
+<!-- MODE SWITCHER -->
+<div class="mode-section anim-fade-up">
+  <div class="mode-title">Modo de exibição</div>
+  <div class="mode-cards">
+    <div class="mode-card" id="mode-light" onclick="selectMode('light')">
+      <div class="mode-preview light-prev">☀️</div>
+      <div class="mode-info">
+        <div class="mode-name">Modo Claro</div>
+        <div class="mode-sub">Fundo branco, texto escuro</div>
+      </div>
+      <span class="mode-check">✓</span>
+    </div>
+    <div class="mode-card" id="mode-dark" onclick="selectMode('dark')">
+      <div class="mode-preview dark-prev">🌙</div>
+      <div class="mode-info">
+        <div class="mode-name">Modo Escuro</div>
+        <div class="mode-sub">Fundo escuro, texto claro</div>
+      </div>
+      <span class="mode-check">✓</span>
+    </div>
+  </div>
+</div>
+
+<!-- COLORS -->
+<div class="colors-section">
+  <div class="colors-title">Esquemas de cores</div>
+  <div class="colors-grid" id="colors-grid"></div>
+</div>
+
+<!-- CONFIRM BUY MODAL -->
+<div class="modal-overlay" id="buy-modal">
+  <div class="modal">
+    <h3 id="buy-title">Comprar tema</h3>
+    <div class="confirm-preview" id="buy-preview"></div>
+    <p id="buy-desc">Deseja comprar este tema?</p>
+    <div class="modal-btns">
+      <button class="btn btn-ghost btn-sm" onclick="closeBuy()">Cancelar</button>
+      <button class="btn btn-accent btn-sm" id="buy-btn" onclick="confirmBuy()">Comprar</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><span id="toast-icon"></span><span id="toast-text"></span></div>
+
+<script src="js/state.js"></script>
+<script src="js/themes.js"></script>
+<script>
+initTheme();
+renderAll();
+
+let pendingBuy = null;
+
+// Color preview configs
+const PREVIEW_CONFIGS = {
+  default:   { c1: '#c2410c', c2: '#f97316', emoji: '🔆' },
+  violet:    { c1: '#7c3aed', c2: '#a78bfa', emoji: '💜' },
+  emerald:   { c1: '#059669', c2: '#34d399', emoji: '💚' },
+  rose:      { c1: '#be185d', c2: '#f472b6', emoji: '🌸' },
+  amber:     { c1: '#b45309', c2: '#fbbf24', emoji: '🔥' },
+  midnight:  { c1: '#1d4ed8', c2: '#60a5fa', emoji: '🌙' },
+  obsidian:  { c1: '#18181b', c2: '#52525b', emoji: '🖤' },
+};
+
+function updateThemeBtn() {
+  document.getElementById('theme-btn').textContent = APP_STATE.theme === 'dark' ? '☀️' : '🌙';
+}
+
+function renderAll() {
+  updateThemeBtn();
+  document.getElementById('pts-display').textContent = APP_STATE.points;
+
+  // Mode cards
+  const mode = APP_STATE.theme || 'light';
+  document.getElementById('mode-light').classList.toggle('selected', mode === 'light');
+  document.getElementById('mode-dark').classList.toggle('selected', mode === 'dark');
+
+  // Color cards
+  const grid = document.getElementById('colors-grid');
+  grid.innerHTML = '';
+  Object.entries(THEME_COLORS).forEach(([key, theme]) => {
+    const owned = APP_STATE.purchasedThemes?.includes(key) || theme.price === 0;
+    const selected = (APP_STATE.themeColor || 'default') === key;
+    const prev = PREVIEW_CONFIGS[key] || { c1: '#888', c2: '#aaa', emoji: '🎨' };
+
+    const card = document.createElement('div');
+    card.className = `color-card${selected?' selected':''}${!owned?' locked':''}`;
+    card.innerHTML = `
+      <div class="color-preview" style="--prev-c1:${prev.c1};--prev-c2:${prev.c2}">
+        <span class="prev-emoji">${prev.emoji}</span>
+        <div class="preview-dots">
+          <div class="preview-dot" style="background:${prev.c1}"></div>
+          <div class="preview-dot" style="background:${prev.c2}"></div>
+          <div class="preview-dot" style="background:#fff"></div>
+        </div>
+        ${!owned ? `<div class="color-badge">🔒 ${theme.price} pts</div>` : ''}
+        ${selected ? `<div class="color-selected-mark">✓ Ativo</div>` : ''}
+      </div>
+      <div class="color-body">
+        <div class="color-name">${theme.name}</div>
+        <div class="color-price">${owned ? (selected ? '✓ Em uso' : 'Disponível') : `⭐ ${theme.price} pts`}</div>
+      </div>
+    `;
+
+    card.onclick = () => {
+      if (!owned) {
+        openBuy(key, theme, prev);
+      } else if (!selected) {
+        selectColor(key);
+      }
+    };
+    grid.appendChild(card);
+  });
+}
+
+function selectMode(mode) {
+  setTheme(mode, APP_STATE.themeColor || 'default');
+  renderAll();
+  showToast('🎨', `Modo ${mode === 'dark' ? 'escuro' : 'claro'} ativado!`);
+}
+
+function selectColor(key) {
+  setTheme(APP_STATE.theme || 'light', key);
+  renderAll();
+  showToast('🎨', `Tema "${THEME_COLORS[key].name}" ativado!`);
+}
+
+function openBuy(key, theme, prev) {
+  pendingBuy = key;
+  document.getElementById('buy-title').textContent = `Comprar tema "${theme.name}"`;
+  document.getElementById('buy-preview').style.cssText = `background:linear-gradient(135deg,${prev.c1},${prev.c2})`;
+  document.getElementById('buy-preview').textContent = PREVIEW_CONFIGS[key]?.emoji || '🎨';
+  document.getElementById('buy-desc').textContent = `Custo: ${theme.price} pontos. Você tem ${APP_STATE.points} pontos.`;
+  const btn = document.getElementById('buy-btn');
+  if (APP_STATE.points < theme.price) {
+    btn.disabled = true;
+    btn.textContent = 'Pontos insuficientes';
+  } else {
+    btn.disabled = false;
+    btn.textContent = `Comprar por ${theme.price} pts`;
+  }
+  document.getElementById('buy-modal').classList.add('open');
+}
+
+function closeBuy() {
+  pendingBuy = null;
+  document.getElementById('buy-modal').classList.remove('open');
+}
+
+function confirmBuy() {
+  if (!pendingBuy) return;
+  const theme = THEME_COLORS[pendingBuy];
+  if (APP_STATE.points < theme.price) { showToast('❌', 'Pontos insuficientes!'); return; }
+  APP_STATE.points -= theme.price;
+  if (!APP_STATE.purchasedThemes) APP_STATE.purchasedThemes = ['default'];
+  if (!APP_STATE.purchasedThemes.includes(pendingBuy)) APP_STATE.purchasedThemes.push(pendingBuy);
+  setTheme(APP_STATE.theme, pendingBuy);
+  saveState();
+  closeBuy();
+  renderAll();
+  showToast('🎉', `Tema "${theme.name}" desbloqueado e ativado!`);
+}
+
+let _toast;
+function showToast(icon, text) {
+  document.getElementById('toast-icon').textContent = icon + ' ';
+  document.getElementById('toast-text').textContent = text;
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(_toast);
+  _toast = setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+const _t = window.toggleDark;
+window.toggleDark = function() { _t(); };
+</script>
+</body>
+</html>

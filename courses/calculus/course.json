@@ -1,0 +1,86 @@
+{
+  "id": "calculus",
+  "title": "Cálculo",
+  "subtitle": "Do zero ao avançado",
+  "description": "Domine os fundamentos do Cálculo Diferencial e Integral: limites, derivadas, integrais e técnicas avançadas. Curso completo com teoria, exemplos e exercícios interativos.",
+  "emoji": "∂",
+  "color": "#c2410c",
+  "level": "Iniciante → Avançado",
+  "estimatedHours": 24,
+  "pointsTotal": 1200,
+  "tags": ["matemática", "cálculo", "ciências exatas", "engenharia"],
+  "prerequisites": "Álgebra e trigonometria básicas",
+  "units": [
+    {
+      "id": "u1",
+      "title": "Limites",
+      "emoji": "📐",
+      "description": "Fundamentos do Cálculo — o conceito que torna tudo possível",
+      "lessons": [
+        { "id": "u1l1", "title": "O que é um Limite?", "file": "lessons/u1l1.json", "points": 80 },
+        { "id": "u1l2", "title": "Limites Laterais", "file": "lessons/u1l2.json", "points": 80 },
+        { "id": "u1l3", "title": "Continuidade", "file": "lessons/u1l3.json", "points": 100 },
+        { "id": "u1l4", "title": "Regra de L'Hôpital", "file": "lessons/u1l4.json", "points": 120 }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Derivadas",
+      "emoji": "📈",
+      "description": "Taxas de variação, inclinações e otimização",
+      "lessons": [
+        { "id": "u2l1", "title": "Definição de Derivada", "file": "lessons/u2l1.json", "points": 100 },
+        { "id": "u2l2", "title": "Regras de Derivação", "file": "lessons/u2l2.json", "points": 120 },
+        { "id": "u2l3", "title": "Regra da Cadeia", "file": "lessons/u2l3.json", "points": 120 },
+        { "id": "u2l4", "title": "Máximos e Mínimos", "file": "lessons/u2l4.json", "points": 140 }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Integrais",
+      "emoji": "∫",
+      "description": "Acumulação, áreas e o Teorema Fundamental do Cálculo",
+      "lessons": [
+        { "id": "u3l1", "title": "Integral Indefinida", "file": "lessons/u3l1.json", "points": 100 },
+        { "id": "u3l2", "title": "Integral Definida", "file": "lessons/u3l2.json", "points": 120 },
+        { "id": "u3l3", "title": "Técnicas de Integração", "file": "lessons/u3l3.json", "points": 140 },
+        { "id": "u3l4", "title": "Aplicações da Integral", "file": "lessons/u3l4.json", "points": 140 }
+      ]
+    }
+  ],
+  "apostila": {
+    "sections": [
+      {
+        "title": "Limites",
+        "items": [
+          { "heading": "Definição de Limite", "formula": "lim(x→a) f(x) = L", "text": "Um limite descreve o valor que uma função se aproxima conforme x se aproxima de a, independentemente do valor em x = a." },
+          { "heading": "Limites Laterais", "formula": "lim(x→a⁻) f(x)  e  lim(x→a⁺) f(x)", "text": "O limite existe ↔ os limites lateral esquerdo e direito existem e são iguais." },
+          { "heading": "Limites Fundamentais", "formula": "lim(x→0) sin(x)/x = 1\nlim(x→0) (eˣ-1)/x = 1\nlim(x→∞) (1 + 1/x)ˣ = e", "text": "Estes limites aparecem com frequência e devem ser memorizados." },
+          { "heading": "Regra de L'Hôpital", "formula": "Se lim f/g = 0/0 ou ∞/∞,\nentão lim f(x)/g(x) = lim f'(x)/g'(x)", "text": "Aplique derivando numerador e denominador separadamente até resolver a indeterminação." },
+          { "heading": "Continuidade", "formula": "f é contínua em a ↔\n1. f(a) definida\n2. lim(x→a) f(x) existe\n3. lim(x→a) f(x) = f(a)", "text": "Polinômios, eˣ, sin(x) e cos(x) são contínuos em todo o seu domínio." }
+        ]
+      },
+      {
+        "title": "Derivadas",
+        "items": [
+          { "heading": "Definição por Limite", "formula": "f'(x) = lim(h→0) [f(x+h) - f(x)] / h", "text": "A derivada representa a taxa de variação instantânea e a inclinação da reta tangente." },
+          { "heading": "Regras Básicas", "formula": "d/dx [xⁿ] = n·xⁿ⁻¹\nd/dx [cf] = c·f'\nd/dx [f+g] = f' + g'", "text": "Regra da potência, escalar e soma são as mais usadas no dia a dia." },
+          { "heading": "Regra do Produto e Quociente", "formula": "d/dx [f·g] = f'g + fg'\nd/dx [f/g] = (f'g - fg') / g²", "text": "Use quando derivar um produto ou divisão de duas funções." },
+          { "heading": "Regra da Cadeia", "formula": "d/dx [f(g(x))] = f'(g(x)) · g'(x)\n\n'Derivada de fora × derivada de dentro'", "text": "A regra mais importante do Cálculo diferencial. Indispensável para funções compostas." },
+          { "heading": "Derivadas Fundamentais", "formula": "d/dx sin(x) = cos(x)\nd/dx cos(x) = -sin(x)\nd/dx eˣ = eˣ\nd/dx ln(x) = 1/x\nd/dx tg(x) = sec²(x)", "text": "Memorize estas — elas aparecem em toda a matemática aplicada." },
+          { "heading": "Pontos Críticos e Teste da 2ª Derivada", "formula": "f'(a) = 0 → ponto crítico\nf''(a) > 0 → mínimo local\nf''(a) < 0 → máximo local", "text": "Use para encontrar máximos e mínimos de funções — otimização." }
+        ]
+      },
+      {
+        "title": "Integrais",
+        "items": [
+          { "heading": "Integral Indefinida", "formula": "∫ f(x) dx = F(x) + C,  onde F'(x) = f(x)\n\nSEMPRE inclua o +C !", "text": "A integral indefinida representa a família de antiderivadas de uma função." },
+          { "heading": "Regras de Integração", "formula": "∫ xⁿ dx = xⁿ⁺¹/(n+1) + C  (n≠-1)\n∫ eˣ dx = eˣ + C\n∫ 1/x dx = ln|x| + C\n∫ cos(x) dx = sin(x) + C\n∫ sin(x) dx = -cos(x) + C", "text": "São o espelho das derivadas. Domine estas e você resolve 80% das integrais básicas." },
+          { "heading": "Teorema Fundamental do Cálculo", "formula": "∫[a,b] f(x) dx = F(b) - F(a)\n\nonde F'(x) = f(x)", "text": "Liga derivação e integração — a maior conquista do Cálculo. A área sob f(x) de a até b." },
+          { "heading": "Substituição (u-sub)", "formula": "u = g(x),  du = g'(x) dx\n∫ f(g(x))·g'(x) dx = ∫ f(u) du", "text": "Método mais comum para simplificar integrais de funções compostas." },
+          { "heading": "Integração por Partes", "formula": "∫ u dv = u·v - ∫ v du\n\nEscolha u pela regra LIATE:\nLog, Inverso trig., Algébrico,\nTrigonométrico, Exponencial", "text": "Use para produtos de funções de 'tipos diferentes', como x·eˣ ou x·sin(x)." }
+        ]
+      }
+    ]
+  }
+}

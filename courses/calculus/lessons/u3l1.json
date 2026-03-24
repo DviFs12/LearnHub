@@ -1,0 +1,15 @@
+{
+  "id": "u3l1", "title": "Integral Indefinida",
+  "steps": [
+    { "type": "theory", "title": "Antiderivada e Integral Indefinida", "blocks": [
+      { "type": "para", "heading": "O processo inverso da derivada", "text": "Integrar é o processo <strong>inverso</strong> de derivar. A integral indefinida de f(x) é a família de funções F(x) tal que F'(x) = f(x)." },
+      { "type": "formula", "text": "∫ f(x) dx = F(x) + C\n\n// C = constante de integração\n// SEMPRE inclua o +C !" },
+      { "type": "formula", "text": "∫ xⁿ dx = xⁿ⁺¹/(n+1) + C    (n ≠ −1)\n∫ eˣ dx = eˣ + C\n∫ 1/x dx = ln|x| + C\n∫ cos(x) dx = sin(x) + C\n∫ sin(x) dx = −cos(x) + C" },
+      { "type": "callout", "kind": "warn", "icon": "⚠️", "text": "Nunca esqueça o '+C'! Representa a infinidade de antiderivadas que diferem por uma constante." }
+    ]},
+    { "type": "mcq", "formula": "∫ x³ dx", "stem": "Use a regra da potência: ∫xⁿ dx = xⁿ⁺¹/(n+1) + C.", "opts": ["x⁴ + C","x⁴/4 + C","3x² + C","4x⁴ + C"], "correct": 1, "exp": "∫x³ dx = x⁴/4 + C. Verifique: d/dx(x⁴/4) = 4x³/4 = x³ ✓" },
+    { "type": "mcq", "formula": "∫ (6x² + 4x − 3) dx", "stem": "Integre cada termo separadamente.", "opts": ["2x³ + 2x² − 3x + C","2x³ + 2x + C","12x + 4 + C","6x³ + 2x² − 3x"], "correct": 0, "exp": "∫6x²=2x³, ∫4x=2x², ∫−3=−3x. Total: 2x³ + 2x² − 3x + C" },
+    { "type": "mcq", "formula": "∫ eˣ dx", "stem": "eˣ é especial: ela é sua própria antiderivada. Qual o resultado?", "opts": ["xeˣ + C","eˣ⁺¹/(x+1) + C","eˣ + C","1/eˣ + C"], "correct": 2, "exp": "∫eˣ dx = eˣ + C. A única função que é sua própria derivada!" },
+    { "type": "input", "formula": "∫ cos(x) dx", "stem": "A antiderivada de cos(x) é sin(x). ∫cos(x)dx = ?·sin(x) + C. Digite o coeficiente.", "correct": "1", "exp": "∫cos(x)dx = sin(x) + C. Coeficiente = 1. Verifique: d/dx(sin(x)) = cos(x) ✓" }
+  ]
+}
