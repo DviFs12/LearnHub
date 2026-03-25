@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Cumprimentos em Inglês",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Saudações básicas",
+          "text": "Em inglês, usamos cumprimentos para iniciar conversas."
+        },
+        {
+          "type": "formula",
+          "text": "Hello = Olá\nHi = Oi\nGood morning = Bom dia"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Use 'Hi' em situações informais."
+        },
+        {
+          "type": "example",
+          "label": "Exemplo",
+          "body": "Hello, how are you?\nHi! I'm fine."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Como dizer 'Bom dia' em inglês?",
+      "opts": ["Good night", "Good morning", "Hello", "Hi"],
+      "correct": 1,
+      "exp": "Good morning significa 'Bom dia'."
+    },
+    {
+      "type": "input",
+      "stem": "Digite como se diz 'Olá' em inglês:",
+      "correct": "Hello",
+      "exp": "Hello = Olá ✓"
+    }
+  ]
+}

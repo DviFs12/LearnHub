@@ -1,0 +1,43 @@
+{
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Verbo To Be",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Uso do verbo",
+          "text": "O verbo 'to be' significa 'ser' ou 'estar'."
+        },
+        {
+          "type": "formula",
+          "text": "I am\nYou are\nHe is\nShe is\nIt is"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Nunca use 'I is'. O correto é 'I am'."
+        },
+        {
+          "type": "example",
+          "label": "Exemplo",
+          "body": "I am happy.\nShe is a student."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Complete: She ___ happy.",
+      "opts": ["am", "are", "is", "be"],
+      "correct": 2,
+      "exp": "Para 'She', usamos 'is'."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: I ___ a student.",
+      "correct": "am",
+      "exp": "I am a student ✓"
+    }
+  ]
+}

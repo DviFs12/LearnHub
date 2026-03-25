@@ -1,0 +1,38 @@
+{
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Pronomes pessoais",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que são pronomes?",
+          "text": "Pronomes substituem nomes nas frases."
+        },
+        {
+          "type": "formula",
+          "text": "I = Eu\nYou = Você\nHe = Ele\nShe = Ela\nIt = Isso"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "'It' é usado para objetos e animais."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual pronome significa 'Ela'?",
+      "opts": ["He", "She", "It", "You"],
+      "correct": 1,
+      "exp": "She significa 'Ela'."
+    },
+    {
+      "type": "input",
+      "stem": "Digite o pronome para 'Eu':",
+      "correct": "I",
+      "exp": "I significa 'Eu'. ✓"
+    }
+  ]
+}

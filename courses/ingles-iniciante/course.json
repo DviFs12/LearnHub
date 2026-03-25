@@ -1,0 +1,57 @@
+{
+  "id": "ingles-iniciante",
+  "title": "Inglês para Iniciantes",
+  "subtitle": "Aprenda o básico do inglês do zero",
+  "description": "Curso completo para quem nunca estudou inglês. Você aprenderá vocabulário básico, cumprimentos, verbos essenciais e formação de frases simples.",
+  "emoji": "🇺🇸",
+  "level": "Iniciante",
+  "estimatedHours": 12,
+  "pointsTotal": 600,
+  "tags": ["inglês", "idiomas", "iniciante"],
+  "prerequisites": "Nenhum",
+  "units": [
+    {
+      "id": "u1",
+      "title": "Fundamentos",
+      "emoji": "📖",
+      "description": "Primeiros passos no inglês",
+      "lessons": [
+        { "id": "u1l1", "title": "Cumprimentos", "file": "lessons/u1l1.json", "points": 80 },
+        { "id": "u1l2", "title": "Pronomes", "file": "lessons/u1l2.json", "points": 80 }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Construindo Frases",
+      "emoji": "🧠",
+      "description": "Formando frases básicas",
+      "lessons": [
+        { "id": "u2l1", "title": "Verbo To Be", "file": "lessons/u2l1.json", "points": 100 }
+      ]
+    }
+  ],
+  "apostila": {
+    "sections": [
+      {
+        "title": "Cumprimentos básicos",
+        "items": [
+          {
+            "heading": "Saudações",
+            "text": "Hello = Olá\nGood morning = Bom dia\nGood afternoon = Boa tarde\nGood evening = Boa noite",
+            "formula": "Hello! How are you?"
+          }
+        ]
+      },
+      {
+        "title": "Verbo To Be",
+        "items": [
+          {
+            "heading": "Estrutura básica",
+            "text": "O verbo 'to be' significa 'ser' ou 'estar'.",
+            "formula": "I am, You are, He/She is"
+          }
+        ]
+      }
+    ]
+  }
+}
