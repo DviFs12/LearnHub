@@ -240,8 +240,9 @@ a:hover { text-decoration: underline; }
 }
 
 /* ── FORMULA BOX ── */
+/* Fixed dark background regardless of theme mode so text is always legible */
 .formula-box {
-  background: var(--ink);
+  background: #1e1c19;
   color: #e8dfd0;
   border-radius: 12px;
   padding: 18px 22px;
@@ -250,6 +251,7 @@ a:hover { text-decoration: underline; }
   white-space: pre-wrap;
   margin: 14px 0;
   overflow-x: auto;
+  border: 1px solid rgba(255,255,255,0.07);
 }
 
 /* ── CALLOUTS ── */
@@ -295,4 +297,35 @@ a:hover { text-decoration: underline; }
 @media (max-width: 700px) {
   .navbar { padding: 0 16px; }
   .hide-mobile { display: none !important; }
+}
+
+/* ── MOBILE SIDEBAR DRAWER ── */
+.menu-btn {
+  display: none;
+  width: 36px; height: 36px;
+  border-radius: 9px;
+  background: var(--paper2);
+  border: 1px solid var(--line);
+  align-items: center; justify-content: center;
+  cursor: pointer; font-size: 1.1rem;
+  transition: background var(--transition);
+  flex-shrink: 0;
+}
+.menu-btn:hover { background: var(--paper3); }
+
+.drawer-overlay {
+  display: none;
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.drawer-overlay.open {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 860px) {
+  .menu-btn { display: flex; }
 }

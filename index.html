@@ -167,10 +167,35 @@
 .recent-label { flex: 1; color: var(--ink2); }
 .recent-pts { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--gold); }
 
+/* Mobile bottom nav */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+  justify-content: space-around;
+}
+.mobile-nav-item {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 4px 16px; border-radius: 10px; cursor: pointer;
+  font-size: 0.65rem; font-weight: 600; color: var(--ink3);
+  text-decoration: none; transition: color 0.15s;
+}
+.mobile-nav-item .nav-ico { font-size: 1.25rem; }
+.mobile-nav-item.active { color: var(--accent); }
+.mobile-nav-item:hover { color: var(--ink2); text-decoration: none; }
+
 @media (max-width: 700px) {
   .hero { padding: 40px 20px 28px; }
-  .stats-bar, .courses-section, .activity-section, .two-col { padding: 0 20px; }
+  .stats-bar, .courses-section, .activity-section, .two-col { padding: 0 16px; }
   .streak-grid { grid-template-columns: repeat(14, 1fr); }
+  body { padding-bottom: 72px; } /* room for bottom nav */
+  .mobile-bottom-nav { display: flex; }
+  .courses-grid { grid-template-columns: 1fr; }
+  .hero-title { font-size: 1.8rem; }
+  .stats-bar { gap: 10px; }
+  .stat-card { padding: 14px 16px; }
 }
 </style>
 </head>
@@ -188,6 +213,16 @@
     <div class="pill pill-streak hide-mobile">🔥 <span id="streak-display">0</span>d</div>
     <button class="theme-toggle" onclick="toggleDark()" title="Alternar tema" id="theme-btn">🌙</button>
   </div>
+</nav>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav">
+  <a class="mobile-nav-item active" href="index.html">
+    <span class="nav-ico">📚</span>Cursos
+  </a>
+  <a class="mobile-nav-item" href="store.html">
+    <span class="nav-ico">🎨</span>Loja
+  </a>
 </nav>
 
 <!-- HERO -->

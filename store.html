@@ -100,9 +100,34 @@
 
 @media (max-width: 600px) {
   .mode-cards { grid-template-columns: 1fr; }
-  .colors-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
-  .page-header, .mode-section, .colors-section { padding: 0 20px; }
+  .colors-grid { grid-template-columns: repeat(2, 1fr); }
+  .page-header, .mode-section, .colors-section { padding: 0 16px; }
   .page-header { padding-top: 28px; }
+  .page-header h1 { font-size: 1.5rem; }
+  body { padding-bottom: 72px; }
+}
+
+/* Mobile bottom nav */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+  justify-content: space-around;
+}
+.mobile-nav-item {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 4px 16px; border-radius: 10px; cursor: pointer;
+  font-size: 0.65rem; font-weight: 600; color: var(--ink3);
+  text-decoration: none; transition: color 0.15s;
+}
+.mobile-nav-item .nav-ico { font-size: 1.25rem; }
+.mobile-nav-item.active { color: var(--accent); }
+.mobile-nav-item:hover { color: var(--ink2); text-decoration: none; }
+
+@media (max-width: 700px) {
+  .mobile-bottom-nav { display: flex; }
 }
 </style>
 </head>
@@ -118,6 +143,16 @@
     <div class="pill pill-points">⭐ <span id="pts-display">0</span> pts</div>
     <button class="theme-toggle" onclick="toggleDark(); renderAll()" id="theme-btn">🌙</button>
   </div>
+</nav>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav">
+  <a class="mobile-nav-item" href="index.html">
+    <span class="nav-ico">📚</span>Cursos
+  </a>
+  <a class="mobile-nav-item active" href="store.html">
+    <span class="nav-ico">🎨</span>Loja
+  </a>
 </nav>
 
 <div class="page-header anim-fade-up">
@@ -173,8 +208,11 @@
 <script src="js/state.js"></script>
 <script src="js/themes.js"></script>
 <script>
-initTheme();
-renderAll();
+// Wait for DOM + scripts to be fully ready
+document.addEventListener('DOMContentLoaded', function() {
+  initTheme();
+  renderAll();
+});
 
 let pendingBuy = null;
 

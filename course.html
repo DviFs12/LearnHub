@@ -183,11 +183,12 @@
 .q-num { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 2px; color: var(--ink3); margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
 .q-num::after { content: ''; flex: 1; height: 1px; background: var(--line); }
 .q-formula {
-  background: var(--ink); color: #e8dfd0;
+  background: #1e1c19; color: #e8dfd0;
   border-radius: 12px; padding: 16px 20px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.88rem; line-height: 1.7; margin-bottom: 18px;
   white-space: pre-wrap; overflow-x: auto;
+  border: 1px solid rgba(255,255,255,0.07);
 }
 .q-stem { font-size: 1rem; color: var(--ink); margin-bottom: 20px; line-height: 1.7; font-weight: 300; }
 .q-stem strong { font-weight: 600; }
@@ -306,20 +307,73 @@
 
 @media (max-width: 860px) {
   #app { grid-template-columns: 1fr; }
-  .sidebar { display: none; }
   .course-home { padding: 24px 20px; }
   .ap-layout { grid-template-columns: 1fr; }
   .ap-toc { display: none; }
   .ap-content { padding: 24px 20px; }
-  .lesson-topbar { padding: 12px 16px; }
-  .lesson-body { padding: 24px 16px; }
-  .feedback-bar { padding: 12px 16px; }
+  .lesson-topbar { padding: 12px 16px; gap: 10px; }
+  .lesson-body { padding: 20px 16px; }
+  .feedback-bar { padding: 12px 16px; gap: 10px; }
+  .btn-check { padding: 9px 18px; font-size: 0.82rem; }
+  body { padding-bottom: 72px; }
+
+  /* Sidebar becomes a fixed drawer on mobile */
+  .sidebar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 250;
+    transform: translateX(-100%);
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    box-shadow: var(--shadow-lg);
+  }
+  .sidebar.drawer-open {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 500px) {
+  .feedback-bar { flex-wrap: wrap; }
+  .btn-check { width: 100%; justify-content: center; }
+  .q-formula { font-size: 0.78rem; }
+}
+
+/* Mobile bottom nav */
+.mobile-bottom-nav {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+  padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+  justify-content: space-around;
+  transition: background var(--transition);
+}
+.mobile-nav-item {
+  display: flex; flex-direction: column; align-items: center; gap: 3px;
+  padding: 4px 12px; border-radius: 10px; cursor: pointer;
+  font-size: 0.65rem; font-weight: 600; color: var(--ink3);
+  text-decoration: none; transition: color 0.15s;
+  border: none; background: none; font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.mobile-nav-item .nav-ico { font-size: 1.25rem; }
+.mobile-nav-item.active { color: var(--accent); }
+.mobile-nav-item:hover { color: var(--ink2); text-decoration: none; }
+
+@media (max-width: 860px) {
+  .mobile-bottom-nav { display: flex; }
+  /* Hide the skip button in topbar on mobile (available via bottom nav drawer) */
+  .skip-btn { display: none; }
 }
 </style>
 </head>
 <body>
 
+<!-- Mobile drawer overlay -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="closeSidebar()"></div>
+
 <nav class="navbar">
+  <button class="menu-btn" id="menu-btn" onclick="openSidebar()" title="Menu">☰</button>
   <a class="navbar-brand" href="index.html"><span class="sym">L</span>earnHub</a>
   <div class="navbar-links hide-mobile">
     <a class="nav-link" href="index.html">Cursos</a>
@@ -335,7 +389,10 @@
   <!-- SIDEBAR -->
   <aside class="sidebar" id="sidebar">
     <div class="sb-course-header">
-      <div class="sb-course-emoji" id="sb-emoji">∂</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
+        <div class="sb-course-emoji" id="sb-emoji" style="margin-bottom:0">∂</div>
+        <button onclick="closeSidebar()" style="display:none;background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--ink3);padding:4px 8px;border-radius:7px" id="sb-close-btn" title="Fechar">✕</button>
+      </div>
       <div class="sb-course-title" id="sb-title">Carregando...</div>
       <div class="sb-course-sub" id="sb-sub"></div>
       <div class="progress-wrap sb-prog-wrap">
@@ -366,7 +423,7 @@
     <!-- LESSON VIEW -->
     <div class="view lesson-view" id="view-lesson">
       <div class="lesson-topbar">
-        <button class="btn btn-ghost btn-sm" onclick="backToHome()" style="flex-shrink:0">← Voltar</button>
+        <button class="btn btn-ghost btn-sm" onclick="backToHome()" style="flex-shrink:0">←</button>
         <div class="lesson-prog-wrap progress-wrap">
           <div class="progress-fill" id="lesson-prog" style="width:0%"></div>
         </div>
@@ -394,6 +451,19 @@
     </div>
   </main>
 </div>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav" id="mobile-bottom-nav">
+  <a class="mobile-nav-item" href="index.html">
+    <span class="nav-ico">📚</span>Início
+  </a>
+  <div class="mobile-nav-item" onclick="openSidebar()">
+    <span class="nav-ico">☰</span>Lições
+  </div>
+  <a class="mobile-nav-item" href="store.html">
+    <span class="nav-ico">🎨</span>Loja
+  </a>
+</nav>
 
 <!-- SKIP MODAL -->
 <div class="modal-overlay" id="skip-modal">
@@ -959,6 +1029,39 @@ function showToast(icon, text) {
   clearTimeout(_toast);
   _toast = setTimeout(() => t.classList.remove('show'), 2300);
 }
+
+// ═══ MOBILE DRAWER ═══
+function openSidebar() {
+  document.getElementById('sidebar').classList.add('drawer-open');
+  document.getElementById('drawer-overlay').classList.add('open');
+  document.getElementById('sb-close-btn').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('drawer-open');
+  document.getElementById('drawer-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleResize() {
+  const isMobile = window.innerWidth <= 860;
+  const closeBtn = document.getElementById('sb-close-btn');
+  if (closeBtn) closeBtn.style.display = isMobile ? 'block' : 'none';
+  if (!isMobile) {
+    document.getElementById('sidebar').classList.remove('drawer-open');
+    document.getElementById('drawer-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+window.addEventListener('resize', handleResize);
+handleResize();
+
+// Close drawer when a lesson is clicked on mobile
+const _origStartLesson = startLesson;
+window.startLesson = function(ui, li) {
+  if (window.innerWidth <= 860) closeSidebar();
+  _origStartLesson(ui, li);
+};
 </script>
 </body>
 </html>
