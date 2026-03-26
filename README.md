@@ -147,6 +147,31 @@ Cada lição tem um array de `steps`. Existem 3 tipos:
 }
 ```
 
+#### Imagem (dentro de um bloco `theory`)
+```json
+{
+  "type": "image",
+  "src": "images/grafico.png",
+  "alt": "Descrição da imagem",
+  "caption": "Legenda opcional exibida abaixo"
+}
+```
+`src` pode ser caminho **relativo** ao `course.json` ou URL **absoluta**. Clique na imagem para ampliar (lightbox).
+
+#### Vídeo — YouTube, Vimeo ou arquivo local (dentro de um bloco `theory`)
+```json
+{
+  "type": "video",
+  "src": "https://www.youtube.com/watch?v=ID_DO_VIDEO",
+  "caption": "Legenda opcional"
+}
+```
+`src` aceita:
+- URL completa do **YouTube**: `"https://youtube.com/watch?v=ID"`
+- ID curto do YouTube (11 chars): `"dQw4w9WgXcQ"`
+- URL do **Vimeo**: `"https://vimeo.com/123456789"`
+- Arquivo local: `"videos/aula1.mp4"` (relativo ao `course.json`)
+
 ### 4. Adicione ao LearnHub
 
 **Opção A — Curso na mesma pasta (mais simples):**
@@ -214,6 +239,19 @@ Tudo salvo em `localStorage` — sem servidor, sem conta:
 - Cursos externos adicionados
 
 Para redefinir: `localStorage.removeItem('learnhub_v1')`
+
+---
+
+## 🎓 Tutorial interativo
+
+O tutorial aparece automaticamente na primeira visita ao `index.html` e ao `course.html`. Ele destaca cada elemento da interface com um spotlight e explica sua função.
+
+- O estado "já visto" é salvo em `localStorage` — não reaparece a menos que o usuário limpe os dados
+- Botão **"Pular tutorial"** sempre visível no card do tutorial
+- Botão **"❓ Tutorial"** na navbar reabre o tutorial a qualquer momento
+- Totalmente responsivo — funciona em mobile com posicionamento adaptativo
+
+Para redefinir o tutorial (mostrar novamente): `localStorage.removeItem('lh_tutorial_seen_v1')`
 
 ---
 

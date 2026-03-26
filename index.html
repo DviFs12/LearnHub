@@ -211,6 +211,7 @@
   <div class="navbar-right">
     <div class="pill pill-points">⭐ <span id="pts-display">0</span> pts</div>
     <div class="pill pill-streak hide-mobile">🔥 <span id="streak-display">0</span>d</div>
+    <button class="btn btn-ghost btn-sm hide-mobile" onclick="window.__lhTutorial?.init(true)" title="Ver tutorial" style="font-size:0.8rem">❓ Tutorial</button>
     <button class="theme-toggle" onclick="toggleDark()" title="Alternar tema" id="theme-btn">🌙</button>
   </div>
 </nav>
@@ -331,10 +332,7 @@
 <script src="js/themes.js"></script>
 <script>
 // ─── BUILT-IN COURSES (paths) ───
-const BUILTIN_COURSES = [
-  'courses/calculus/course.json',
-  'courses/ingles-iniciante/course.json',
-];
+const BUILTIN_COURSES = ['courses/calculus/course.json'];
 
 // ─── INIT ───
 initTheme();
@@ -535,5 +533,6 @@ window.addEventListener('storage', e => {
   }
 });
 </script>
+<script src="js/tutorial.js"></script>
 </body>
 </html>

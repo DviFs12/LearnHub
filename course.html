@@ -305,6 +305,62 @@
 /* GAME OVER */
 .gameover-card { max-width: 420px; width: 100%; text-align: center; animation: fadeUp 0.35s ease; }
 
+/* ── MEDIA BLOCKS ── */
+.lesson-img-wrap {
+  margin: 16px 0; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--line); background: var(--paper3);
+}
+.lesson-img-wrap img {
+  width: 100%; height: auto; display: block;
+  max-height: 400px; object-fit: contain; background: var(--paper2);
+  cursor: zoom-in; transition: opacity 0.2s;
+}
+.lesson-img-wrap img:hover { opacity: 0.92; }
+.lesson-img-caption {
+  padding: 7px 14px; font-size: 0.74rem; color: var(--ink3);
+  text-align: center; border-top: 1px solid var(--line); font-style: italic;
+}
+.lesson-video-outer {
+  margin: 16px 0; border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--line);
+}
+.lesson-video-wrap {
+  position: relative; padding-bottom: 56.25%; height: 0;
+  background: #000;
+}
+.lesson-video-wrap iframe {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%; border: none;
+}
+.lesson-video-caption {
+  background: var(--paper2); padding: 7px 14px;
+  font-size: 0.74rem; color: var(--ink3);
+  text-align: center; font-style: italic;
+}
+
+/* Lightbox */
+#lh-lightbox {
+  position: fixed; inset: 0; z-index: 8000;
+  background: rgba(0,0,0,0.88); display: none;
+  align-items: center; justify-content: center;
+  cursor: zoom-out; padding: 16px;
+}
+#lh-lightbox.open { display: flex; }
+#lh-lightbox img {
+  max-width: 100%; max-height: 90vh;
+  border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+#lh-lightbox-close {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(255,255,255,0.15); border: none;
+  color: #fff; font-size: 1.2rem; width: 36px; height: 36px;
+  border-radius: 50%; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.15s;
+}
+#lh-lightbox-close:hover { background: rgba(255,255,255,0.25); }
+
 @media (max-width: 860px) {
   #app { grid-template-columns: 1fr; }
   .course-home { padding: 24px 20px; }
@@ -381,6 +437,7 @@
   </div>
   <div class="navbar-right">
     <div class="pill pill-points">⭐ <span id="pts-nav">0</span></div>
+    <button class="btn btn-ghost btn-sm hide-mobile" onclick="window.__lhTutorial?.init(true)" title="Ver tutorial" style="font-size:0.8rem">❓</button>
     <button class="theme-toggle" onclick="toggleDark(); updateThemeBtn()" id="theme-btn">🌙</button>
   </div>
 </nav>
@@ -475,6 +532,12 @@
       <button class="btn btn-ghost btn-sm" onclick="closeSkipModal()">Cancelar</button>
     </div>
   </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div id="lh-lightbox" onclick="closeLightbox()">
+  <button id="lh-lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lh-lightbox-img" src="" alt="">
 </div>
 
 <!-- TOAST -->
@@ -785,13 +848,52 @@ function renderTheory(step) {
   let html = '<div class="theory-card">';
   html += `<span class="theory-tag">📖 Teoria</span><div class="theory-title">${step.title}</div>`;
   step.blocks.forEach(b => {
-    if (b.type === 'para') html += `<div class="theory-block">${b.heading?`<h3>${b.heading}</h3>`:''}<p>${b.text}</p></div>`;
-    else if (b.type === 'formula') html += `<div class="formula-box">${escHtml(b.text)}</div>`;
-    else if (b.type === 'callout') {
+    if (b.type === 'para') {
+      html += `<div class="theory-block">${b.heading?`<h3>${b.heading}</h3>`:''}<p>${b.text}</p></div>`;
+    } else if (b.type === 'formula') {
+      html += `<div class="formula-box">${escHtml(b.text)}</div>`;
+    } else if (b.type === 'callout') {
       const cls = b.kind==='warn'?'warn':b.kind==='tip'?'tip':b.kind==='danger'?'danger':'';
       html += `<div class="callout ${cls}"><div class="callout-icon">${b.icon}</div><div class="callout-text">${b.text}</div></div>`;
     } else if (b.type === 'example') {
       html += `<div class="example-box"><div class="example-header">${b.label}</div><div class="example-body">${escHtml(b.body)}</div></div>`;
+    } else if (b.type === 'image') {
+      // b.src  = URL da imagem (relativa ao course.json ou absoluta)
+      // b.alt  = texto alternativo (opcional)
+      // b.caption = legenda (opcional)
+      const src = b.src.startsWith('http') ? b.src : COURSE._dir + b.src;
+      const alt = escHtml(b.alt || b.caption || 'Imagem');
+      html += `<div class="lesson-img-wrap">
+        <img src="${src}" alt="${alt}" loading="lazy" onclick="openLightbox(this.src)">
+        ${b.caption ? `<div class="lesson-img-caption">${escHtml(b.caption)}</div>` : ''}
+      </div>`;
+    } else if (b.type === 'video') {
+      // b.src pode ser:
+      //   • URL completa do YouTube/Vimeo (embed)
+      //   • ID do YouTube: "dQw4w9WgXcQ"
+      //   • URL de um arquivo .mp4 local
+      // b.caption = legenda (opcional)
+      const embedSrc = resolveVideoSrc(b.src);
+      if (embedSrc.type === 'iframe') {
+        html += `<div class="lesson-video-outer">
+          <div class="lesson-video-wrap">
+            <iframe src="${embedSrc.url}" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          ${b.caption ? `<div class="lesson-video-caption">${escHtml(b.caption)}</div>` : ''}
+        </div>`;
+      } else {
+        // Arquivo de vídeo local
+        const vsrc = b.src.startsWith('http') ? b.src : COURSE._dir + b.src;
+        html += `<div class="lesson-video-outer">
+          <div style="background:#000;border-radius:0">
+            <video controls style="width:100%;display:block;max-height:360px;border-radius:0">
+              <source src="${vsrc}">
+              Seu navegador não suporta vídeo HTML5.
+            </video>
+          </div>
+          ${b.caption ? `<div class="lesson-video-caption">${escHtml(b.caption)}</div>` : ''}
+        </div>`;
+      }
     }
   });
   html += '</div>';
@@ -1020,6 +1122,50 @@ function backToHome() {
 // ═══ UTILS ═══
 function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
+// ── Resolve video src to iframe or native ──
+function resolveVideoSrc(src) {
+  if (!src) return { type: 'native', url: src };
+
+  // YouTube full URL
+  const ytMatch = src.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+  if (ytMatch) {
+    return { type: 'iframe', url: `https://www.youtube.com/embed/${ytMatch[1]}?rel=0` };
+  }
+  // YouTube embed URL already
+  if (src.includes('youtube.com/embed/')) return { type: 'iframe', url: src };
+
+  // YouTube short ID (11 chars, no slashes)
+  if (/^[a-zA-Z0-9_-]{11}$/.test(src)) {
+    return { type: 'iframe', url: `https://www.youtube.com/embed/${src}?rel=0` };
+  }
+  // Vimeo
+  const vimMatch = src.match(/vimeo\.com\/(\d+)/);
+  if (vimMatch) {
+    return { type: 'iframe', url: `https://player.vimeo.com/video/${vimMatch[1]}` };
+  }
+  // Generic iframe URL (other embeds)
+  if (src.startsWith('http') && !src.match(/\.(mp4|webm|ogg)$/i)) {
+    return { type: 'iframe', url: src };
+  }
+  // Local / direct file
+  return { type: 'native', url: src };
+}
+
+// ── Lightbox ──
+function openLightbox(src) {
+  const lb = document.getElementById('lh-lightbox');
+  const img = document.getElementById('lh-lightbox-img');
+  img.src = src;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lh-lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+// Close lightbox on Escape
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
 let _toast;
 function showToast(icon, text) {
   document.getElementById('toast-icon').textContent = icon + ' ';
@@ -1063,5 +1209,6 @@ window.startLesson = function(ui, li) {
   _origStartLesson(ui, li);
 };
 </script>
+<script src="js/tutorial.js"></script>
 </body>
 </html>
