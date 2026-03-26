@@ -1,0 +1,66 @@
+{
+  "id": "u5l2",
+  "title": "O Presente Contínuo",
+  "unit": "u5",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "O Presente Contínuo",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Present Continuous - Ações Agora",
+          "text": "O presente contínuo descreve ações que estão acontecendo <strong>neste exato momento</strong>. É diferente do Present Simple que descreve ações habituais."
+        },
+        {
+          "type": "example",
+          "label": "Diferença Importante",
+          "body": "Present Simple: I play soccer. (Eu jogo futebol - regularmente)\nPresent Continuous: I am playing soccer. (Estou jogando futebol - AGORA)"
+        },
+        {
+          "type": "para",
+          "heading": "Como Formar o Gerúndio (-ING)",
+          "text": "Para o presente contínuo, você precisa adicionar '-ING' ao verbo. Há algumas regras:"
+        },
+        {
+          "type": "example",
+          "label": "Regras de Formação",
+          "body": "Regra 1: Adicione 'ing'\nplay → playing\nrun → running\nswim → swimming\n\nRegra 2: Se termina em 'e', remova antes de adicionar 'ing'\nwrite → writing\nuse → using\n\nRegra 3: Se a sílaba tônica tem 1 vogal + 1 consoante, dobre o consoante\nget → getting\nrun → running (não dobra porque 'run' tem duas consoantes no final)"
+        },
+        {
+          "type": "example",
+          "label": "Estrutura do Present Continuous",
+          "body": "I am playing (Estou jogando)\nYou are studying (Você está estudando)\nHe is working (Ele está trabalhando)\nShe is reading (Ela está lendo)\nIt is raining (Está chovendo)\nWe are running (Estamos correndo)\nThey are swimming (Eles estão nadando)"
+        },
+        {
+          "type": "para",
+          "heading": "Negativo e Interrogativo",
+          "text": "Iguais ao Present Simple, mas com o verbo no gerúndio:"
+        },
+        {
+          "type": "example",
+          "label": "Formas Completas",
+          "body": "Afirmativo: I am playing.\nNegativo: I am not playing. / I'm not playing.\nInterrogativo: Am I playing? / Are you playing?"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o assunto principal desta lição?",
+      "opts": [
+        "O Presente Contínuo",
+        "Um assunto completamente diferente",
+        "Gramática avançada",
+        "Vocabulário de números"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'O Presente Contínuo'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "id": "ingles-basico",
+  "title": "Inglês Básico",
+  "subtitle": "Formação Inicial e Continuada (FIC)",
+  "description": "Curso de inglês básico como segunda língua, promovendo atividades que permitem compreender e produzir mensagens orais e escritas em nível básico. Desenvolvido pelo PRONATEC/FUNECE com as quatro habilidades fundamentais: leitura, escrita, fala e audição.",
+  "emoji": "🌍",
+  "level": "Iniciante",
+  "estimatedHours": 40,
+  "pointsTotal": 1600,
+  "tags": ["inglês", "idioma", "comunicação", "PRONATEC"],
+  "prerequisites": "Certificado do Ensino Fundamental",
+  "units": [
+    {
+      "id": "u1",
+      "title": "Linguagem de Sala de Aula",
+      "emoji": "📚",
+      "description": "Aprenda expressões e frases essenciais usadas em ambiente de sala de aula",
+      "lessons": [
+        { "id": "u1l1", "title": "Expressões e Frases da Sala de Aula", "file": "lessons/u1l1.json", "points": 80 },
+        { "id": "u1l2", "title": "Saudações", "file": "lessons/u1l2.json", "points": 80 },
+        { "id": "u1l3", "title": "Pronomes Pessoais e To Be", "file": "lessons/u1l3.json", "points": 100 },
+        { "id": "u1l4", "title": "Perguntas com WH", "file": "lessons/u1l4.json", "points": 80 }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Um Projeto Escolar",
+      "emoji": "🎯",
+      "description": "Desenvolva habilidades de entrevista e aprofunde seu conhecimento sobre o verbo to be",
+      "lessons": [
+        { "id": "u2l1", "title": "Uma Entrevista para Projeto Escolar", "file": "lessons/u2l1.json", "points": 80 },
+        { "id": "u2l2", "title": "To Be - Significados e Usos", "file": "lessons/u2l2.json", "points": 100 },
+        { "id": "u2l3", "title": "Adjetivos", "file": "lessons/u2l3.json", "points": 100 },
+        { "id": "u2l4", "title": "Vocabulário e Leitura", "file": "lessons/u2l4.json", "points": 80 }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Atividades Diárias",
+      "emoji": "⏰",
+      "description": "Conheça vocabulário sobre rotina diária, família e possessivos",
+      "lessons": [
+        { "id": "u3l1", "title": "Caso Possessivo ('S)", "file": "lessons/u3l1.json", "points": 80 },
+        { "id": "u3l2", "title": "Adjetivos Possessivos", "file": "lessons/u3l2.json", "points": 100 },
+        { "id": "u3l3", "title": "Minha Árvore Genealógica", "file": "lessons/u3l3.json", "points": 80 },
+        { "id": "u3l4", "title": "Minha Rotina Presente", "file": "lessons/u3l4.json", "points": 100 }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Minha Vizinhança",
+      "emoji": "🏘️",
+      "description": "Aprenda sobre lugares, partes da casa e preposições de lugar",
+      "lessons": [
+        { "id": "u4l1", "title": "Lugares na Cidade", "file": "lessons/u4l1.json", "points": 80 },
+        { "id": "u4l2", "title": "Partes da Casa e Móveis", "file": "lessons/u4l2.json", "points": 100 },
+        { "id": "u4l3", "title": "Preposições de Lugar", "file": "lessons/u4l3.json", "points": 100 },
+        { "id": "u4l4", "title": "Leitura - Descrição de Lugar", "file": "lessons/u4l4.json", "points": 80 }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Sou Fã de Saúde",
+      "emoji": "💪",
+      "description": "Explore exercícios físicos, o presente contínuo e moda",
+      "lessons": [
+        { "id": "u5l1", "title": "Fazendo Exercícios Físicos", "file": "lessons/u5l1.json", "points": 80 },
+        { "id": "u5l2", "title": "O Presente Contínuo", "file": "lessons/u5l2.json", "points": 100 },
+        { "id": "u5l3", "title": "Desfile de Moda", "file": "lessons/u5l3.json", "points": 100 },
+        { "id": "u5l4", "title": "Lendo um E-mail", "file": "lessons/u5l4.json", "points": 80 }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Grandes Pessoas, Grandes Ações",
+      "emoji": "⭐",
+      "description": "Conheça histórias inspiradoras e domine o passado simples",
+      "lessons": [
+        { "id": "u6l1", "title": "Uma Mulher Única", "file": "lessons/u6l1.json", "points": 80 },
+        { "id": "u6l2", "title": "O Passado Simples", "file": "lessons/u6l2.json", "points": 100 },
+        { "id": "u6l3", "title": "Advérbios de Tempo", "file": "lessons/u6l3.json", "points": 100 },
+        { "id": "u6l4", "title": "Leitura - Biografia", "file": "lessons/u6l4.json", "points": 80 }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Entrevista de Emprego",
+      "emoji": "💼",
+      "description": "Prepare-se para entrevistas de trabalho e aprofunde seu conhecimento do Present Perfect",
+      "lessons": [
+        { "id": "u7l1", "title": "O que Você Procura Neste Emprego?", "file": "lessons/u7l1.json", "points": 80 },
+        { "id": "u7l2", "title": "Present Perfect", "file": "lessons/u7l2.json", "points": 100 },
+        { "id": "u7l3", "title": "Vocabulário - Profissões", "file": "lessons/u7l3.json", "points": 80 },
+        { "id": "u7l4", "title": "Leitura - Oportunidades", "file": "lessons/u7l4.json", "points": 80 }
+      ]
+    },
+    {
+      "id": "u8",
+      "title": "Planos de Férias",
+      "emoji": "🏖️",
+      "description": "Fale sobre planos futuros usando 'be going to' e 'will'",
+      "lessons": [
+        { "id": "u8l1", "title": "Be Going To", "file": "lessons/u8l1.json", "points": 100 },
+        { "id": "u8l2", "title": "Profissões", "file": "lessons/u8l2.json", "points": 80 },
+        { "id": "u8l3", "title": "Futuro - Will", "file": "lessons/u8l3.json", "points": 100 },
+        { "id": "u8l4", "title": "Leitura - Previsões Futuras", "file": "lessons/u8l4.json", "points": 80 }
+      ]
+    }
+  ],
+  "apostila": {
+    "sections": [
+      {
+        "title": "Sobre o Curso",
+        "items": [
+          {
+            "heading": "Objetivo Geral",
+            "text": "Promover atividades que permitam aos alunos compreenderem e produzirem mensagens orais e escritas em língua inglesa em nível básico, tendo como eixo quatro habilidades: <strong>leitura, escrita, fala e audição</strong>."
+          },
+          {
+            "heading": "Objetivos Específicos",
+            "text": "Ao final do curso, o aluno será capaz de: compreender e usar expressões familiares e cotidianas; apresentar-se e fazer apresentações formais; comunicar-se em situações do dia a dia; entender e produzir textos simples; participar em conversas sobre tópicos familiares."
+          }
+        ]
+      },
+      {
+        "title": "Estrutura Gramatical",
+        "items": [
+          {
+            "heading": "Pronomes Pessoais",
+            "text": "<strong>I, you, he, she, it, we, they</strong> - Os pronomes pessoais são fundamentais para toda comunicação em inglês. Cada pronome tem usos específicos e concordância própria com os verbos."
+          },
+          {
+            "heading": "Verbo To Be",
+            "text": "O verbo <strong>to be</strong> é o mais importante do inglês. Aparece em forma de 'am', 'is', 'are' no presente. Usado para: identificar pessoas e coisas, descrever características, informar localização, e expressar idade."
+          },
+          {
+            "heading": "Presente Simples",
+            "text": "Descreve ações habituais ou fatos gerais. Forma: <strong>sujeito + verbo base</strong>. Exemplos: I play soccer, She works as a teacher, They study English."
+          },
+          {
+            "heading": "Presente Contínuo",
+            "text": "Descreve ações em andamento. Forma: <strong>to be (presente) + verbo-ing</strong>. Exemplos: I am studying, She is working, They are playing."
+          },
+          {
+            "heading": "Passado Simples",
+            "text": "Descreve ações completadas no passado. Verbos regulares adicionam '-ed'. Exemplos: I worked, She played, They studied."
+          },
+          {
+            "heading": "Futuro com Will",
+            "text": "Expressa decisões no momento da fala ou previsões. Forma: <strong>will + infinitivo</strong>. Exemplos: I will travel, She will help, They will come."
+          },
+          {
+            "heading": "Futuro com Be Going To",
+            "text": "Expressa planos já decididos ou próximos. Forma: <strong>to be (presente) + going to + infinitivo</strong>. Exemplos: I am going to study, She is going to work, They are going to rest."
+          },
+          {
+            "heading": "Present Perfect",
+            "text": "Conecta ações passadas com o presente. Forma: <strong>have/has + past participle</strong>. Exemplos: I have worked here, She has studied English, They have traveled."
+          }
+        ]
+      },
+      {
+        "title": "Vocabulário Essencial",
+        "items": [
+          {
+            "heading": "Saudações",
+            "text": "<strong>Hello, Hi, Good morning, Good afternoon, Good evening, How are you?, I'm fine</strong> - Expressões básicas para iniciar conversas e cumprimentos formais."
+          },
+          {
+            "heading": "Números",
+            "text": "<strong>0-100:</strong> Zero, One, Two, Three... Ninety-nine, One hundred. Importantes para datas, horas, preços e contagem."
+          },
+          {
+            "heading": "Dias e Meses",
+            "text": "Dias: <strong>Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday</strong><br>Meses: <strong>January, February, March, April, May, June, July, August, September, October, November, December</strong>"
+          },
+          {
+            "heading": "Profissões",
+            "text": "<strong>Doctor, Teacher, Engineer, Lawyer, Chef, Pilot, Programmer, Nurse, Artist, Architect</strong> - Vocabulário essencial para entrevistas e descrições de carreira."
+          },
+          {
+            "heading": "Lugares",
+            "text": "<strong>School, Hospital, Bank, Store, Park, Library, Restaurant, Cinema, Museum, Market</strong> - Locais comuns em cidades e comunidades."
+          },
+          {
+            "heading": "Partes da Casa",
+            "text": "<strong>Living room, Kitchen, Bedroom, Bathroom, Dining room, Garage, Yard, Garden</strong> - Vocabulário para descrever e localizar itens em casa."
+          },
+          {
+            "heading": "Família",
+            "text": "<strong>Father, Mother, Brother, Sister, Grandfather, Grandmother, Aunt, Uncle, Cousin, Son, Daughter</strong> - Termos para descrever relações familiares."
+          },
+          {
+            "heading": "Cores",
+            "text": "<strong>Red, Blue, Green, Yellow, Orange, Purple, Pink, Black, White, Brown, Gray</strong> - Cores básicas para descrições."
+          }
+        ]
+      }
+    ]
+  }
+}

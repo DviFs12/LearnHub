@@ -1,0 +1,57 @@
+{
+  "id": "u6l4",
+  "title": "Leitura - Biografia",
+  "unit": "u6",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Leitura - Biografia",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Lendo Biografias Completas",
+          "text": "Quando você lê uma biografia, procure entender <strong>quem é a pessoa, o que fez, quando fez, e por que é importante</strong>."
+        },
+        {
+          "type": "para",
+          "heading": "Exemplo: Albert Einstein",
+          "text": "Vamos ler uma biografia simples e responder perguntas sobre ela:"
+        },
+        {
+          "type": "example",
+          "label": "Biografia Completa",
+          "body": "Albert Einstein was born in 1879 in Germany. He was a brilliant physicist and mathematician. He studied at the Swiss Polytechnic in Zurich. In 1905, he published his famous theory of relativity. This theory changed our understanding of physics forever. He won the Nobel Prize in Physics in 1921. He lived in many countries during his life, including Germany, Switzerland, and the United States. He died in 1955 in New Jersey. Today, Einstein is considered one of the greatest scientists of all time. His theories are still used in modern science."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Ao ler: Identifique datas (1879, 1955), eventos (published, won), e adjetivos (brilliant, greatest)."
+        },
+        {
+          "type": "para",
+          "heading": "Estrutura de uma Biografia",
+          "text": "<strong>Parágrafo 1:</strong> Nascimento e informações básicas\n<strong>Parágrafo 2:</strong> Educação e carreira inicial\n<strong>Parágrafo 3:</strong> Realizações principais\n<strong>Parágrafo 4:</strong> Legado e morte"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Leitura - Biografia",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Leitura - Biografia'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "id": "u7l4",
+  "title": "Leitura - Oportunidades",
+  "unit": "u7",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Leitura - Oportunidades",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Lendo Anúncios de Emprego",
+          "text": "Anúncios de emprego contêm informações importantes sobre a posição, empresa, salário e requisitos. Saber como ler e entender esses anúncios é crucial."
+        },
+        {
+          "type": "example",
+          "label": "Partes de um Anúncio",
+          "body": "• JOB TITLE (Cargo)\n• COMPANY (Empresa)\n• LOCATION (Localização)\n• SALARY (Salário)\n• EXPERIENCE (Experiência requerida)\n• SKILLS (Habilidades)\n• DESCRIPTION (Descrição do trabalho)\n• HOW TO APPLY (Como candidatar)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo de Anúncio",
+          "body": "JOB: Sales Manager\nCOMPANY: ABC Corporation\nLOCATION: São Paulo, Brazil\nSALARY: $50,000 - $60,000 per year\nEXPERIENCE: Minimum 5 years in sales\nREQUIRED SKILLS: \n- Strong communication skills\n- Leadership experience\n- English proficiency\n- Computer skills (Excel, PowerPoint)\n\nDESCRIPTION: We are looking for an experienced sales manager to lead our sales team. You will be responsible for meeting sales targets, managing team members, and developing sales strategies."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Dica: Procure por números (salário, experiência em anos) e verbos de ação (manage, develop, meet)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Leitura - Oportunidades",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Leitura - Oportunidades'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

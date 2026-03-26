@@ -1,0 +1,69 @@
+{
+  "id": "u3l2",
+  "title": "Adjetivos Possessivos",
+  "unit": "u3",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Adjetivos Possessivos",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Adjetivos vs Pronomes Possessivos",
+          "text": "Adjetivos possessivos <strong>modificam nomes</strong> (sempre vêm antes de um substantivo). Pronomes possessivos <strong>substituem nomes</strong> (ficam sozinhos)."
+        },
+        {
+          "type": "example",
+          "label": "Os 7 Adjetivos Possessivos",
+          "body": "my (meu/minha)\nyour (seu/sua)\nhis (dele)\nher (dela)\nits (dele/dela - coisas/animais)\nour (nosso/nossa)\ntheir (deles/delas)"
+        },
+        {
+          "type": "para",
+          "heading": "Importante: Nunca Mudam!",
+          "text": "Os adjetivos possessivos <strong>não mudam de forma</strong>. 'My' é sempre 'my', não importa se o nome é masculino, feminino, singular ou plural."
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Uso",
+          "body": "My book (Meu livro) / My books (Meus livros)\nYour pen (Sua caneta) / Your pens (Suas canetas)\nHis car (O carro dele) / His cars (Os carros dele)\nHer sister (A irmã dela) / Her sisters (As irmãs dela)\nOur house (Nossa casa) / Our houses (Nossas casas)\nTheir friend (O amigo deles) / Their friends (Os amigos deles)"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Use 'its' para coisas e animais: 'The dog and its toy' (O cachorro e seu brinquedo)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual adjetivo possessivo se usa para 'he'?",
+      "opts": [
+        "her",
+        "his",
+        "him",
+        "he's"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'his'. 'Her' é para 'she', 'him' é pronome objeto."
+    },
+    {
+      "type": "mcq",
+      "stem": "Os adjetivos possessivos mudam de forma?",
+      "opts": [
+        "Sim, mudam para singular/plural",
+        "Sim, mudam para masculino/feminino",
+        "Não, sempre têm a mesma forma",
+        "Sim, mudam conforme o contexto"
+      ],
+      "correct": 2,
+      "exp": "A resposta correta é 'Não, sempre têm a mesma forma'. 'My' é sempre 'my' em qualquer contexto."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: '__________ car is red.' (possessivo para 'she')",
+      "correct": "Her",
+      "exp": "A resposta correta é 'Her'. A frase fica: 'Her car is red.' ✓"
+    }
+  ]
+}

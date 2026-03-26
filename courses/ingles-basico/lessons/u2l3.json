@@ -1,0 +1,117 @@
+{
+  "id": "u2l3",
+  "title": "Adjetivos",
+  "unit": "u2",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "O que são Adjetivos?",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição",
+          "text": "Adjetivos são <strong>palavras que descrevem características, qualidades ou estados</strong> de nomes (substantivos). Em inglês, os adjetivos <strong>sempre vêm antes do nome</strong> que descrevem."
+        },
+        {
+          "type": "example",
+          "label": "Exemplos Básicos",
+          "body": "• A big house (Uma casa grande)\n• A beautiful girl (Uma menina bonita)\n• A fast car (Um carro rápido)\n• An intelligent student (Um aluno inteligente)\n• Happy people (Pessoas felizes)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Em português o adjetivo pode vir antes ou depois (casa grande / grande casa), mas em inglês sempre vem <strong>antes</strong> do nome."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Categorias de Adjetivos",
+      "blocks": [
+        {
+          "type": "example",
+          "label": "Adjetivos de Tamanho",
+          "body": "big (grande), small (pequeno), tiny (minúsculo), huge (enorme), long (comprido), short (curto)"
+        },
+        {
+          "type": "example",
+          "label": "Adjetivos de Cor",
+          "body": "red (vermelho), blue (azul), green (verde), yellow (amarelo), black (preto), white (branco), pink (rosa)"
+        },
+        {
+          "type": "example",
+          "label": "Adjetivos de Qualidade",
+          "body": "good (bom), bad (ruim), beautiful (belo), ugly (feio), clean (limpo), dirty (sujo), modern (moderno), old (antigo)"
+        },
+        {
+          "type": "example",
+          "label": "Adjetivos de Emoção/Estado",
+          "body": "happy (feliz), sad (triste), angry (zangado), excited (animado), tired (cansado), sick (doente), busy (ocupado), ready (pronto)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Como Usar Adjetivos com To Be",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Estrutura: Sujeito + To Be + Adjetivo",
+          "text": "Quando você descreve algo com um adjetivo, coloque o adjetivo <strong>depois do verbo 'to be'</strong>:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos",
+          "body": "• I am happy. (Estou feliz)\n• You are intelligent. (Você é inteligente)\n• He is tall. (Ele é alto)\n• She is beautiful. (Ela é bela)\n• It is cold. (Está frio)\n• We are ready. (Estamos prontos)\n• They are friendly. (Eles são amigáveis)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Adjetivos Antes do Nome",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Ordem das Palavras",
+          "text": "Quando o adjetivo descreve um nome, ele vem <strong>antes do nome</strong>. A ordem é: artigo + adjetivo + nome"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos",
+          "body": "• a beautiful house (uma casa bonita)\n• a big dog (um cachorro grande)\n• an intelligent boy (um menino inteligente)\n• a red car (um carro vermelho)\n• an old city (uma cidade antiga)\n• happy children (crianças felizes)\n• beautiful flowers (flores bonitas)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a posição correta do adjetivo em inglês?",
+      "opts": [
+        "house beautiful a",
+        "a house beautiful",
+        "a beautiful house",
+        "beautiful a house"
+      ],
+      "correct": 2,
+      "exp": "A resposta correta é 'a beautiful house'. Em inglês, o adjetivo vem <strong>antes</strong> do nome."
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você diz 'Estou cansado' em inglês?",
+      "opts": [
+        "I tired am.",
+        "I am tired.",
+        "Tired I am.",
+        "I tired."
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'I am tired.' - o adjetivo vem <strong>depois</strong> do 'to be'."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'She has a __________ car.' (vermelho)",
+      "correct": "red",
+      "exp": "A resposta correta é 'red'. A frase completa é: 'She has a red car.' ✓"
+    }
+  ]
+}

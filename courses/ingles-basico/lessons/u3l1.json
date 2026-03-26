@@ -1,0 +1,75 @@
+{
+  "id": "u3l1",
+  "title": "Caso Possessivo ('S)",
+  "unit": "u3",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Caso Possessivo ('S)",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que é Possessivo?",
+          "text": "O possessivo em inglês indica <strong>posse ou propriedade</strong>. Diferente do português, usamos um apóstrofo e a letra 's' após o nome do proprietário."
+        },
+        {
+          "type": "example",
+          "label": "Estrutura Básica",
+          "body": "NOME + 'S + OBJETO\n\nExemplos:\n• John's book (o livro do João)\n• Maria's car (o carro da Maria)\n• The teacher's pen (a caneta do professor)\n• My parents' house (a casa dos meus pais)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "O apóstrofo e 's' são pronunciados. 'John's' = 'João's' mas funciona para mostrar posse, não como contração."
+        },
+        {
+          "type": "para",
+          "heading": "Regra Para Plurais",
+          "text": "Se o nome já termina em 's' (plural), você adiciona <strong>apenas o apóstrofo</strong> depois do 's'."
+        },
+        {
+          "type": "example",
+          "label": "Plurais Terminados em S",
+          "body": "The teachers' books (os livros dos professores)\nThe students' desks (as carteiras dos alunos)\nMy parents' room (o quarto dos meus pais)\nThe children's toys (os brinquedos das crianças) - Note: children não termina em s"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Cuidado! 'Its' (sem apóstrofo) é o adjetivo possessivo para 'it'. 'It's' (com apóstrofo) é a contração de 'it is'."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você forma o possessivo em inglês?",
+      "opts": [
+        "nome + 's + objeto",
+        "'s + nome + objeto",
+        "objeto + nome + 's",
+        "nome + objeto + 's"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'nome + 's + objeto'. Exemplo: John's book"
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a forma correta para 'os livros dos professores'?",
+      "opts": [
+        "teachers' books",
+        "teacher's books",
+        "teachers books",
+        "book teachers'"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'teachers' books'. Como 'teachers' termina em 's', só adiciona apóstrofo."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'Maria's __________' (objeto, singular)",
+      "correct": "book",
+      "exp": "Qualquer objeto faz sentido. Exemplo: Maria's book (o livro da Maria) ✓"
+    }
+  ]
+}

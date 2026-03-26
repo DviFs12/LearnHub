@@ -1,0 +1,46 @@
+{
+  "id": "u7l2",
+  "title": "Present Perfect",
+  "unit": "u7",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Present Perfect",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Present Perfect",
+          "text": "O Present Perfect conecta <strong>ações passadas com o presente</strong>. É usado para falar sobre experiências ou ações recentes."
+        },
+        {
+          "type": "example",
+          "label": "Estrutura",
+          "body": "HAVE/HAS + PAST PARTICIPLE\nI have worked (trabalhei/tenho trabalhado)\nYou have studied (estudou/tem estudado)\nHe has played (jogou/tem jogado)\nShe has lived (viveu/tem vivido)\nWe have traveled (viajamos/temos viajado)\nThey have eaten (comeram/têm comido)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos",
+          "body": "I have worked here for 5 years. (Trabalhei aqui por 5 anos)\nShe has visited Brazil twice. (Ela visitou o Brasil duas vezes)\nThey have finished their homework. (Eles terminaram o dever de casa)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal de 'Present Perfect'?",
+      "opts": [
+        "Present Perfect",
+        "Outro tópico",
+        "Mais um tópico",
+        "Outra coisa"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é relacionada a 'Present Perfect'."
+    },
+    {
+      "type": "input",
+      "stem": "Digite um exemplo relacionado ao tópico:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

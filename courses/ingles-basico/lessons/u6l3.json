@@ -1,0 +1,56 @@
+{
+  "id": "u6l3",
+  "title": "Advérbios de Tempo",
+  "unit": "u6",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Advérbios de Tempo",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Advérbios de Tempo - Quando?",
+          "text": "Advérbios de tempo indicam <strong>quando uma ação aconteceu</strong>. São especialmente importantes com o Past Simple para situar as ações na linha do tempo."
+        },
+        {
+          "type": "example",
+          "label": "Advérbios de Tempo",
+          "body": "yesterday (ontem)\nlast week (semana passada)\nlast month (mês passado)\nlast year (ano passado)\nlast night (ontem à noite)\ntwo days ago (há dois dias)\na week ago (há uma semana)\nthis morning (esta manhã)\nearlier (mais cedo)\nbefore (antes)\nafter (depois)\nthen (então)\nfirst (primeiro)\nnext (depois/próximo)"
+        },
+        {
+          "type": "para",
+          "heading": "Posição do Advérbio",
+          "text": "O advérbio de tempo pode vir no <strong>início ou no fim</strong> da frase, mas normalmente fica no fim:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Posição",
+          "body": "I studied last night. (Estudei ontem à noite) - FIM\nLast night, I studied. (Ontem à noite, estudei) - INÍCIO\n\nShe came two days ago. (Ela veio há dois dias) - FIM\nTwo days ago, she came. (Há dois dias, ela veio) - INÍCIO"
+        },
+        {
+          "type": "example",
+          "label": "Frases Completas",
+          "body": "I studied last night. (Estudei ontem à noite)\nHe worked yesterday. (Ele trabalhou ontem)\nThey visited us a week ago. (Eles nos visitaram há uma semana)\nShe went to the beach last summer. (Ela foi à praia no verão passado)\nWe finished our homework before dinner. (Terminamos o dever antes do jantar)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Advérbios de Tempo",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Advérbios de Tempo'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

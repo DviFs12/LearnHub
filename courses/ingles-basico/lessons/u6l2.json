@@ -1,0 +1,66 @@
+{
+  "id": "u6l2",
+  "title": "O Passado Simples",
+  "unit": "u6",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "O Passado Simples",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Simple Past - Ações Completadas",
+          "text": "O passado simples é usado para descrever ações que <strong>começaram e terminaram no passado</strong>. É o tempo verbal mais comum para contar histórias."
+        },
+        {
+          "type": "para",
+          "heading": "Verbos Regulares",
+          "text": "Verbos regulares adicionam <strong>-ED</strong> no passado. A pronunciação muda conforme a terminação:"
+        },
+        {
+          "type": "example",
+          "label": "Padrões de Formação",
+          "body": "Padrão 1: Adicione 'ed'\nplay → played\nwork → worked\nstudy → studied (note: y → ied)\nwalk → walked\n\nPronúncia:\n-/t/ (após consoantes surdas): worked, walked, watched\n-/d/ (após consoantes sonoras e vogais): played, lived, loved\n-/ɪd/ (após t/d): waited, wanted, needed"
+        },
+        {
+          "type": "example",
+          "label": "Verbos Irregulares Comuns",
+          "body": "go → went\nbe → was / were\nhave → had\ndo → did\neats → ate\ndrink → drank\nwrite → wrote\nsee → saw\ncome → came\nmake → made\ntake → took\nget → got\nsay → said\nthink → thought"
+        },
+        {
+          "type": "para",
+          "heading": "Negativo e Interrogativo",
+          "text": "No passado, o negativo e interrogativo usam <strong>DID</strong>. O verbo volta para o infinitivo:"
+        },
+        {
+          "type": "example",
+          "label": "Formas do Past Simple",
+          "body": "Afirmativo: I played. / He went.\nNegativo: I did not play. / He did not go. (I didn't play / He didn't go)\nInterrogativo: Did I play? / Did he go?\nResposta curta: Yes, I did. / No, I didn't."
+        },
+        {
+          "type": "example",
+          "label": "Exemplos em Contexto",
+          "body": "I worked yesterday. (Trabalhei ontem)\nShe visited her family last week. (Ela visitou sua família semana passada)\nThey went to the beach on vacation. (Eles foram à praia nas férias)\nWe did not go to school yesterday. (Não fomos à escola ontem)\nDid you eat lunch? (Você comeu almoço?)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "O Passado Simples",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'O Passado Simples'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "u2l4",
+  "title": "Vocabulário e Leitura",
+  "unit": "u2",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Expandindo seu Vocabulário",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Por Que Aprender Vocabulário?",
+          "text": "Aprender novo vocabulário é <strong>essencial</strong> para melhorar sua compreensão e capacidade de comunicação. Quanto mais palavras você conhece, mais fácil fica entender textos e manter conversas."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Sempre leia em <strong>contexto</strong> para entender melhor o significado das palavras. Uma mesma palavra pode ter significados diferentes dependendo da situação."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Categorias de Vocabulário Essencial",
+      "blocks": [
+        {
+          "type": "example",
+          "label": "Escola e Educação",
+          "body": "school (escola), student (aluno), teacher (professor), book (livro), classroom (sala de aula), desk (carteira), board (quadro), exam (exame), homework (dever de casa), subject (matéria)"
+        },
+        {
+          "type": "example",
+          "label": "Pessoas e Relacionamentos",
+          "body": "friend (amigo), family (família), mother (mãe), father (pai), brother (irmão), sister (irmã), relative (parente), person (pessoa), people (pessoas)"
+        },
+        {
+          "type": "example",
+          "label": "Casa e Rotina",
+          "body": "home (casa), bedroom (quarto), kitchen (cozinha), bathroom (banheiro), time (hora/tempo), morning (manhã), afternoon (tarde), evening (noite), night (noite)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Técnicas de Leitura em Inglês",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Ler Melhor",
+          "text": "Existem estratégias para melhorar sua compreensão de leitura. <strong>Skimming</strong> é ler rapidamente para entender a ideia geral. <strong>Scanning</strong> é procurar informações específicas."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Dica: Não tente traduzir cada palavra. Leia o texto inteiro e tente entender o contexto geral primeiro."
+        },
+        {
+          "type": "para",
+          "heading": "Exemplo de Texto Simples",
+          "text": "Leia e tente entender sem dicionário:\n\n<strong>'My name is Peter. I am a student. I study English every day. I have a big family. My father is a doctor. My mother is a teacher. I love my family.'</strong>"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "De acordo com o texto, qual é a profissão do pai de Peter?",
+      "opts": [
+        "Teacher (professor)",
+        "Doctor (médico)",
+        "Student (aluno)",
+        "Engineer (engenheiro)"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Doctor'. O texto diz: 'My father is a doctor.'"
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a melhor estratégia para ler um texto longo em inglês?",
+      "opts": [
+        "Traduzir cada palavra para português",
+        "Ler rapidamente para entender a ideia geral",
+        "Procurar apenas pelas respostas que você precisa",
+        "Ignorar as palavras que você não conhece"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Ler rapidamente para entender a ideia geral' (skimming). Esta é uma técnica eficaz de leitura."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'I study __________ every day.' (do texto sobre Peter)",
+      "correct": "English",
+      "exp": "A resposta correta é 'English'. A frase do texto é: 'I study English every day.' ✓"
+    }
+  ]
+}

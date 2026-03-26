@@ -1,0 +1,57 @@
+{
+  "id": "u4l4",
+  "title": "Leitura - Descrição de Lugar",
+  "unit": "u4",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Leitura - Descrição de Lugar",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Lendo Descrições de Lugares",
+          "text": "Quando você lê descrições de lugares, procure por <strong>adjetivos, preposições de lugar e vocabulário de ambiente</strong>. Isso ajuda a criar uma imagem mental clara."
+        },
+        {
+          "type": "para",
+          "heading": "Vocabulário Descritivo",
+          "text": "Adjetivos comuns para descrever lugares:"
+        },
+        {
+          "type": "example",
+          "label": "Adjetivos para Lugares",
+          "body": "beautiful (belo), clean (limpo), spacious (espaçoso), comfortable (confortável), modern (moderno), old-fashioned (antigo), bright (claro), dark (escuro), noisy (barulhento), quiet (tranquilo), crowded (lotado), empty (vazio)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo de Texto Descritivo",
+          "body": "My Home\n\nMy home is beautiful and comfortable. It has a big living room with a spacious sofa and large windows. The living room is very bright and clean. The kitchen is modern with new appliances. There are three bedrooms, each with a comfortable bed and a desk. The bathroom is small but nice. Outside, there is a beautiful garden with many colorful flowers and tall trees. I love my home!"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Ao ler, procure responder: O que é? Como é? Onde fica? Isso ajuda a compreender melhor a descrição."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o assunto principal desta lição?",
+      "opts": [
+        "Leitura - Descrição de Lugar",
+        "Um assunto completamente diferente",
+        "Gramática avançada",
+        "Vocabulário de números"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Leitura - Descrição de Lugar'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

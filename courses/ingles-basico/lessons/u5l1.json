@@ -1,0 +1,62 @@
+{
+  "id": "u5l1",
+  "title": "Fazendo Exercícios Físicos",
+  "unit": "u5",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Fazendo Exercícios Físicos",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Importância do Exercício Físico",
+          "text": "A saúde é importante! Conhecer os nomes de exercícios e esportes permite que você converse sobre <strong>atividades físicas, rotina de exercícios e esportes</strong> em inglês."
+        },
+        {
+          "type": "example",
+          "label": "Exercícios Comuns",
+          "body": "run (correr)\nwalk (caminhar)\njump (pular)\nswim (nadar)\nlift weights (levantar pesos)\ndo yoga (fazer yoga)\ndo aerobics (fazer aeróbica)\nstretch (alongar)\nwork out (malhar)\nride a bike (andar de bicicleta)"
+        },
+        {
+          "type": "example",
+          "label": "Esportes Populares",
+          "body": "play soccer (jogar futebol)\nplay basketball (jogar basquete)\nplay tennis (jogar tênis)\nplay volleyball (jogar vôlei)\nplay badminton (jogar badminton)\nplay golf (jogar golfe)\ngo skiing (esquiar)\ngo surfing (surfar)"
+        },
+        {
+          "type": "para",
+          "heading": "Expressões Relacionadas",
+          "text": "Úteis para falar sobre exercício:"
+        },
+        {
+          "type": "example",
+          "label": "Frases Úteis",
+          "body": "I like to run in the morning. (Gosto de correr de manhã)\nShe plays soccer every day. (Ela joga futebol todo dia)\nThey swim on weekends. (Eles nadam nos fins de semana)\nHe works out three times a week. (Ele malha três vezes por semana)\nWe do yoga to relax. (Fazemos yoga para relaxar)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Use 'do' ou 'does' para exercícios (do yoga, does aerobics) e 'play' para esportes com bola (play soccer)."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o assunto principal desta lição?",
+      "opts": [
+        "Fazendo Exercícios Físicos",
+        "Um assunto completamente diferente",
+        "Gramática avançada",
+        "Vocabulário de números"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Fazendo Exercícios Físicos'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

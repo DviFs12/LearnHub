@@ -1,0 +1,153 @@
+{
+  "id": "u1l3",
+  "title": "Pronomes Pessoais e To Be",
+  "unit": "u1",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Pronomes Pessoais em Inglês",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que são Pronomes Pessoais?",
+          "text": "Pronomes pessoais são palavras que substituem nomes de pessoas. Em inglês, temos <strong>7 pronomes principais</strong> que você precisa dominar para qualquer conversa básica."
+        },
+        {
+          "type": "example",
+          "label": "Os 7 Pronomes Pessoais",
+          "body": "I (eu)\nyou (você)\nhe (ele)\nshe (ela)\nit (isso/aquilo - para coisas ou animais)\nwe (nós)\nthey (eles/elas)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Todos os pronomes em inglês são escritos em <strong>letra minúscula</strong>, exceto o pronome 'I' que é sempre em <strong>maiúscula</strong>: I am happy (Eu sou feliz)."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "O Verbo To Be - Formas Presentes",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Introdução ao To Be",
+          "text": "O verbo <strong>'to be'</strong> é o verbo mais importante do inglês. Significa 'ser' ou 'estar' em português. No presente, tem três formas: am, is, are."
+        },
+        {
+          "type": "example",
+          "label": "Conjugação do To Be (Presente)",
+          "body": "I am (eu sou/estou) - am\nYou are (você é/está) - are\nHe is (ele é/está) - is\nShe is (ela é/está) - is\nIt is (isso é/está) - is\nWe are (nós somos/estamos) - are\nThey are (eles são/estão) - are"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Memorize: I AM, You/We/They ARE, He/She/It IS - Este padrão é fundamental!"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Exemplos e Usos do To Be",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Usos Comuns",
+          "text": "O verbo 'to be' é usado para: <strong>identificar pessoas</strong>, <strong>descrever características</strong>, <strong>informar profissão</strong> e <strong>localização</strong>."
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Sentido",
+          "body": "Identificação:\n• I am John. (Eu sou João.)\n• You are a student. (Você é um aluno.)\n• She is a teacher. (Ela é uma professora.)\n\nDescrição:\n• I am happy. (Estou feliz.)\n• He is tall. (Ele é alto.)\n• They are intelligent. (Eles são inteligentes.)\n\nLocalização:\n• I am in the classroom. (Estou na sala de aula.)\n• He is at home. (Ele está em casa.)\n• She is in Brazil. (Ela está no Brasil.)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Forma Negativa do To Be",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Negar",
+          "text": "Para fazer a forma negativa, você adiciona <strong>'not'</strong> depois do verbo 'to be'."
+        },
+        {
+          "type": "example",
+          "label": "Forma Negativa",
+          "body": "I am not happy. (Não estou feliz.)\nYou are not a teacher. (Você não é professor.)\nHe is not tall. (Ele não é alto.)\nShe is not at home. (Ela não está em casa.)\nIt is not big. (Não é grande.)\nWe are not students. (Não somos alunos.)\nThey are not in the classroom. (Eles não estão na sala.)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Formas contraídas (abreviadas): am not → I'm not; is not → isn't; are not → aren't"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Forma Interrogativa (Perguntas)",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Fazer Perguntas",
+          "text": "Para fazer uma pergunta com 'to be', coloque o verbo <strong>no início</strong> da frase, antes do sujeito."
+        },
+        {
+          "type": "example",
+          "label": "Perguntas com To Be",
+          "body": "Am I happy? (Estou feliz?)\nAre you a student? (Você é aluno?)\nIs he tall? (Ele é alto?)\nIs she at home? (Ela está em casa?)\nIs it big? (É grande?)\nAre we ready? (Estamos prontos?)\nAre they here? (Eles estão aqui?)\n\nRespostas curtas:\nYes, I am. / No, I'm not.\nYes, you are. / No, you're not.\nYes, he is. / No, he isn't."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a forma correta para 'ele'?",
+      "opts": [
+        "He am",
+        "He is",
+        "He are",
+        "He be"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'He is'. Para 'he' (e 'she', 'it'), usamos sempre 'is'."
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você faz uma pergunta com 'to be'?",
+      "opts": [
+        "I am happy?",
+        "Am I happy?",
+        "I am happy.",
+        "Happy I am?"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Am I happy?'. Em perguntas, o verbo 'to be' vem <strong>antes</strong> do sujeito."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a forma negativa de 'They are students'?",
+      "opts": [
+        "They not are students.",
+        "They are not students.",
+        "Not they are students.",
+        "They are students not."
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'They are not students.'. O 'not' vem depois do verbo 'to be'."
+    },
+    {
+      "type": "input",
+      "stem": "Qual verbo você usa com 'I'? 'I _______ a student.'",
+      "correct": "am",
+      "exp": "A resposta correta é 'am'. A frase completa é: 'I am a student.' ✓"
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'She _______ happy.' (ela é feliz)",
+      "correct": "is",
+      "exp": "A resposta correta é 'is'. A frase completa é: 'She is happy.' ✓"
+    }
+  ]
+}

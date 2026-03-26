@@ -1,0 +1,56 @@
+{
+  "id": "u3l4",
+  "title": "Minha Rotina Presente",
+  "unit": "u3",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Minha Rotina Presente",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "A Importância da Rotina",
+          "text": "Descrever sua rotina diária é uma <strong>habilidade essencial</strong> em inglês. Você usa o Present Simple para falar sobre atividades habituais."
+        },
+        {
+          "type": "example",
+          "label": "Verbos de Rotina (Infinitivo → 3ª pessoa)",
+          "body": "wake up (acordar) → wakes up\nget up (levantar) → gets up\ntake a shower (tomar banho) → takes a shower\neat breakfast (tomar café) → eats breakfast\ngo to school (ir à escola) → goes to school\nreturn home (voltar para casa) → returns home\ndo homework (fazer dever) → does homework\nwatch TV (assistir TV) → watches TV\ngo to bed (ir para a cama) → goes to bed"
+        },
+        {
+          "type": "para",
+          "heading": "Expressões de Tempo",
+          "text": "Para descrever a rotina, você precisa de expressões de tempo:"
+        },
+        {
+          "type": "example",
+          "label": "Expressões Temporais",
+          "body": "in the morning (de manhã)\nin the afternoon (à tarde)\nin the evening (à noite/entardecer)\nat noon (ao meio-dia)\nat night (à noite/de noite)\nevery day (todo dia)\nevery morning (toda manhã)\nusually (geralmente)\nalways (sempre)\nsometimes (às vezes)\nrarely (raramente)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo Completo de Rotina",
+          "body": "I usually wake up at 7 AM. I take a shower and eat breakfast at 7:30. I go to school at 8 AM. I have classes until 12 PM. I eat lunch and rest. I return home at 3 PM. I do my homework for two hours. I play with my friends or watch TV. I eat dinner at 7 PM. I go to bed at 10 PM."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Minha Rotina Presente",
+        "Outro assunto",
+        "Algo completamente diferente",
+        "Não tem tópico"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Minha Rotina Presente'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

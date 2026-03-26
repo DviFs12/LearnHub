@@ -1,0 +1,107 @@
+{
+  "id": "u2l2",
+  "title": "To Be - Significados e Usos",
+  "unit": "u2",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Os Múltiplos Significados do To Be",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "To Be: Verbo Versátil",
+          "text": "O verbo 'to be' tem <strong>vários significados</strong> em português dependendo do contexto. Pode significar 'ser', 'estar', 'existir' ou até 'custar'. Entender seus diferentes usos é crucial."
+        },
+        {
+          "type": "example",
+          "label": "Diferentes Significados",
+          "body": "1. SER (identidade/profissão):\n   'I am a student.' (Eu sou aluno/a)\n   'She is a doctor.' (Ela é médica)\n\n2. ESTAR (localização):\n   'I am at home.' (Estou em casa)\n   'They are in Brazil.' (Eles estão no Brasil)\n\n3. ESTAR (estado/condição):\n   'I am happy.' (Estou feliz)\n   'She is tired.' (Ela está cansada)\n\n4. TER (idade/descrição):\n   'He is 25 years old.' (Ele tem 25 anos)\n   'The dog is big.' (O cachorro é grande)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "To Be para Identidade e Profissão",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Identificando Pessoas",
+          "text": "Use 'to be' para dizer quem é algo ou qual é a profissão de alguém:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Identidade",
+          "body": "• I am John. (Eu sou João)\n• You are a student. (Você é um aluno)\n• He is my brother. (Ele é meu irmão)\n• She is an engineer. (Ela é uma engenheira)\n• It is a cat. (Isso é um gato)\n• We are friends. (Nós somos amigos)\n• They are teachers. (Eles são professores)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Observe: Use 'a' antes de profissões (a student, an engineer) mesmo que em português não use artigo."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "To Be para Localização",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Indicando Posição ou Lugar",
+          "text": "Use 'to be' com preposições para indicar onde alguém ou algo está:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Localização",
+          "body": "• I am in the classroom. (Estou na sala de aula)\n• You are at school. (Você está na escola)\n• He is at home. (Ele está em casa)\n• She is in Brazil. (Ela está no Brasil)\n• The book is on the table. (O livro está na mesa)\n• We are outside. (Estamos lá fora)\n• They are in the car. (Eles estão no carro)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "To Be para Descrição e Condição",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Descrevendo Características",
+          "text": "Use 'to be' com adjetivos para descrever como alguém está ou qual é a característica de algo:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Descrição",
+          "body": "Emoções:\n• I am happy. (Estou feliz)\n• You are sad. (Você está triste)\n• He is angry. (Ele está zangado)\n• She is excited. (Ela está animada)\n\nDescrição Física:\n• The dog is big. (O cachorro é grande)\n• The car is fast. (O carro é rápido)\n• The water is cold. (A água é fria)\n• I am tall. (Eu sou alto)\n\nEstado Geral:\n• I am tired. (Estou cansado)\n• You are sick. (Você está doente)\n• He is busy. (Ele está ocupado)\n• They are ready. (Eles estão prontos)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual frase indica profissão?",
+      "opts": [
+        "I am happy.",
+        "I am at home.",
+        "I am a doctor.",
+        "I am big."
+      ],
+      "correct": 2,
+      "exp": "A resposta correta é 'I am a doctor.' - esta frase indica profissão/identidade."
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você diz 'Ele está em casa' em inglês?",
+      "opts": [
+        "He is at home.",
+        "He is home.",
+        "He is in home.",
+        "He home is."
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'He is at home.' - usamos 'at' com 'home'."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'She _________ sad today.' (estar - estado emocional)",
+      "correct": "is",
+      "exp": "A resposta correta é 'is'. A frase completa é: 'She is sad today.' ✓"
+    }
+  ]
+}

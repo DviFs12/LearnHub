@@ -1,0 +1,163 @@
+{
+  "id": "u1l4",
+  "title": "Perguntas com WH",
+  "unit": "u1",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Palavras de Pergunta - WH Questions",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que são WH Questions?",
+          "text": "WH questions são perguntas que começam com palavras como 'What', 'Where', 'Who', 'When', 'Why' e 'How'. Essas perguntas <strong>não podem ser respondidas com 'sim' ou 'não'</strong> - exigem respostas mais detalhadas."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Essas palavras começam com as letras 'W' e 'H', por isso são chamadas de WH Questions (ou question words)."
+        },
+        {
+          "type": "example",
+          "label": "As 6 Palavras de Pergunta Principais",
+          "body": "What = O quê? / Qual?\nWhere = Onde?\nWho = Quem?\nWhen = Quando?\nWhy = Por quê?\nHow = Como?"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Estrutura e Exemplos",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Estruturar WH Questions",
+          "text": "A estrutura geral é: <strong>WH word + verbo + sujeito + ...?</strong> ou <strong>WH word + to be + sujeito + ...?</strong>"
+        },
+        {
+          "type": "example",
+          "label": "What (O quê)",
+          "body": "What is your name? (Qual é seu nome?)\nWhat is that? (O que é isso?)\nWhat do you do? (O que você faz?)\nWhat color is it? (Que cor é?)"
+        },
+        {
+          "type": "example",
+          "label": "Where (Onde)",
+          "body": "Where are you from? (De onde você é?)\nWhere is the classroom? (Onde fica a sala de aula?)\nWhere do you live? (Onde você mora?)\nWhere are they? (Onde estão?)"
+        },
+        {
+          "type": "example",
+          "label": "Who (Quem)",
+          "body": "Who are you? (Quem é você?)\nWho is the teacher? (Quem é o professor?)\nWho are your friends? (Quem são seus amigos?)\nWho is that girl? (Quem é aquela menina?)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "More WH Questions",
+      "blocks": [
+        {
+          "type": "example",
+          "label": "When (Quando)",
+          "body": "When are you happy? (Quando você é feliz?)\nWhen is your birthday? (Quando é seu aniversário?)\nWhen do you study? (Quando você estuda?)\nWhen are they arriving? (Quando eles chegam?)"
+        },
+        {
+          "type": "example",
+          "label": "Why (Por quê)",
+          "body": "Why are you sad? (Por que você está triste?)\nWhy is English important? (Por que inglês é importante?)\nWhy do you study? (Por que você estuda?)\nWhy are you late? (Por que você está atrasado?)"
+        },
+        {
+          "type": "example",
+          "label": "How (Como)",
+          "body": "How are you? (Como você está?)\nHow is the weather? (Como está o tempo?)\nHow do you study? (Como você estuda?)\nHow old are you? (Quantos anos você tem?)"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "HOW tem variações especiais: 'How old?' (idade), 'How many?' (quantidade), 'How much?' (preço/quantidade de não-contáveis)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Praticando Respostas",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Responder WH Questions",
+          "text": "As respostas devem fornecer a informação solicitada. Veja os exemplos de conversas completas:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo 1",
+          "body": "A: What is your name?\nB: My name is Maria.\n\nA: Where are you from?\nB: I'm from Brazil.\n\nA: When is your birthday?\nB: It's in December."
+        },
+        {
+          "type": "example",
+          "label": "Exemplo 2",
+          "body": "A: Who is your best friend?\nB: My best friend is João.\n\nA: Why do you like him?\nB: Because he is kind and funny.\n\nA: How do you feel about him?\nB: I feel happy when I'm with him."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual palavra de pergunta você usa para perguntar sobre o local?",
+      "opts": [
+        "What",
+        "When",
+        "Where",
+        "Why"
+      ],
+      "correct": 2,
+      "exp": "A resposta correta é 'Where'. Esta palavra pergunta sobre localização ou lugar."
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você pergunta o nome de alguém?",
+      "opts": [
+        "Where is your name?",
+        "What is your name?",
+        "Who is your name?",
+        "When is your name?"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'What is your name?'. 'What' é usada para perguntar sobre informações específicas."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a pergunta correta para saber a idade?",
+      "opts": [
+        "When are you?",
+        "How old are you?",
+        "What age are you?",
+        "Where old are you?"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'How old are you?'. Esta é a forma padrão para perguntar idade em inglês."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual pergunta corresponde à resposta 'He is a teacher'?",
+      "opts": [
+        "What is his name?",
+        "Who is he?",
+        "Where is he?",
+        "When is he here?"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Who is he?'. A resposta 'He is a teacher' identifica quem é essa pessoa (sua profissão)."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: '_________ is your phone number?' (perguntando número de telefone)",
+      "correct": "What",
+      "exp": "A resposta correta é 'What'. A frase completa é: 'What is your phone number?' ✓"
+    },
+    {
+      "type": "input",
+      "stem": "Complete: '_________ are you happy?' (perguntando razão)",
+      "correct": "Why",
+      "exp": "A resposta correta é 'Why'. A frase completa é: 'Why are you happy?' ✓"
+    }
+  ]
+}

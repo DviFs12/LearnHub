@@ -1,0 +1,61 @@
+{
+  "id": "u3l3",
+  "title": "Minha Árvore Genealógica",
+  "unit": "u3",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Minha Árvore Genealógica",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Membros da Família",
+          "text": "A família é um tema importante. Aqui estão todos os termos que você precisa saber para descrever relações familiares em inglês."
+        },
+        {
+          "type": "example",
+          "label": "Geração Direta",
+          "body": "Parents (pais) = Father (pai) + Mother (mãe)\nChildren (filhos) = Son (filho) + Daughter (filha)\nSiblings (irmãos) = Brother (irmão) + Sister (irmã)"
+        },
+        {
+          "type": "example",
+          "label": "Geração dos Avós",
+          "body": "Grandparents (avós) = Grandfather (avô) + Grandmother (avó)\nGreat-grandfather (bisavô) / Great-grandmother (bisavó)"
+        },
+        {
+          "type": "example",
+          "label": "Tios, Primos e Outros",
+          "body": "Aunt (tia) / Uncle (tio)\nCousin (primo/prima)\nNephew (sobrinho) / Niece (sobrinha)\nHusband (marido) / Wife (esposa)\nIn-laws (parentes por casamento)"
+        },
+        {
+          "type": "para",
+          "heading": "Exemplo de Descrição Familiar",
+          "text": "Vamos descrever uma família completa como exemplo:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo Completo",
+          "body": "My name is Maria. I have two brothers and one sister. My father is a doctor and my mother is a teacher. My grandparents are retired. I also have an aunt and an uncle, and two cousins. We all live in the same city, so I see my family every week."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Minha Árvore Genealógica",
+        "Outro assunto",
+        "Algo completamente diferente",
+        "Não tem tópico"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Minha Árvore Genealógica'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

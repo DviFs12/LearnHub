@@ -1,0 +1,57 @@
+{
+  "id": "u6l1",
+  "title": "Uma Mulher Única",
+  "unit": "u6",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Uma Mulher Única",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Lendo Biografias",
+          "text": "Biografias contam a história de pessoas famosas. Para compreender bem uma biografia, você precisa entender <strong>datas, eventos principais e características pessoais</strong>."
+        },
+        {
+          "type": "para",
+          "heading": "Palavras-chave em Biografias",
+          "text": "Quando você lê uma biografia, procure por:"
+        },
+        {
+          "type": "example",
+          "label": "Informações Principais",
+          "body": "• Nome completo\n• Data de nascimento (born in...)\n• Local de nascimento (born in...)\n• Profissão/Ocupação\n• Realizações principais (achievements)\n• Características pessoais\n• Data de morte (died in...)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo: Princess Diana",
+          "body": "Princess Diana was a unique woman. She was born in 1961 in England. She was kind, generous, and caring. She helped many poor people. She was famous all over the world. She was the Princess of Wales. People loved her very much because she was humble and approachable. Unfortunately, she died in a car accident in 1997. She is still remembered as an icon of compassion."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Dica: Use a linha do tempo (timeline) para organizar os eventos da vida da pessoa."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Uma Mulher Única",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Uma Mulher Única'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

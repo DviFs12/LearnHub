@@ -1,0 +1,176 @@
+{
+  "id": "u8l3",
+  "title": "Futuro - Will",
+  "unit": "u8",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Introdução ao Simple Future (Will)",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que é Simple Future?",
+          "text": "O <strong>Simple Future</strong> com 'will' é usado para expressar ações que acontecerão em um <strong>futuro não-imediato</strong> ou para <strong>decisões tomadas no momento da fala</strong>. 'Will' é mais comum quando você <strong>não tem um plano prévio</strong>."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Diferença: 'be going to' = plano já decidido; 'will' = decisão no momento ou previsão"
+        },
+        {
+          "type": "para",
+          "heading": "Estrutura",
+          "text": "A estrutura é: <strong>WILL + INFINITIVO (sem 'to')</strong>"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos",
+          "body": "I will travel to Europe next year.\nShe will become a doctor in the future.\nThey will win the game tomorrow.\nWe will help you with the project."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Conjugação do Will",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Uma Vantagem do Will",
+          "text": "A vantagem do 'will' é que <strong>a forma não muda conforme o pronome</strong>. 'Will' é sempre igual para todos!"
+        },
+        {
+          "type": "example",
+          "label": "Afirmativo com Will",
+          "body": "I will work (Vou trabalhar)\nYou will study (Você vai estudar)\nHe will play (Ele vai jogar)\nShe will travel (Ela vai viajar)\nIt will break (Vai quebrar)\nWe will come (Vamos vir)\nThey will help (Eles vão ajudar)"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Forma contraída: 'll (I'll, you'll, he'll, she'll, it'll, we'll, they'll)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Forma Negativa com Will",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Negar",
+          "text": "Para negar com 'will', adicione <strong>'not'</strong> depois de 'will'. A forma é <strong>WILL NOT + INFINITIVO</strong>."
+        },
+        {
+          "type": "example",
+          "label": "Negativo",
+          "body": "I will not work. (Não vou trabalhar)\nYou will not study. (Você não vai estudar)\nHe will not play. (Ele não vai jogar)\nShe will not travel. (Ela não vai viajar)\nWe will not help. (Não vamos ajudar)\nThey will not come. (Eles não vão vir)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Forma contraída na negativa: won't (I won't, you won't, he won't, etc.)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Forma Interrogativa com Will",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Fazer Perguntas",
+          "text": "Para fazer uma pergunta com 'will', coloque <strong>'will' no início</strong> da frase, seguido do sujeito."
+        },
+        {
+          "type": "example",
+          "label": "Interrogativo",
+          "body": "Will I work tomorrow? (Vou trabalhar amanhã?)\nWill you help me? (Você vai me ajudar?)\nWill he come? (Ele vai vir?)\nWill she travel next year? (Ela vai viajar ano que vem?)\nWill they pass the exam? (Eles vão passar no exame?)\n\nRespostas curtas:\nYes, I will. / No, I won't.\nYes, he will. / No, he won't."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Usos e Diferença Entre Will e Be Going To",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Quando Usar Will",
+          "text": "Use 'will' para: 1) <strong>Previsões</strong>, 2) <strong>Decisões no momento</strong>, 3) <strong>Promessas</strong>, 4) <strong>Futuro não-imediato</strong>"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos",
+          "body": "1. Previsão:\n'Mary is a good student; she will pass the test.' (Previsão baseada em fato)\n\n2. Decisão no momento:\n'That box looks heavy; I'll help you lift it.' (Decide ao ver a situação)\n\n3. Promessa:\n'I promise I will call you tomorrow.' (Promessa)\n\n4. Futuro distante:\n'Next year at this time, she'll be in New York.' (Futuro não-imediato)"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Comparação: 'I will buy milk' (você decide agora) vs 'I'm going to buy milk' (já tinha planejado)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Complete: 'I _________ help you with your homework.' (will)",
+      "opts": [
+        "will",
+        "am going to",
+        "is",
+        "are"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'will'. Com 'will', a forma é sempre igual para todos os pronomes."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a forma negativa correta com will?",
+      "opts": [
+        "I will not go.",
+        "I not will go.",
+        "I will go not.",
+        "Not I will go."
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'I will not go.' ou 'I won't go.' O 'not' vem imediatamente depois de 'will'."
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você faz uma pergunta com will?",
+      "opts": [
+        "You will help?",
+        "Will you help?",
+        "You will help me?",
+        "Help you will?"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Will you help?'. Em perguntas, 'will' vem no início."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual frase expressa uma decisão tomada no momento?",
+      "opts": [
+        "I'm going to call him tomorrow.",
+        "It's raining. I'll take an umbrella.",
+        "I will travel next month.",
+        "She will be a doctor."
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'It's raining. I'll take an umbrella.' - a decisão é tomada após ver a situação."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'They _________ win the game tomorrow.' (will)",
+      "correct": "will",
+      "exp": "A resposta correta é 'will'. A frase completa é: 'They will win the game tomorrow.' ✓"
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'She _________ not go to the party.' (will)",
+      "correct": "will",
+      "exp": "A resposta correta é 'will'. A frase completa é: 'She will not go to the party.' ou 'She won't go to the party.' ✓"
+    }
+  ]
+}

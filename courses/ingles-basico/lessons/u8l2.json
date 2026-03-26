@@ -1,0 +1,66 @@
+{
+  "id": "u8l2",
+  "title": "Profissões",
+  "unit": "u8",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Profissões",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Falando sobre Futuro Profissional",
+          "text": "Com 'be going to' e 'will', você pode falar sobre <strong>suas aspirações de carreira e futuro profissional</strong>."
+        },
+        {
+          "type": "para",
+          "heading": "Usando Be Going To para Planos Decididos",
+          "text": "Use quando você JÁ DECIDIU sobre sua carreira futura:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos com Be Going To",
+          "body": "I am going to be a doctor. (Vou ser médico - já decidi)\nShe is going to become an engineer. (Ela vai virar engenheira - plano definido)\nHe is going to work as a teacher. (Ele vai trabalhar como professor - planejado)\nWe are going to open our own business. (Vamos abrir nosso próprio negócio)"
+        },
+        {
+          "type": "para",
+          "heading": "Usando Will para Previsões e Promessas",
+          "text": "Use para predições e decisões no momento, não planejadas:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos com Will",
+          "body": "I will be successful in my career. (Serei bem-sucedido na carreira - previsão)\nShe will earn a lot of money. (Ela vai ganhar muito dinheiro - previsão)\nThey will help people. (Eles vão ajudar pessoas - objetivo)\nHe will work hard to achieve his goals. (Ele vai trabalhar duro para alcançar seus objetivos)"
+        },
+        {
+          "type": "para",
+          "heading": "Conversas Completas",
+          "text": "Vejamos um diálogo sobre futuro profissional:"
+        },
+        {
+          "type": "example",
+          "label": "Diálogo",
+          "body": "A: What are you going to do in the future?\nB: I am going to study medicine. I want to be a doctor.\nA: That's wonderful! Why did you choose that profession?\nB: Because I like helping people. I will work in a hospital.\nA: I think you will be a great doctor!\nB: Thank you! What about you? What will you do?\nA: I will probably work in technology. I'm interested in computers."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Profissões",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Profissões'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

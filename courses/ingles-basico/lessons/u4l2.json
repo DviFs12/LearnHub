@@ -1,0 +1,56 @@
+{
+  "id": "u4l2",
+  "title": "Partes da Casa e Móveis",
+  "unit": "u4",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Partes da Casa e Móveis",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Os Cômodos de Uma Casa",
+          "text": "Uma casa típica tem vários cômodos, cada um com uma função específica. Aprender esses nomes é importante para <strong>descrever sua casa</strong> e entender conversas sobre moradia."
+        },
+        {
+          "type": "example",
+          "label": "Cômodos Principais",
+          "body": "living room (sala de estar) - onde a família relaxa\nkitchen (cozinha) - onde se prepara comida\nbedroom (quarto) - onde se dorme\nbathroom (banheiro) - higiene pessoal\ndining room (sala de jantar) - refeições formais\ngarage (garagem) - estacionar carro\nyardGRAM (quintal) - área externa\ngarden (jardim) - plantas e flores"
+        },
+        {
+          "type": "example",
+          "label": "Móveis e Objetos",
+          "body": "sofa (sofá) - para sentar na sala\ntable (mesa) - para comer ou trabalhar\nchair (cadeira) - para sentar\nbed (cama) - para dormir\nrefrigerator (geladeira) - para guardar comida\nstove (fogão) - para cozinhar\nlamp (abajur/lâmpada) - para iluminar\nwindow (janela) - para luz e ventilação\ndoor (porta) - entrada/saída"
+        },
+        {
+          "type": "para",
+          "heading": "Descrevendo Sua Casa",
+          "text": "Agora você pode descrever sua casa em detalhes:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo de Descrição",
+          "body": "My house is beautiful. It has a big living room with a comfortable sofa and a television. The kitchen is modern and clean with a refrigerator and a stove. There are three bedrooms, each with a bed and a desk for studying. The bathroom is small but nice. Outside, there is a beautiful garden with many flowers and trees."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Partes da Casa e Móveis",
+        "Outro assunto",
+        "Algo completamente diferente",
+        "Não tem tópico"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Partes da Casa e Móveis'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

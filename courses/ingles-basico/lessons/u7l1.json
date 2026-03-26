@@ -1,0 +1,46 @@
+{
+  "id": "u7l1",
+  "title": "O que Você Procura Neste Emprego?",
+  "unit": "u7",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "O que Você Procura Neste Emprego?",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Entrevista de Emprego",
+          "text": "Uma entrevista de emprego é uma conversa formal onde você e o empregador se conhecem melhor."
+        },
+        {
+          "type": "example",
+          "label": "Perguntas Comuns",
+          "body": "Why do you want this job? (Por que você quer este emprego?)\nWhat are your strengths? (Quais são seus pontos fortes?)\nWhat is your experience? (Qual é sua experiência?)\nWhat are your salary expectations? (Quais são suas expectativas salariais?)\nWhere do you see yourself in 5 years? (Onde você se vê em 5 anos?)"
+        },
+        {
+          "type": "example",
+          "label": "Respostas Exemplo",
+          "body": "I am interested in this job because I like working with people. I am organized and responsible. I have 3 years of experience in this field. I believe I can be a good fit for your company."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal de 'O que Você Procura Neste Emprego?'?",
+      "opts": [
+        "O que Você Procura Neste Emprego?",
+        "Outro tópico",
+        "Mais um tópico",
+        "Outra coisa"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é relacionada a 'O que Você Procura Neste Emprego?'."
+    },
+    {
+      "type": "input",
+      "stem": "Digite um exemplo relacionado ao tópico:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "id": "u2l1",
+  "title": "Uma Entrevista para Projeto Escolar",
+  "unit": "u2",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Conduzindo uma Entrevista em Inglês",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Introdução a Entrevistas",
+          "text": "Uma entrevista é uma conversa estruturada onde você faz perguntas a alguém para obter informações. Em um projeto escolar, geralmente você entrevista uma pessoa interessante sobre sua vida, trabalho ou experiências."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Para uma boa entrevista, você precisa: <strong>preparar perguntas</strong>, <strong>escutar atentamente</strong> e <strong>fazer acompanhamentos</strong> (follow-up questions)."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Estrutura de uma Entrevista",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Partes de uma Entrevista",
+          "text": "Uma entrevista bem estruturada tem: 1) <strong>Abertura</strong> - saudação e apresentação, 2) <strong>Corpo</strong> - perguntas principais, 3) <strong>Encerramento</strong> - agradecimento"
+        },
+        {
+          "type": "example",
+          "label": "Modelo de Abertura",
+          "body": "Good morning/afternoon! My name is [seu nome]. Thank you for taking time to talk with me today. I'm doing a school project about [tema], and I'd like to ask you some questions. Is that okay?"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Perguntas Comuns em Entrevistas",
+      "blocks": [
+        {
+          "type": "example",
+          "label": "Perguntas Sobre Informações Pessoais",
+          "body": "• What is your name?\n• How old are you?\n• Where are you from?\n• What is your job/occupation?\n• How long have you worked there?\n• What do you like about your job?"
+        },
+        {
+          "type": "example",
+          "label": "Perguntas Sobre Experiências",
+          "body": "• Can you tell me about your most interesting experience?\n• What is your greatest achievement?\n• What challenges do you face?\n• How did you become interested in this field?\n• What advice would you give to young people?"
+        },
+        {
+          "type": "example",
+          "label": "Perguntas sobre o Futuro",
+          "body": "• What are your future plans?\n• Where do you see yourself in 5 years?\n• What do you want to achieve in the future?\n• What will be your next project?"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Respondendo e Continuando a Conversa",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Técnicas de Acompanhamento",
+          "text": "Após uma resposta, você pode fazer perguntas de acompanhamento (follow-up) para obter mais detalhes:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Follow-up",
+          "body": "Pergunta principal: 'What is your job?'\nResposta: 'I'm a teacher.'\n\nFollow-up: \n• How long have you been a teacher?\n• What do you like most about teaching?\n• What is your favorite subject?\n• Why did you become a teacher?"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Use expressões como 'That's interesting!', 'Can you tell me more?', 'Why?' para mostrar interesse genuíno."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Encerramento da Entrevista",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Finalizar",
+          "text": "Sempre termine uma entrevista agradecendo à pessoa pelo tempo dedicado:"
+        },
+        {
+          "type": "example",
+          "label": "Expressões de Encerramento",
+          "body": "• Thank you very much for your time.\n• I really appreciate you talking with me today.\n• This was very interesting!\n• Thank you for sharing your experience.\n• I wish you the best in your future!"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a primeira coisa que você faz em uma entrevista?",
+      "opts": [
+        "Fazer perguntas imediatamente",
+        "Se apresentar e explicar o propósito",
+        "Dizer adeus",
+        "Rir de um jeito"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Se apresentar e explicar o propósito'. A abertura é fundamental para estabelecer a entrevista."
+    },
+    {
+      "type": "mcq",
+      "stem": "O que é um 'follow-up question'?",
+      "opts": [
+        "Uma pergunta para encerrar",
+        "Uma pergunta de acompanhamento que pede mais detalhes",
+        "Uma saudação",
+        "Um agradecimento"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Uma pergunta de acompanhamento que pede mais detalhes'. Follow-ups aprofundam a conversa."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'Thank you very much for your __________.' (agradecimento)",
+      "correct": "time",
+      "exp": "A resposta correta é 'time'. A frase completa é: 'Thank you very much for your time.' ✓"
+    }
+  ]
+}

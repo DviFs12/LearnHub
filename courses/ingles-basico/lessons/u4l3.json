@@ -1,0 +1,62 @@
+{
+  "id": "u4l3",
+  "title": "Preposições de Lugar",
+  "unit": "u4",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Preposições de Lugar",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que são Preposições de Lugar?",
+          "text": "Preposições de lugar indicam <strong>posição ou localização</strong> de algo em relação a outro objeto. São palavras muito importantes para dar e receber direções."
+        },
+        {
+          "type": "example",
+          "label": "Preposições Principais",
+          "body": "in (em/dentro de)\non (em/sobre)\nunder (embaixo de)\nbehind (atrás de)\nin front of (na frente de)\nnext to (ao lado de)\nbetween (entre)\nnear (perto de)\nfar from (longe de)\nabove (acima de)\nbelow (abaixo de)\naround (em volta de)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos Visuais",
+          "body": "The cat is ON the table. (O gato está SOBRE a mesa)\nThe book is UNDER the bed. (O livro está EMBAIXO da cama)\nThe school is NEXT TO the park. (A escola fica AO LADO do parque)\nHe is IN FRONT OF the house. (Ele está NA FRENTE da casa)\nShe is BETWEEN John and Mary. (Ela está ENTRE João e Maria)\nThe hospital is FAR FROM our house. (O hospital fica LONGE de nossa casa)"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Dica: Use 'in' para espaços fechados (in the room) e 'on' para superfícies (on the table)."
+        },
+        {
+          "type": "para",
+          "heading": "Usando Preposições em Contexto",
+          "text": "As preposições ajudam a descrever onde as coisas estão. Combine com 'to be' (estar) para fazer frases completas:"
+        },
+        {
+          "type": "example",
+          "label": "Frases Completas",
+          "body": "I am in the classroom. (Estou na sala de aula)\nYou are on the chair. (Você está na cadeira)\nHe is behind the tree. (Ele está atrás da árvore)\nShe is near the window. (Ela está perto da janela)\nIt is above the door. (Fica acima da porta)\nWe are around the table. (Estamos em volta da mesa)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o assunto principal desta lição?",
+      "opts": [
+        "Preposições de Lugar",
+        "Um assunto completamente diferente",
+        "Gramática avançada",
+        "Vocabulário de números"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Preposições de Lugar'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "id": "u7l3",
+  "title": "Vocabulário - Profissões",
+  "unit": "u7",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Vocabulário - Profissões",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Expandindo Vocabulário de Profissões",
+          "text": "Para entrevistas de emprego e conversas sobre carreira, você precisa conhecer <strong>nomes de profissões e o que cada profissional faz</strong>."
+        },
+        {
+          "type": "example",
+          "label": "Profissões Médicas",
+          "body": "doctor (médico) - diagnóstico e tratamento\nnurse (enfermeira) - cuidado de pacientes\ndentist (dentista) - saúde dos dentes\npsychologist (psicólogo) - saúde mental\nsurgeon (cirurgião) - operações"
+        },
+        {
+          "type": "example",
+          "label": "Profissões Técnicas",
+          "body": "engineer (engenheiro) - design e construção\nprogrammer (programador) - software\nelectrician (eletricista) - sistemas elétricos\nmechanic (mecânico) - reparação\narchitect (arquiteto) - design de edifícios"
+        },
+        {
+          "type": "example",
+          "label": "Profissões Educacionais e Administrativas",
+          "body": "teacher (professor) - ensino\nprofessor (professor universitário) - pesquisa e ensino\naccountant (contador) - finanças\nmanager (gerente) - gestão\nsecretary (secretária) - administração"
+        },
+        {
+          "type": "example",
+          "label": "Profissões Criativas",
+          "body": "artist (artista) - artes visuais\nmusician (músico) - música\nwriter (escritor) - literatura\nactor (ator) - teatro/cinema\ndesigner (designer) - design gráfico"
+        },
+        {
+          "type": "para",
+          "heading": "Como Descrever Profissões",
+          "text": "Use estruturas como: 'A [profissão] ... [verbo] ... [objeto]'"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos",
+          "body": "A doctor helps sick people. (Um médico ajuda pessoas doentes)\nAn engineer designs buildings. (Um engenheiro projeta edifícios)\nA teacher educates students. (Um professor educa alunos)\nA programmer writes software. (Um programador escreve software)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Vocabulário - Profissões",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Vocabulário - Profissões'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "u5l4",
+  "title": "Lendo um E-mail",
+  "unit": "u5",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Lendo um E-mail",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Comunicação por E-mail em Inglês",
+          "text": "E-mail é um meio comum de comunicação profissional e pessoal. Conhecer a estrutura básica e expressões é importante para se comunicar efetivamente."
+        },
+        {
+          "type": "para",
+          "heading": "Estrutura de um E-mail",
+          "text": "Um e-mail bem formatado tem várias partes essenciais:"
+        },
+        {
+          "type": "example",
+          "label": "Partes do E-mail",
+          "body": "1. SUBJECT (Assunto) - breve e claro\n2. GREETING (Saudação) - Dear/Hi + nome\n3. OPENING (Abertura) - Como você está?\n4. BODY (Corpo) - Mensagem principal\n5. CLOSING (Encerramento) - Despedida\n6. SIGNATURE (Assinatura) - Seu nome"
+        },
+        {
+          "type": "example",
+          "label": "Saudações Formais",
+          "body": "Dear John, (Formal)\nDear Mr. Smith, (Muito formal)\nHi John, (Informal)\nHello, (Neutro)"
+        },
+        {
+          "type": "example",
+          "label": "Encerramentos",
+          "body": "Best regards, (Profissional)\nSincerely, (Profissional)\nBest wishes, (Amigável)\nTake care, (Informal)\nCheers, (Casual)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo Completo de E-mail",
+          "body": "Subject: Hello\n\nDear John,\n\nHow are you? I am fine and I hope you are well too. I am writing to you because I want to meet you next week. Are you free on Friday afternoon?\n\nPlease let me know.\n\nBest regards,\nMary"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o assunto principal desta lição?",
+      "opts": [
+        "Lendo um E-mail",
+        "Um assunto completamente diferente",
+        "Gramática avançada",
+        "Vocabulário de números"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Lendo um E-mail'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

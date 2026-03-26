@@ -1,0 +1,115 @@
+{
+  "id": "u1l1",
+  "title": "Expressões e Frases da Sala de Aula",
+  "unit": "u1",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Bem-vindo à Sala de Aula",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que é Linguagem de Sala de Aula?",
+          "text": "A linguagem de sala de aula refere-se a expressões e frases comuns usadas entre professores e alunos em ambiente acadêmico. Essas expressões são <strong>fundamentais</strong> para uma boa comunicação e compreensão em inglês."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Aprender expressões de sala de aula ajuda você a se comunicar melhor com professores e colegas durante as aulas."
+        },
+        {
+          "type": "example",
+          "label": "Expressões Comuns",
+          "body": "• Good morning, class!\n• Please, sit down.\n• Can you repeat, please?\n• I don't understand.\n• Do you understand?\n• Open your books, page 25.\n• Listen carefully.\n• Speak louder, please."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Expressões do Professor",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que o Professor Diz",
+          "text": "Conhecer as instruções do professor ajuda você a acompanhar melhor as aulas. Aqui estão as mais comuns:"
+        },
+        {
+          "type": "example",
+          "label": "Instruções Frequentes",
+          "body": "• Open your books (Abra seus livros)\n• Close your books (Feche seus livros)\n• Listen carefully (Ouça com atenção)\n• Repeat after me (Repita depois de mim)\n• Do the exercise (Faça o exercício)\n• Work in pairs (Trabalhe em pares)\n• Raise your hand (Levante a mão)\n• Be quiet (Fique em silêncio)\n• Pay attention (Preste atenção)"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Quando não entender uma instrução, sempre pergunte: 'Can you repeat, please?' ou 'Can you explain, please?'"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Expressões do Aluno",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Frases Úteis para Alunos",
+          "text": "Como aluno, você precisará usar essas frases para participar ativamente da aula e pedir ajuda quando necessário."
+        },
+        {
+          "type": "example",
+          "label": "Frases de Alunos",
+          "body": "• I have a question (Tenho uma pergunta)\n• Can I ask something? (Posso perguntar algo?)\n• I don't understand (Não entendo)\n• Can you repeat, please? (Pode repetir, por favor?)\n• What does it mean? (O que significa?)\n• How do you pronounce it? (Como se pronuncia?)\n• I'm sorry, I'm late (Desculpe, cheguei atrasado)\n• May I go to the bathroom? (Posso ir ao banheiro?)\n• Can I borrow a pen? (Posso pedir uma caneta emprestada?)"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Sempre use 'please' e diga 'thank you' quando alguém ajudá-lo. Boas maneiras são importantes em qualquer idioma!"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual expressão você usa para pedir que o professor repita algo?",
+      "opts": [
+        "Close your books",
+        "Can you repeat, please?",
+        "Open your books",
+        "Listen carefully"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Can you repeat, please?' - esta é a forma educada e apropriada de pedir a repetição."
+    },
+    {
+      "type": "mcq",
+      "stem": "O que significa 'Do the exercise'?",
+      "opts": [
+        "Abra o livro",
+        "Feche o livro",
+        "Faça o exercício",
+        "Levante a mão"
+      ],
+      "correct": 2,
+      "exp": "A expressão 'Do the exercise' significa 'Faça o exercício'. É uma instrução comum do professor."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual frase você usa para indicar que não compreendeu algo?",
+      "opts": [
+        "I have a question",
+        "I don't understand",
+        "Can you repeat?",
+        "Thank you"
+      ],
+      "correct": 1,
+      "exp": "A resposta 'I don't understand' é a forma direta e clara de comunicar que você não entendeu algo."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'Can you __________ , please?' (Pedindo repetição)",
+      "correct": "repeat",
+      "exp": "A resposta correta é 'repeat'. A frase completa é: 'Can you repeat, please?' ✓"
+    }
+  ]
+}

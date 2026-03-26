@@ -1,0 +1,61 @@
+{
+  "id": "u5l3",
+  "title": "Desfile de Moda",
+  "unit": "u5",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Desfile de Moda",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Vestuário e Moda em Inglês",
+          "text": "Para descrever o que alguém está vestindo e falar sobre moda, você precisa saber os nomes de roupas e adjetivos descritivos."
+        },
+        {
+          "type": "example",
+          "label": "Roupas Básicas",
+          "body": "shirt (camisa)\nblouse (blusa)\nt-shirt (camiseta)\npants (calça)\njeans (jeans)\nskirt (saia)\ndress (vestido)\nshorts (shorts)"
+        },
+        {
+          "type": "example",
+          "label": "Roupas de Frio",
+          "body": "jacket (jaqueta)\ncoat (casaco)\nsweater (suéter)\nscarf (lenço)\nhat (chapéu)\ngloves (luvas)"
+        },
+        {
+          "type": "example",
+          "label": "Calçados e Acessórios",
+          "body": "shoes (sapatos)\nboots (botas)\nsneakers (tênis)\nsocks (meias)\nbelt (cinto)\ntie (gravata)\nwatch (relógio)\nring (anel)\nnecklace (colar)"
+        },
+        {
+          "type": "para",
+          "heading": "Descrevendo o que Alguém Está Vestindo",
+          "text": "Use 'be wearing' (estar vestindo) com o Present Continuous:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Descrição",
+          "body": "She is wearing a beautiful red dress. (Ela está vestindo um lindo vestido vermelho)\nHe is wearing a blue shirt and black pants. (Ele está vestindo uma camisa azul e calça preta)\nI am wearing a white t-shirt and jeans. (Estou vestindo uma camiseta branca e jeans)\nThey are wearing winter coats. (Eles estão vestindo casacos de inverno)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o assunto principal desta lição?",
+      "opts": [
+        "Desfile de Moda",
+        "Um assunto completamente diferente",
+        "Gramática avançada",
+        "Vocabulário de números"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Desfile de Moda'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

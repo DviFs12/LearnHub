@@ -1,0 +1,158 @@
+{
+  "id": "u8l1",
+  "title": "Be Going To",
+  "unit": "u8",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Introdução a Be Going To",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "O que é Be Going To?",
+          "text": "A forma <strong>'be going to'</strong> é usada para expressar planos ou ações que você <strong>já decidiu fazer</strong> no futuro próximo. É uma estrutura muito comum em inglês para falar sobre o futuro."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Use 'be going to' quando você tem um plano definido. Por exemplo: 'Vou visitar minha avó no fim de semana' - já é uma decisão tomada."
+        },
+        {
+          "type": "para",
+          "heading": "Estrutura",
+          "text": "A estrutura é: <strong>TO BE (presente) + GOING TO + INFINITIVO</strong>"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos",
+          "body": "I am going to travel to Disney next month.\nShe is going to watch a movie tonight.\nThey are going to rest on vacation.\nWe are going to study English together."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Conjugação do Be Going To",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Conjugar",
+          "text": "O verbo 'to be' muda conforme o pronome. Veja a tabela com todas as formas:"
+        },
+        {
+          "type": "example",
+          "label": "Afirmativo",
+          "body": "I am going to play (Vou jogar)\nYou are going to study (Você vai estudar)\nHe is going to work (Ele vai trabalhar)\nShe is going to travel (Ela vai viajar)\nIt is going to rain (Vai chover)\nWe are going to dance (Vamos dançar)\nThey are going to sing (Eles vão cantar)"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Formas contraídas: I'm going to, you're going to, he's going to, she's going to, we're going to, they're going to"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Forma Negativa",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Negar",
+          "text": "Para fazer a forma negativa, adicione <strong>'not'</strong> depois de 'to be'."
+        },
+        {
+          "type": "example",
+          "label": "Negativo",
+          "body": "I am not going to travel. (Não vou viajar)\nYou are not going to study. (Você não vai estudar)\nHe is not going to work. (Ele não vai trabalhar)\nShe is not going to rest. (Ela não vai descansar)\nWe are not going to come. (Não vamos vir)\nThey are not going to stay. (Eles não vão ficar)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Formas contraídas na negativa: I'm not going to, you're not going to (ou aren't), he's not going to (ou isn't), she's not going to (ou isn't)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Forma Interrogativa (Perguntas)",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Fazer Perguntas",
+          "text": "Para fazer uma pergunta, coloque <strong>'to be' no início</strong>, seguido do sujeito."
+        },
+        {
+          "type": "example",
+          "label": "Interrogativo",
+          "body": "Am I going to travel? (Vou viajar?)\nAre you going to study? (Você vai estudar?)\nIs he going to work? (Ele vai trabalhar?)\nIs she going to come? (Ela vai vir?)\nAre we going to dance? (Vamos dançar?)\nAre they going to stay? (Eles vão ficar?)\n\nRespostas curtas:\nYes, I am. / No, I'm not.\nYes, you are. / No, you're not.\nYes, he is. / No, he isn't."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Casos de Uso",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Quando Usar Be Going To",
+          "text": "Use 'be going to' quando: 1) Você tem um <strong>plano definido</strong>, 2) A ação é <strong>próxima ou iminente</strong>, ou 3) Você vê <strong>evidência</strong> de algo que vai acontecer."
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Situações",
+          "body": "1. Plano definido:\n'I'm going to visit my family next weekend.' (Já decidi)\n\n2. Ação iminente:\n'Look at those clouds! It's going to rain!' (Vai chover em breve)\n\n3. Com evidência:\n'Watch out! You're going to fall!' (Vejo que você vai cair)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Complete: 'I _________ to the beach tomorrow.' (be going to)",
+      "opts": [
+        "am going",
+        "are going",
+        "is going",
+        "will going"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'am going'. Para 'I', usamos 'am', resultando em 'I am going to the beach.'"
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a forma interrogativa correta?",
+      "opts": [
+        "You are going to study?",
+        "Are you going to study?",
+        "You going to study?",
+        "Going you to study?"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Are you going to study?'. Em perguntas, 'to be' vem antes do sujeito."
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você nega 'They are going to come'?",
+      "opts": [
+        "They not are going to come.",
+        "They are not going to come.",
+        "They going to not come.",
+        "Not they are going to come."
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'They are not going to come.' ou 'They aren't going to come.'"
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'She _________ to watch a movie tonight.' (be going to)",
+      "correct": "is going",
+      "exp": "A resposta correta é 'is going'. A frase completa é: 'She is going to watch a movie tonight.' ✓"
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'We are going to _________ next month.' (viajar - infinitivo)",
+      "correct": "travel",
+      "exp": "A resposta correta é 'travel'. A frase completa é: 'We are going to travel next month.' ✓"
+    }
+  ]
+}

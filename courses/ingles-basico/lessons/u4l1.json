@@ -1,0 +1,56 @@
+{
+  "id": "u4l1",
+  "title": "Lugares na Cidade",
+  "unit": "u4",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Lugares na Cidade",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Navegando pela Cidade",
+          "text": "Conhecer os nomes dos principais lugares em uma cidade é importante para <strong>pedir direções</strong> e descrever sua localização."
+        },
+        {
+          "type": "example",
+          "label": "Lugares Essenciais",
+          "body": "school (escola)\nhospital (hospital)\nbank (banco)\nstore (loja)\nsupermarket (supermercado)\npark (parque)\nlibrary (biblioteca)\nrestaurant (restaurante)\ncafé (café)\ncinema (cinema)"
+        },
+        {
+          "type": "example",
+          "label": "Mais Lugares",
+          "body": "museum (museu)\nchurch (igreja)\npolice station (delegacia)\nfire station (corpo de bombeiros)\npost office (correios)\nhotel (hotel)\nhospital (hospital)\ndoctor's office (consultório médico)\ndentist (consultório do dentista)"
+        },
+        {
+          "type": "para",
+          "heading": "Como Usar em Contexto",
+          "text": "Veja como usar esses nomes em frases reais:"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Frases",
+          "body": "Where is the hospital? (Onde fica o hospital?)\nThe school is near the park. (A escola fica perto do parque)\nI go to the library every week. (Vou à biblioteca toda semana)\nThere's a good restaurant next to the cinema. (Há um bom restaurante ao lado do cinema)"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Lugares na Cidade",
+        "Outro assunto",
+        "Algo completamente diferente",
+        "Não tem tópico"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Lugares na Cidade'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}

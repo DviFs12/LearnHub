@@ -1,0 +1,142 @@
+{
+  "id": "u1l2",
+  "title": "Saudações",
+  "unit": "u1",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Como Saudar em Inglês",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Saudações Básicas",
+          "text": "Saudar alguém é a forma mais básica de iniciar uma conversa. Em inglês, existem várias maneiras de fazê-lo, dependendo do momento do dia e do contexto (formal ou informal)."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "As saudações são <strong>fundamentais</strong> para fazer boas primeiras impressões e iniciar conversas de forma adequada."
+        },
+        {
+          "type": "example",
+          "label": "Saudações Informais",
+          "body": "• Hello! (Olá!)\n• Hi! (Oi!)\n• Hey! (Opa!)\n• What's up? (E aí?)\n• How's it going? (Como vai?)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Saudações Formais por Hora do Dia",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Saudações Específicas do Dia",
+          "text": "Em contextos formais, é importante usar a saudação apropriada para cada período do dia. Isso mostra respeito e educação."
+        },
+        {
+          "type": "example",
+          "label": "Saudações Formais",
+          "body": "• Good morning (Bom dia) - até 12:00\n• Good afternoon (Boa tarde) - 12:00 até 18:00\n• Good evening (Boa noite) - depois das 18:00\n• Good night (Boa noite) - ao despedir-se antes de dormir"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Note: 'Good night' é usado para despedir-se, não como saudação ao encontrar alguém à noite. Use 'Good evening' para isto."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Respondendo Saudações",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como Responder",
+          "text": "Quando alguém saudar você, é importante responder de forma apropriada. Aqui estão as respostas mais comuns:"
+        },
+        {
+          "type": "example",
+          "label": "Respostas Comuns",
+          "body": "Pergunta: How are you?\nRespostas:\n• I'm fine, thank you! (Estou bem, obrigado!)\n• I'm great! (Estou ótimo!)\n• I'm okay. (Estou bem.)\n• So far so good. (Tudo bem até agora.)\n• Not bad. (Nada mal.)\n\nE você pode perguntar de volta:\n• And you? (E você?)\n• How about you? (E com você?)"
+        },
+        {
+          "type": "para",
+          "heading": "Exemplo Completo",
+          "text": "Pessoa A: 'Hello! How are you?'\nPessoa B: 'Hi! I'm fine, thank you. And you?'\nPessoa A: 'I'm great, thanks!'"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Apresentações Simples",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Como se Apresentar",
+          "text": "Quando você encontra alguém pela primeira vez, é comum fazer uma apresentação simples. Aqui estão as formas básicas:"
+        },
+        {
+          "type": "example",
+          "label": "Apresentações",
+          "body": "Pessoa A: Hi, my name is John. What's your name?\nPessoa B: Hello, I'm Maria. Nice to meet you!\nPessoa A: Nice to meet you too!\n\nOu mais formal:\nPessoa A: Hello, I'm Mr. Smith. What is your name?\nPessoa B: Good morning. I'm Mrs. Johnson. Pleased to meet you."
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Use 'My name is...' ou 'I'm...' para apresentação. Evite dizer apenas 'Name is John!' sem o pronome pessoal."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a saudação apropriada às 15:00 (3 da tarde)?",
+      "opts": [
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "Good night"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'Good afternoon'. Este período é entre 12:00 e 18:00, então 15:00 é à tarde."
+    },
+    {
+      "type": "mcq",
+      "stem": "Como você responde quando alguém pergunta 'How are you?'",
+      "opts": [
+        "What's your name?",
+        "I'm fine, thank you!",
+        "Good morning",
+        "See you later"
+      ],
+      "correct": 1,
+      "exp": "A resposta correta é 'I'm fine, thank you!' - esta é a resposta padrão para 'How are you?'"
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual expressão é usada ao se despedir antes de dormir?",
+      "opts": [
+        "Good evening",
+        "Good afternoon",
+        "Good night",
+        "Hello"
+      ],
+      "correct": 2,
+      "exp": "A resposta correta é 'Good night'. Esta é a saudação de despedida antes de dormir."
+    },
+    {
+      "type": "input",
+      "stem": "Complete: 'My name is __________.' (Complete com um nome próprio)",
+      "correct": "John",
+      "exp": "Qualquer nome próprio é válido! Exemplos: John, Maria, Pedro, Ana, etc. ✓"
+    },
+    {
+      "type": "input",
+      "stem": "Como você pergunta o nome de alguém? 'What's __________?'",
+      "correct": "your name",
+      "exp": "A resposta correta é 'your name'. A frase completa é: 'What's your name?' ✓"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "u8l4",
+  "title": "Leitura - Previsões Futuras",
+  "unit": "u8",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Leitura - Previsões Futuras",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Lendo Texto de Previsões",
+          "text": "Textos sobre o futuro usam frequentemente 'will' para fazer previsões. Procure por <strong>verbos em 'will' e vocabulário de tecnologia/inovação</strong>."
+        },
+        {
+          "type": "para",
+          "heading": "Exemplo de Texto de Previsão",
+          "text": "Adaptado de 'Popular Mechanics': Como a tecnologia mudará nossas vidas"
+        },
+        {
+          "type": "example",
+          "label": "Trecho 1: Visão do Futuro",
+          "body": "Contact lenses will grant us Terminator vision. When miniaturization reaches its full potential, achieving superhuman eyesight will be as simple as placing a soft lens on your eye. Early prototypes feature wirelessly powered LEDs. But circuits and antennas can also be grafted onto flexible polymer, enabling zooming, night vision, and visible data fields."
+        },
+        {
+          "type": "example",
+          "label": "Trecho 2: Saúde do Futuro",
+          "body": "Checkups will be conducted by cellphone. The technology is no problem. Scientists are hard at work trying to perfect apps that can measure your heart and respiration rates, perform blood and saliva tests—even evaluate your cough."
+        },
+        {
+          "type": "example",
+          "label": "Trecho 3: Livros e Tecnologia",
+          "body": "All 130 million books on the planet will be digitized. In the future, Google planned to complete the job by decade's end, but as of March it still had 110 million tomes to go. You might use the time to shop for storage, because given today's options and the average size of an e-book (3 MB), you'll need 124 3-terabyte drives to carry the library of humanity with you."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Ao ler previsões: Identifique 'will' + verbo para entender que tipo de mudança é prevista. Procure por números e palavras-chave de tecnologia."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o tópico principal desta lição?",
+      "opts": [
+        "Leitura - Previsões Futuras",
+        "Um assunto diferente",
+        "Outro assunto completamente",
+        "Nenhum dos anteriores"
+      ],
+      "correct": 0,
+      "exp": "A resposta correta é 'Leitura - Previsões Futuras'."
+    },
+    {
+      "type": "input",
+      "stem": "Dê um exemplo prático do conteúdo aprendido:",
+      "correct": "exemplo",
+      "exp": "Qualquer exemplo relacionado ao tópico é válido! ✓"
+    }
+  ]
+}
