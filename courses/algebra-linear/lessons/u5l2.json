@@ -1,0 +1,118 @@
+{
+  "id": "u5l2",
+  "title": "Projeção Ortogonal e Mínimos Quadrados",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Projeção Ortogonal",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Projetando sobre um Vetor",
+          "text": "A <strong>projeção ortogonal</strong> de um vetor b sobre a direção de u é o vetor p que é múltiplo de u e minimiza a distância ‖b−p‖. Geometricamente, p é o 'pé da perpendicular' de b sobre a reta gerada por u."
+        },
+        {
+          "type": "formula",
+          "text": "proj_u(b) = (⟨b, u⟩ / ‖u‖²) · u\n           = (⟨b, u⟩ / ⟨u, u⟩) · u\n\n// O erro (componente ortogonal):\ne = b - proj_u(b)\n⟨e, u⟩ = 0  (e é perpendicular a u) ✓\n\n// Decomposição ortogonal:\nb = proj_u(b) + e"
+        },
+        {
+          "type": "example",
+          "label": "Projetando (3,4) sobre (1,0)",
+          "body": "b = (3,4),  u = (1,0)\n\nproj_u(b) = (⟨(3,4),(1,0)⟩/‖(1,0)‖²)·(1,0)\n           = (3·1+4·0)/(1²+0²) · (1,0)\n           = 3 · (1,0) = (3,0)\n\nErro: e = (3,4)-(3,0) = (0,4)\nVerificação: ⟨(0,4),(1,0)⟩ = 0 ✓\n\nInterpretação: projetar no eixo x pega só a componente x!"
+        },
+        {
+          "type": "para",
+          "heading": "Projetando sobre um Subespaço",
+          "text": "Para projetar b sobre um subespaço W gerado pelas colunas de uma matriz A, a projeção p = Aα satisfaz a <strong>equação normal</strong>: AᵀAα = Aᵀb. A solução α = (AᵀA)⁻¹Aᵀb (quando AᵀA é inversível) dá a melhor aproximação de b em W."
+        },
+        {
+          "type": "formula",
+          "text": "Projeção de b em W = Col(A):\n\nEquação normal: AᵀA α = Aᵀb\nSolução:        α = (AᵀA)⁻¹ Aᵀb\nProjeção:       p = A α = A(AᵀA)⁻¹Aᵀb\n\n// Matriz de projeção:\nP = A(AᵀA)⁻¹Aᵀ\n// P² = P (idempotente) e Pᵀ = P (simétrica)"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Mínimos Quadrados",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Sistemas Inconsistentes: A Melhor Solução",
+          "text": "Quando o sistema Ax = b não tem solução exata (b ∉ Col(A)), buscamos o vetor x̂ que <strong>minimiza o erro ‖Ax−b‖²</strong> (soma dos quadrados dos resíduos). Essa solução é chamada <em>solução de mínimos quadrados</em> e é dada pela equação normal."
+        },
+        {
+          "type": "formula",
+          "text": "Mínimos Quadrados — minimizar ‖Ax - b‖²:\n\nEquação Normal: AᵀA x̂ = Aᵀb\n\nSolução: x̂ = (AᵀA)⁻¹ Aᵀb\n\n// Resíduo mínimo: r = b - Ax̂ ⊥ Col(A)\n// Equivalentemente: Aᵀr = 0"
+        },
+        {
+          "type": "example",
+          "label": "Regressão Linear por Mínimos Quadrados",
+          "body": "Pontos: (0,1), (1,2), (2,4). Ajustar reta y=a+bx.\n\nSistema (inconsistente):\n  a + 0·b = 1    → A = [1 0]\n  a + 1·b = 2         [1 1]\n  a + 2·b = 4         [1 2], b_vetor=(1,2,4)\n\nAᵀA = [1 1 1] · [1 0] = [3 3]\n      [0 1 2]   [1 1]   [3 5]\n                [1 2]\n\nAᵀb = [1+2+4] = [7]\n      [0+2+8]   [10]\n\nEquação normal: [3 3][a] = [7]\n               [3 5][b]   [10]\n\nDa 1ª: a+b=7/3; da 2ª: 3a+5b=10\nSolução: b=1/2, a=5/6 ≈ 0,833\n\nReta ajustada: y ≈ 0,833 + 0,5x"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Mínimos quadrados tem aplicações enormes: regressão linear/polinomial, ajuste de curvas, processamento de sinais, machine learning (regressão), computação gráfica (aproximação de superfícies) e muito mais."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Processo de Gram-Schmidt",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Construindo uma Base Ortonormal",
+          "text": "O <strong>processo de Gram-Schmidt</strong> transforma uma base qualquer {v₁,...,vₖ} numa base ortonormal {u₁,...,uₖ} do mesmo subespaço. A ideia é ortogonalizar sequencialmente, subtraindo as projeções sobre os vetores já construídos."
+        },
+        {
+          "type": "formula",
+          "text": "Dado {v₁, v₂, v₃}:\n\nPasso 1: u₁ = v₁ / ‖v₁‖\n\nPasso 2: w₂ = v₂ - ⟨v₂,u₁⟩u₁\n         u₂ = w₂ / ‖w₂‖\n\nPasso 3: w₃ = v₃ - ⟨v₃,u₁⟩u₁ - ⟨v₃,u₂⟩u₂\n         u₃ = w₃ / ‖w₃‖\n\n// Resultado: {u₁,u₂,u₃} ortonormal\n//            span{u₁,u₂,u₃} = span{v₁,v₂,v₃}"
+        },
+        {
+          "type": "example",
+          "label": "Gram-Schmidt em R²",
+          "body": "v₁=(1,1), v₂=(1,0). Aplicar Gram-Schmidt:\n\nPasso 1:\n  u₁ = v₁/‖v₁‖ = (1,1)/√2 = (1/√2, 1/√2)\n\nPasso 2:\n  w₂ = v₂ - ⟨v₂,u₁⟩u₁\n     = (1,0) - ⟨(1,0),(1/√2,1/√2)⟩·(1/√2,1/√2)\n     = (1,0) - (1/√2)·(1/√2,1/√2)\n     = (1,0) - (1/2,1/2)\n     = (1/2,-1/2)\n  u₂ = w₂/‖w₂‖ = (1/2,-1/2)/(1/√2) = (1/√2,-1/√2)\n\nBase ortonormal: {(1/√2,1/√2), (1/√2,-1/√2)}\nVerificação: ⟨u₁,u₂⟩ = 1/2-1/2 = 0 ✓"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Gram-Schmidt leva a uma fatoração importante: A = QR, onde Q tem colunas ortonormais e R é triangular superior. Esta é a decomposição QR, fundamental em algoritmos numéricos."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a projeção do vetor b = (1, 3) sobre u = (2, 0)?",
+      "opts": [
+        "(1, 0)",
+        "(2, 0)",
+        "(1, 3)",
+        "(0, 3)"
+      ],
+      "correct": 0,
+      "exp": "proj_u(b) = (⟨b,u⟩/‖u‖²)·u = (1·2+3·0)/(4+0)·(2,0) = (2/4)·(2,0) = (1/2)·(2,0) = (1,0). A projeção sobre o eixo x pega apenas a componente x, mas o resultado depende do comprimento de u."
+    },
+    {
+      "type": "mcq",
+      "stem": "Na equação normal AᵀAx̂ = Aᵀb, qual é a interpretação geométrica da solução x̂?",
+      "opts": [
+        "x̂ é a solução exata do sistema Ax=b",
+        "x̂ minimiza ‖Ax-b‖ (melhor aproximação de b no span das colunas de A)",
+        "x̂ é ortogonal a todas as colunas de A",
+        "x̂ é o vetor de norma mínima no Rⁿ"
+      ],
+      "correct": 1,
+      "exp": "A equação normal emerge ao projetar b no espaço coluna de A. O vetor Ax̂ é a projeção de b em Col(A), minimizando o resíduo ‖Ax-b‖. Isso é especialmente útil quando o sistema é inconsistente (b ∉ Col(A)) — x̂ dá a 'melhor solução possível' no sentido dos mínimos quadrados."
+    },
+    {
+      "type": "input",
+      "formula": "b = (4, 2),  u = (1, 1)",
+      "stem": "Calcule ⟨b, u⟩ (produto interno de b e u), que é o numerador da fórmula de projeção.",
+      "correct": "6",
+      "exp": "⟨b, u⟩ = 4·1 + 2·1 = 6. Logo proj_u(b) = (6/‖u‖²)·u = (6/2)·(1,1) = 3·(1,1) = (3,3). O resíduo é e = (4,2)-(3,3) = (1,-1), que é perpendicular a u (verifique: ⟨(1,-1),(1,1)⟩ = 1-1 = 0 ✓)."
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "id": "u3l2",
+  "title": "Base, Dimensão e Independência Linear",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Base de um Espaço Vetorial",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição de Base",
+          "text": "Uma <strong>base</strong> de um espaço vetorial V é um conjunto de vetores β = {v₁, ..., vₙ} que satisfaz duas condições simultaneamente: (1) os vetores são <em>linearmente independentes</em> e (2) eles <em>geram</em> V (ou seja, V = span{v₁,...,vₙ}). Uma base é o conjunto mínimo que gera V."
+        },
+        {
+          "type": "formula",
+          "text": "β = {v₁, ..., vₙ} é base de V ⟺\n  (i)  v₁, ..., vₙ são LI\n  (ii) span{v₁,...,vₙ} = V\n\n// Base canônica de Rⁿ:\ne₁=(1,0,...,0), e₂=(0,1,...,0), ..., eₙ=(0,...,0,1)\n\n// Base canônica de P₂ (polinômios grau ≤ 2):\n{1, x, x²}"
+        },
+        {
+          "type": "para",
+          "heading": "Unicidade da Representação",
+          "text": "Se {v₁,...,vₙ} é uma base de V, então <em>todo</em> vetor u ∈ V pode ser escrito de forma <em>única</em> como combinação linear u = α₁v₁ + ... + αₙvₙ. Os escalares α₁,...,αₙ são as <strong>coordenadas</strong> de u na base."
+        },
+        {
+          "type": "example",
+          "label": "Coordenadas em Outra Base",
+          "body": "Em R², seja a base β = {(1,1), (1,-1)}. Qual a coordenada de (3,7) em β?\n\nBuscamos α₁, α₂: α₁(1,1)+α₂(1,-1) = (3,7)\n  α₁+α₂=3\n  α₁-α₂=7\n\nSomando: 2α₁=10, α₁=5; então α₂=-2.\nPortanto (3,7) = 5·(1,1)+(-2)·(1,-1) em β as coordenadas são (5,-2)."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Toda base de um mesmo espaço vetorial tem o mesmo número de elementos. Esse número é a dimensão do espaço, uma propriedade intrínseca de V."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Dimensão",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição de Dimensão",
+          "text": "A <strong>dimensão</strong> de V, denotada dim(V), é o número de elementos em qualquer base de V. Se V possui uma base com n elementos, então dim(V) = n. O espaço trivial {0} tem dimensão 0."
+        },
+        {
+          "type": "formula",
+          "text": "dim(Rⁿ) = n\ndim(Mₘₓₙ) = m·n    // matrizes m×n\ndim(Pₙ) = n+1      // polinômios grau ≤ n\ndim({0}) = 0\n\n// Propriedades cruciais:\n• n vetores LI em Rⁿ formam uma base\n• n vetores que geram Rⁿ formam uma base\n• mais de n vetores em Rⁿ são sempre LD"
+        },
+        {
+          "type": "example",
+          "label": "Base de P₂",
+          "body": "O espaço P₂ = {a + bx + cx² | a,b,c ∈ ℝ} tem dim = 3.\n\nBase canônica: {1, x, x²}\nLI: α₁·1 + α₂·x + α₃·x² = 0 (função nula) ⟹ α₁=α₂=α₃=0 ✓\nGeram: qualquer polinômio a+bx+cx² = a·1+b·x+c·x² ✓\n\nOutra base válida: {1, 1+x, 1+x+x²} (verifique!)\nMesmo número de elementos: 3"
+        },
+        {
+          "type": "para",
+          "heading": "Posto de uma Matriz (rank)",
+          "text": "O <strong>posto</strong> (rank) de uma matriz A é a dimensão do espaço coluna de A, igual ao número de pivôs na forma escalonada. Relaciona-se com sistemas: Ax=b tem solução ⟺ posto(A) = posto([A|b])."
+        },
+        {
+          "type": "formula",
+          "text": "posto(A) = nº de pivôs no escalonamento de A\n\nTeorema do Núcleo-Imagem (para T: Rⁿ→Rᵐ):\n  dim(Nuc T) + dim(Im T) = n\n  dim(Nuc T) + posto(A) = n"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Algoritmo prático: para encontrar uma base do span{v₁,...,vₖ}, forme a matriz com os vᵢ nas linhas e escalone. Os vetores correspondentes às linhas não nulas do resultado formam uma base!"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Polinômios e Funções como Vetores",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Polinômios: Vetores Abstratos",
+          "text": "Os polinômios de grau ≤ n formam um espaço vetorial Pₙ. Somar polinômios e multiplicar por escalar funcionam exatamente como nos axiomas. A derivação é uma transformação linear em Pₙ. As coordenadas de p(x) = a+bx+cx² na base {1,x,x²} são simplesmente os coeficientes (a,b,c)."
+        },
+        {
+          "type": "formula",
+          "text": "Em P₂ com base {1, x, x²}:\n  p(x) = 3 - 2x + x²  ↔  coordenadas (3,-2,1)\n  q(x) = 1 + x        ↔  coordenadas (1,1,0)\n\n  p+q = 4 - x + x²    ↔  coordenadas (4,-1,1)\n  2p = 6 - 4x + 2x²   ↔  coordenadas (6,-4,2)\n\nDerivada:\n  d/dx(3-2x+x²) = -2+2x  ↔  coordenadas (0,-2,2) em P₁\n\n// D: P₂ → P₁ é transformação linear!"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Usar coordenadas é o elo entre espaços abstratos e Rⁿ. Uma vez escolhida a base, trabalhar com polinômios vira trabalhar com seus vetores de coordenadas em Rⁿ."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a dimensão do subespaço W = {(x,y,z) ∈ R³ | x + y + z = 0}?",
+      "opts": ["0", "1", "2", "3"],
+      "correct": 2,
+      "exp": "Parametrizando: y=s, z=t são livres, x=-s-t. Logo (x,y,z)=s(-1,1,0)+t(-1,0,1). Uma base é {(-1,1,0),(-1,0,1)}, que são LI. Portanto dim(W)=2. (Regra: um plano em R³ passando pela origem tem dimensão 2.)"
+    },
+    {
+      "type": "mcq",
+      "stem": "Se A é uma matriz 4×6 e o sistema Ax=0 tem 3 variáveis livres, qual é o posto de A?",
+      "opts": ["2", "3", "4", "6"],
+      "correct": 1,
+      "exp": "Pelo Teorema Núcleo-Imagem: dim(Nuc A) + posto(A) = 6 (nº de colunas). Como há 3 variáveis livres, dim(Nuc A) = 3. Portanto posto(A) = 6-3 = 3."
+    },
+    {
+      "type": "input",
+      "formula": "P₃ = {a + bx + cx² + dx³ | a,b,c,d ∈ ℝ}",
+      "stem": "Qual é a dimensão do espaço P₃ de polinômios de grau no máximo 3?",
+      "correct": "4",
+      "exp": "A base canônica de P₃ é {1, x, x², x³}, com 4 elementos. Logo dim(P₃) = 4. Em geral, dim(Pₙ) = n+1."
+    }
+  ]
+}

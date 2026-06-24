@@ -1,0 +1,105 @@
+{
+  "id": "u6l2",
+  "title": "Cálculo por Cofatores e Produto Vetorial",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Expansão por Cofatores (Laplace)",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição de Menor e Cofator",
+          "text": "O <strong>menor</strong> Mᵢⱼ é o determinante da submatriz obtida removendo a linha i e coluna j de A. O <strong>cofator</strong> Cᵢⱼ é o menor com um sinal que depende da posição: Cᵢⱼ = (−1)^(i+j)·Mᵢⱼ. A expansão por cofatores (Teorema de Laplace) permite calcular o determinante de qualquer matriz recursivamente."
+        },
+        {
+          "type": "formula",
+          "text": "Cofator: Cᵢⱼ = (-1)^(i+j) · Mᵢⱼ\n\nTabela de sinais (+/-):\n  + - + - ...\n  - + - + ...\n  + - + - ...\n\nExpansão pela linha i:\n  det(A) = aᵢ₁·Cᵢ₁ + aᵢ₂·Cᵢ₂ + ... + aᵢₙ·Cᵢₙ\n\nExpansão pela coluna j:\n  det(A) = a₁ⱼ·C₁ⱼ + a₂ⱼ·C₂ⱼ + ... + aₙⱼ·Cₙⱼ"
+        },
+        {
+          "type": "example",
+          "label": "Expansão pela 1ª linha",
+          "body": "A = [ 1  2  3 ]\n    [ 0  4  5 ]\n    [ 1  0  6 ]\n\nExpansão pela 1ª linha (sinais: + - +):\n\ndet(A) = 1·(+)·det[4 5; 0 6] - 2·(-)... aguard:\n= +1·det[4 5] - 2·det[0 5] + 3·det[0 4]\n        [0 6]         [1 6]         [1 0]\n\n= 1·(4·6-5·0) - 2·(0·6-5·1) + 3·(0·0-4·1)\n= 1·24 - 2·(-5) + 3·(-4)\n= 24 + 10 - 12\n= 22\n\nDica: escolha a linha/coluna com mais zeros para reduzir o trabalho!"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Expanda sempre pela linha ou coluna com mais zeros — isso zera muitos termos da expansão. Se uma linha/coluna tem k zeros, você precisa calcular apenas (n-k) determinantes menores."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Fórmula de Cramer",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Resolvendo Sistemas com Determinantes",
+          "text": "A <strong>Regra de Cramer</strong> fornece uma fórmula explícita para a solução de Ax=b quando A é inversível (det(A)≠0). Embora seja computacionalmente cara para sistemas grandes, é muito útil para provas teóricas e para sistemas 2×2 e 3×3."
+        },
+        {
+          "type": "formula",
+          "text": "Se det(A) ≠ 0, a solução de Ax=b é:\n\n  xⱼ = det(Aⱼ) / det(A)\n\nonde Aⱼ é A com a j-ésima coluna substituída por b:\n  A₁=[b|a₂|...|aₙ], A₂=[a₁|b|...|aₙ], etc.\n\n// Exemplo 2×2: Ax=b, A=[a b; c d], b=(e,f)\n  x = (ed-bf)/(ad-bc)\n  y = (af-ce)/(ad-bc)"
+        },
+        {
+          "type": "example",
+          "label": "Cramer aplicado a sistema 2×2",
+          "body": "Sistema: 2x + y = 5\n         x - y = 1\n\nA = [2 1; 1 -1],  b = (5,1)\ndet(A) = 2·(-1) - 1·1 = -3\n\nA₁ = [5 1; 1 -1] → det(A₁) = -5-1 = -6\nA₂ = [2 5; 1  1] → det(A₂) = 2-5  = -3\n\nx = det(A₁)/det(A) = -6/(-3) = 2\ny = det(A₂)/det(A) = -3/(-3) = 1\n\nVerificação: 2·2+1=5 ✓ e 2-1=1 ✓"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Produto Vetorial em R³",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição via Determinante",
+          "text": "O <strong>produto vetorial</strong> u×v de dois vetores em R³ é definido como o determinante simbólico de uma matriz com os vetores da base canônica na 1ª linha e os componentes de u e v nas demais linhas. O resultado é um vetor <em>perpendicular a u e a v</em>."
+        },
+        {
+          "type": "formula",
+          "text": "u = (u₁, u₂, u₃),  v = (v₁, v₂, v₃)\n\nu × v = det[ e₁  e₂  e₃ ]\n           [ u₁  u₂  u₃ ]\n           [ v₁  v₂  v₃ ]\n\n     = (u₂v₃-u₃v₂, u₃v₁-u₁v₃, u₁v₂-u₂v₁)\n\nPropriedades:\n  u × v = -(v × u)     (antissimetria)\n  ‖u × v‖ = ‖u‖·‖v‖·|sen θ|  (norma = área)\n  u × v ⊥ u  e  u × v ⊥ v"
+        },
+        {
+          "type": "example",
+          "label": "Calculando o Produto Vetorial",
+          "body": "u = (1, 2, 3),  v = (4, 5, 6)\n\nu×v = (u₂v₃-u₃v₂, u₃v₁-u₁v₃, u₁v₂-u₂v₁)\n    = (2·6-3·5, 3·4-1·6, 1·5-2·4)\n    = (12-15, 12-6, 5-8)\n    = (-3, 6, -3)\n\nVerificação de perpendicularidade:\n⟨(-3,6,-3),(1,2,3)⟩ = -3+12-9 = 0 ✓\n⟨(-3,6,-3),(4,5,6)⟩ = -12+30-18 = 0 ✓\n\nÁrea do paralelogramo: ‖(-3,6,-3)‖ = √(9+36+9) = √54 = 3√6"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "O produto vetorial é exclusivo do R³ (e R⁷, mas isso não é coberto aqui). Em R² e Rⁿ com n≠3, o produto vetorial não tem definição direta. O produto escalar (produto interno), por outro lado, funciona em qualquer Rⁿ."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "formula": "A = [ 2  0  1 ]\n    [ 0  3  0 ]\n    [ 1  0  4 ]",
+      "stem": "Expanda o determinante pela 2ª linha (que tem dois zeros). Qual é det(A)?",
+      "opts": ["21", "24", "18", "12"],
+      "correct": 0,
+      "exp": "Expandindo pela linha 2 (sinais: - + -):\nSó o termo com a₂₂=3 sobrevive (os outros dois zeros):\ndet(A) = 3·(+1)·det[2 1; 1 4] = 3·(8-1) = 3·7 = 21. Verificação pelo sinal: posição (2,2) tem sinal (-1)^(2+2) = +1 ✓."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o produto vetorial e₁ × e₂ (vetores da base canônica de R³)?",
+      "opts": [
+        "(1,1,0)",
+        "(0,0,1) = e₃",
+        "(0,0,-1) = -e₃",
+        "(0,1,0) = e₂"
+      ],
+      "correct": 1,
+      "exp": "e₁=(1,0,0), e₂=(0,1,0). e₁×e₂ = (0·0-0·1, 0·0-1·0, 1·1-0·0) = (0,0,1) = e₃. Esta é a regra da mão direita: e₁×e₂=e₃, e₂×e₃=e₁, e₃×e₁=e₂."
+    },
+    {
+      "type": "input",
+      "formula": "A = [ 3  1 ]\n    [ 0  2 ]",
+      "stem": "A está na forma triangular. Det(A) é o produto dos elementos da diagonal. Calcule det(A).",
+      "correct": "6",
+      "exp": "Para matrizes triangulares (superiores ou inferiores), o determinante é simplesmente o produto dos elementos da diagonal principal. Aqui: det(A) = 3·2 = 6. Este é exatamente por que o escalonamento funciona: ele transforma A em triangular, e aí det é imediato."
+    }
+  ]
+}

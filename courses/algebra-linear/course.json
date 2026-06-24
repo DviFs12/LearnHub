@@ -1,0 +1,234 @@
+{
+  "id": "algebra-linear",
+  "title": "Álgebra Linear",
+  "subtitle": "Fundamentos e Aplicações — da geometria aos autovetores",
+  "description": "Curso completo de Álgebra Linear cobrindo vetores, sistemas lineares, espaços vetoriais, transformações lineares, produto interno, determinantes e autovetores. Com teoria rigorosa, exemplos resolvidos e exercícios interativos.",
+  "emoji": "🔢",
+  "level": "Intermediário",
+  "estimatedHours": 40,
+  "pointsTotal": 1400,
+  "tags": ["matemática", "álgebra", "vetores", "matrizes", "engenharia", "UFRJ"],
+  "prerequisites": "Funções e geometria analítica básica do ensino médio.",
+  "credits": "Baseado em: Cabral, M. A. P. e Goldfeld, P. — 'Curso de Álgebra Linear: Fundamentos e Aplicações', 3ª ed., IM-UFRJ, 2021. Licença Creative Commons BY-NC-SA 3.0 BR. Disponível em: sites.google.com/matematica.ufrj.br/mapcabral/livros-e-videos",
+  "units": [
+    {
+      "id": "u1",
+      "title": "Introdução à Álgebra Linear",
+      "emoji": "📐",
+      "description": "Vetores no Rⁿ, operações, representação geométrica, equações de retas e planos, combinações lineares e espaços gerados.",
+      "lessons": [
+        { "id": "u1l1", "title": "Vetores no Rⁿ e Operações", "file": "lessons/u1l1.json", "points": 100 },
+        { "id": "u1l2", "title": "Equações, Retas e Combinações Lineares", "file": "lessons/u1l2.json", "points": 100 }
+      ]
+    },
+    {
+      "id": "u2",
+      "title": "Sistemas Lineares",
+      "emoji": "⚙️",
+      "description": "Modelagem com sistemas lineares, interpretação geométrica, operações elementares e algoritmo de escalonamento.",
+      "lessons": [
+        { "id": "u2l1", "title": "Modelagem e Interpretação Geométrica", "file": "lessons/u2l1.json", "points": 100 },
+        { "id": "u2l2", "title": "Escalonamento e Solução de Sistemas", "file": "lessons/u2l2.json", "points": 100 }
+      ]
+    },
+    {
+      "id": "u3",
+      "title": "Espaços Vetoriais",
+      "emoji": "🌐",
+      "description": "Espaços e subespaços vetoriais, dependência e independência linear, base, dimensão e polinômios como vetores.",
+      "lessons": [
+        { "id": "u3l1", "title": "Espaços e Subespaços Vetoriais", "file": "lessons/u3l1.json", "points": 100 },
+        { "id": "u3l2", "title": "Base, Dimensão e Independência Linear", "file": "lessons/u3l2.json", "points": 100 }
+      ]
+    },
+    {
+      "id": "u4",
+      "title": "Transformações Lineares e Matrizes",
+      "emoji": "🔄",
+      "description": "Definição e exemplos geométricos de transformações lineares, núcleo, imagem, produto de matrizes e matriz inversa.",
+      "lessons": [
+        { "id": "u4l1", "title": "Transformações Lineares e Sua Matriz", "file": "lessons/u4l1.json", "points": 100 },
+        { "id": "u4l2", "title": "Núcleo, Imagem e Produto de Matrizes", "file": "lessons/u4l2.json", "points": 100 }
+      ]
+    },
+    {
+      "id": "u5",
+      "title": "Produto Interno",
+      "emoji": "📏",
+      "description": "Produto interno em Rⁿ, norma, ângulo, ortogonalidade, projeção ortogonal, mínimos quadrados e Gram-Schmidt.",
+      "lessons": [
+        { "id": "u5l1", "title": "Produto Interno e Ortogonalidade", "file": "lessons/u5l1.json", "points": 100 },
+        { "id": "u5l2", "title": "Projeção Ortogonal e Mínimos Quadrados", "file": "lessons/u5l2.json", "points": 100 }
+      ]
+    },
+    {
+      "id": "u6",
+      "title": "Determinante",
+      "emoji": "🔳",
+      "description": "Motivação geométrica via área e volume, definição algébrica, propriedades, algoritmo de cálculo e produto vetorial.",
+      "lessons": [
+        { "id": "u6l1", "title": "Definição e Propriedades do Determinante", "file": "lessons/u6l1.json", "points": 100 },
+        { "id": "u6l2", "title": "Cálculo do Determinante e Produto Vetorial", "file": "lessons/u6l2.json", "points": 100 }
+      ]
+    },
+    {
+      "id": "u7",
+      "title": "Autovetores e Diagonalização",
+      "emoji": "🌀",
+      "description": "Autovalores, autovetores, polinômio característico, diagonalização de matrizes e aplicações.",
+      "lessons": [
+        { "id": "u7l1", "title": "Autovalores e Autovetores", "file": "lessons/u7l1.json", "points": 100 },
+        { "id": "u7l2", "title": "Diagonalização e Aplicações", "file": "lessons/u7l2.json", "points": 100 }
+      ]
+    }
+  ],
+  "apostila": {
+    "sections": [
+      {
+        "title": "Vetores e Operações",
+        "items": [
+          {
+            "heading": "Vetor no Rⁿ",
+            "text": "Um vetor u em Rⁿ é uma n-upla ordenada de números reais: u = (u₁, u₂, ..., uₙ). A soma e o produto por escalar são feitos componente a componente.",
+            "formula": "u + v = (u₁+v₁, u₂+v₂, ..., uₙ+vₙ)\nαu = (αu₁, αu₂, ..., αuₙ)"
+          },
+          {
+            "heading": "Norma (Comprimento) de um Vetor",
+            "text": "A norma euclidiana de u = (u₁, ..., uₙ) é a raiz quadrada da soma dos quadrados de suas componentes.",
+            "formula": "‖u‖ = √(u₁² + u₂² + ... + uₙ²)"
+          },
+          {
+            "heading": "Combinação Linear e Espaço Gerado",
+            "text": "Uma combinação linear de vetores v₁, ..., vₖ é qualquer vetor da forma α₁v₁ + α₂v₂ + ... + αₖvₖ. O conjunto de todas as combinações lineares forma o espaço gerado (span).",
+            "formula": "span{v₁, ..., vₖ} = { α₁v₁ + ... + αₖvₖ | α₁, ..., αₖ ∈ ℝ }"
+          }
+        ]
+      },
+      {
+        "title": "Sistemas Lineares e Escalonamento",
+        "items": [
+          {
+            "heading": "Sistema Linear",
+            "text": "Um sistema linear com m equações e n incógnitas tem a forma Ax = b, onde A é a matriz dos coeficientes, x o vetor de incógnitas e b o vetor independente. Pode ter: solução única, infinitas soluções ou nenhuma solução.",
+            "formula": "a₁₁x₁ + a₁₂x₂ + ... + a₁ₙxₙ = b₁\na₂₁x₁ + a₂₂x₂ + ... + a₂ₙxₙ = b₂\n...\naₘ₁x₁ + aₘ₂x₂ + ... + aₘₙxₙ = bₘ"
+          },
+          {
+            "heading": "Operações Elementares",
+            "text": "São três operações que não mudam o conjunto-solução: (1) trocar duas linhas; (2) multiplicar uma linha por escalar não-nulo; (3) somar a uma linha um múltiplo de outra.",
+            "formula": "L_i ↔ L_j          // troca de linhas\nL_i ← α·L_i        // multiplicação por escalar\nL_i ← L_i + α·L_j  // combinação linear"
+          },
+          {
+            "heading": "Forma Escalonada",
+            "text": "Após o escalonamento (eliminação gaussiana), obtemos a matriz na forma escalonada. O número de pivôs é o posto da matriz. Variáveis sem pivô são livres (geram infinitas soluções).",
+            "formula": "[ * * * * | * ]\n[ 0 * * * | * ]  ← forma escalonada\n[ 0 0 * * | * ]\n[ 0 0 0 0 | 0 ]"
+          }
+        ]
+      },
+      {
+        "title": "Espaços Vetoriais",
+        "items": [
+          {
+            "heading": "Espaço Vetorial",
+            "text": "Um espaço vetorial é um conjunto V com operações de adição e produto por escalar satisfazendo 8 axiomas: fechamento, associatividade, comutatividade, elemento neutro (0), inverso, distributividade (2×) e multiplicação por 1.",
+            "formula": "Exemplos: Rⁿ, Mₘₓₙ (matrizes), P_n (polinômios de grau ≤ n)"
+          },
+          {
+            "heading": "Independência Linear",
+            "text": "Vetores v₁, ..., vₖ são linearmente independentes (LI) se a única solução de α₁v₁ + ... + αₖvₖ = 0 for α₁ = ... = αₖ = 0. Caso contrário, são linearmente dependentes (LD).",
+            "formula": "α₁v₁ + α₂v₂ + ... + αₖvₖ = 0  ⟹  α₁=α₂=...=αₖ=0\n                                        (condição de LI)"
+          },
+          {
+            "heading": "Base e Dimensão",
+            "text": "Uma base de V é um conjunto de vetores LI que gera V. A dimensão de V é o número de vetores em qualquer base. Para Rⁿ, a base canônica é {e₁, ..., eₙ} e dim(Rⁿ) = n.",
+            "formula": "Base canônica de R³:\ne₁ = (1,0,0),  e₂ = (0,1,0),  e₃ = (0,0,1)"
+          }
+        ]
+      },
+      {
+        "title": "Transformações Lineares e Matrizes",
+        "items": [
+          {
+            "heading": "Transformação Linear",
+            "text": "Uma função T: Rⁿ → Rᵐ é linear se preserva adição e produto por escalar: T(u+v) = T(u)+T(v) e T(αu) = αT(u). Toda TL é representada por uma matriz A de dimensão m×n.",
+            "formula": "T(αu + βv) = αT(u) + βT(v)  // linearidade\nT(x) = Ax                    // representação matricial"
+          },
+          {
+            "heading": "Núcleo e Imagem",
+            "text": "O núcleo (Nuc) de T é o conjunto dos vetores mapeados para 0. A imagem (Im) é o conjunto de todos os valores assumidos por T. Vale o Teorema do Núcleo-Imagem: dim(Nuc T) + dim(Im T) = n.",
+            "formula": "Nuc(T) = { x ∈ Rⁿ | T(x) = 0 }\nIm(T)  = { T(x) | x ∈ Rⁿ }\ndim(Nuc T) + dim(Im T) = n  // Teorema Núcleo-Imagem"
+          },
+          {
+            "heading": "Produto de Matrizes",
+            "text": "O produto C = AB, onde A é m×k e B é k×n, resulta numa matriz m×n. A entrada (i,j) de C é o produto interno da linha i de A com a coluna j de B.",
+            "formula": "C_{ij} = Σₖ a_{ik} · b_{kj}\n\n// Importante: AB ≠ BA em geral (não comutativo)"
+          },
+          {
+            "heading": "Matriz Inversa",
+            "text": "Uma matriz quadrada A é inversível se existe A⁻¹ tal que AA⁻¹ = A⁻¹A = I. A é inversível se e somente se det(A) ≠ 0, ou equivalentemente, se o escalonamento de A resulta na identidade.",
+            "formula": "A A⁻¹ = A⁻¹ A = I\n\n// Para 2×2:\nA = [a b]   ⟹   A⁻¹ = 1/(ad-bc) · [ d -b]\n    [c d]                              [-c  a]"
+          }
+        ]
+      },
+      {
+        "title": "Produto Interno",
+        "items": [
+          {
+            "heading": "Produto Interno em Rⁿ",
+            "text": "O produto interno (ou produto escalar) de u e v em Rⁿ é a soma dos produtos das componentes correspondentes. Sua raiz quadrada é a norma.",
+            "formula": "⟨u, v⟩ = u₁v₁ + u₂v₂ + ... + uₙvₙ\n‖u‖ = √⟨u,u⟩"
+          },
+          {
+            "heading": "Ortogonalidade e Ângulo",
+            "text": "u e v são ortogonais se ⟨u,v⟩ = 0. O ângulo θ entre dois vetores não-nulos é determinado pela fórmula de Cauchy-Schwarz.",
+            "formula": "cos θ = ⟨u,v⟩ / (‖u‖·‖v‖)\nu ⊥ v  ⟺  ⟨u,v⟩ = 0"
+          },
+          {
+            "heading": "Projeção Ortogonal",
+            "text": "A projeção de b sobre o subespaço gerado por u é o vetor de Im(u) mais próximo de b. Para subir de subespaços maiores, usa-se a equação normal.",
+            "formula": "proj_u(b) = (⟨b,u⟩/‖u‖²) · u\n\n// Equação normal (subespaços maiores):\nAᵀA x̂ = Aᵀb"
+          }
+        ]
+      },
+      {
+        "title": "Determinante",
+        "items": [
+          {
+            "heading": "Determinante 2×2 e 3×3",
+            "text": "O determinante de uma matriz 2×2 é ad-bc. Para 3×3, usa-se a Regra de Sarrus ou o desenvolvimento por cofatores.",
+            "formula": "det[a b] = ad - bc\n   [c d]\n\nRegra de Sarrus (3×3):\ndet(A) = a₁₁a₂₂a₃₃ + a₁₂a₂₃a₃₁ + a₁₃a₂₁a₃₂\n       - a₁₃a₂₂a₃₁ - a₁₁a₂₃a₃₂ - a₁₂a₂₁a₃₃"
+          },
+          {
+            "heading": "Propriedades do Determinante",
+            "text": "O determinante tem propriedades importantes relacionadas às operações elementares: trocar linhas muda o sinal, multiplicar linha por α multiplica o det por α, e somar múltiplo de linha não muda o det.",
+            "formula": "det(AB) = det(A)·det(B)\ndet(Aᵀ) = det(A)\ndet(A⁻¹) = 1/det(A)  (se A inversível)\n\n// A é inversível ⟺ det(A) ≠ 0"
+          },
+          {
+            "heading": "Produto Vetorial em R³",
+            "text": "O produto vetorial u × v de dois vetores em R³ é perpendicular a ambos. Sua norma é a área do paralelogramo formado por u e v.",
+            "formula": "u × v = det[e₁  e₂  e₃]\n            [u₁  u₂  u₃]\n            [v₁  v₂  v₃]\n\n‖u × v‖ = ‖u‖·‖v‖·|sen θ|"
+          }
+        ]
+      },
+      {
+        "title": "Autovetores e Diagonalização",
+        "items": [
+          {
+            "heading": "Autovalores e Autovetores",
+            "text": "Um vetor não-nulo v é autovetor de T com autovalor λ se T(v) = λv. Geometricamente, T preserva a direção de v, apenas escalonando-o por λ.",
+            "formula": "T(v) = λv,  v ≠ 0\n\n// Autovalores: zeros do polinômio característico\np(λ) = det(T - λI) = 0"
+          },
+          {
+            "heading": "Autoespaço",
+            "text": "O autoespaço associado ao autovalor λ é o núcleo de (T - λI), ou seja, o conjunto de todos os autovetores associados a λ (incluindo o vetor nulo).",
+            "formula": "Autoespaço(λ) = Nuc(T - λI)\n              = { v | (T - λI)v = 0 }"
+          },
+          {
+            "heading": "Diagonalização",
+            "text": "Uma matriz n×n é diagonalizável se possui n autovetores LI. Neste caso, A = PDP⁻¹ onde D é diagonal (com autovalores) e P tem autovetores nas colunas.",
+            "formula": "A = P D P⁻¹\n\nD = diag(λ₁, λ₂, ..., λₙ)  // autovalores\nP = [v₁ | v₂ | ... | vₙ]    // autovetores\n\n// Aplicação: Aᵏ = P Dᵏ P⁻¹"
+          }
+        ]
+      }
+    ]
+  }
+}

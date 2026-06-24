@@ -1,0 +1,129 @@
+{
+  "id": "u2l1",
+  "title": "Modelagem e Interpretação Geométrica",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "O que é um Sistema Linear?",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição",
+          "text": "Um <strong>sistema linear</strong> com m equações e n incógnitas é um conjunto de m equações de 1° grau nas variáveis x₁, x₂, ..., xₙ. Cada equação descreve um <em>hiperplano</em> em Rⁿ. A solução é o conjunto de todos os vetores x que satisfazem simultaneamente todas as equações."
+        },
+        {
+          "type": "formula",
+          "text": "Sistema m×n:\n  a₁₁x₁ + a₁₂x₂ + ... + a₁ₙxₙ = b₁\n  a₂₁x₁ + a₂₂x₂ + ... + a₂ₙxₙ = b₂\n     ...          ...          ...\n  aₘ₁x₁ + aₘ₂x₂ + ... + aₘₙxₙ = bₘ\n\n// Forma matricial compacta:\nAx = b"
+        },
+        {
+          "type": "para",
+          "heading": "Classificação das Soluções",
+          "text": "Um sistema linear admite exatamente um de três casos: <strong>(1) sem solução</strong> (inconsistente), <strong>(2) solução única</strong>, ou <strong>(3) infinitas soluções</strong>. Não existe sistema com exatamente 2 soluções."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Vocabulário alternativo do ensino médio (não usado aqui): 'incompatível' = sem solução; 'determinado' = solução única; 'indeterminado' = infinitas soluções."
+        },
+        {
+          "type": "example",
+          "label": "Aplicação: Mistura de Soluções",
+          "body": "Um químico quer misturar x litros de solução a 10% e y litros a 25% para obter 5 litros a 16%.\n\nEquações:\n  x + y = 5           (total de litros)\n  0,10x + 0,25y = 0,80  (concentração × volume)\n\nEste é um sistema 2×2 que modela o problema. A solução nos diz as quantidades de cada solução a usar."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Interpretação Geométrica em R²",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Sistemas 2×2: Interseção de Retas",
+          "text": "Em R², cada equação ax + by = c representa uma <strong>reta</strong>. Resolver um sistema 2×2 é encontrar a interseção de duas retas. Há exatamente três casos geométricos possíveis."
+        },
+        {
+          "type": "formula",
+          "text": "Caso 1 — Solução Única:\n  retas se cruzam em um ponto\n\nCaso 2 — Sem Solução:\n  retas paralelas (não se cruzam)\n\nCaso 3 — Infinitas Soluções:\n  retas coincidentes (a mesma reta)"
+        },
+        {
+          "type": "para",
+          "heading": "Interpretação por Colunas",
+          "text": "Outra forma de ver: o sistema Ax = b pergunta se o vetor b é <strong>combinação linear das colunas de A</strong>. Se A = [v₁ | v₂], a pergunta é: existem x₁, x₂ tais que x₁v₁ + x₂v₂ = b?"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo: Três Casos em R²",
+          "body": "Sistema com solução única:\n  x + y = 2  e  x - y = 0  →  solução: (1,1)\n  Retas distintas que se cruzam em (1,1)\n\nSistema sem solução:\n  x - 2y = 2  e  -2x + 4y = 2\n  2ª eq. = -2×(1ª): retas paralelas, nenhuma interseção\n\nSistema com infinitas soluções:\n  x - 2y = 2  e  -2x + 4y = -4\n  2ª eq. = -2×(1ª): retas coincidentes!"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Em R³, cada equação representa um plano. A interseção de dois planos geralmente é uma reta, não um ponto! É por isso que sistemas 3×3 podem ter infinitas soluções mesmo sem equações redundantes óbvias."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Representação Matricial",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Matriz Aumentada",
+          "text": "Para trabalhar com sistemas lineares de forma eficiente, representamos o sistema pela <strong>matriz aumentada</strong> [A|b], que agrupa os coeficientes e o lado direito numa única matriz. Cada linha corresponde a uma equação."
+        },
+        {
+          "type": "formula",
+          "text": "Sistema:\n  2x + y - z = 1\n  x - y + z = 3\n  x + 2y + z = 0\n\nMatriz aumentada [A|b]:\n  [ 2  1 -1 | 1 ]\n  [ 1 -1  1 | 3 ]\n  [ 1  2  1 | 0 ]"
+        },
+        {
+          "type": "para",
+          "heading": "Produto Matriz-Vetor",
+          "text": "O produto Ax é definido como combinação linear das colunas de A com os coeficientes de x. Se A tem colunas a₁, a₂, ..., aₙ e x = (x₁,...,xₙ), então Ax = x₁a₁ + x₂a₂ + ... + xₙaₙ."
+        },
+        {
+          "type": "formula",
+          "text": "A = [ a₁ | a₂ | ... | aₙ ]   (colunas de A)\n\nAx = x₁a₁ + x₂a₂ + ... + xₙaₙ\n\n// Exemplo:\n[ 2 1 ] · [ 3 ] = 3·[ 2 ] + (-1)·[ 1 ] = [ 5 ]\n[ 1 3 ]   [-1]      [ 1 ]        [ 3 ]   [ 0 ]"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Memorize: 'Ax = b' é equivalente a 'b é combinação linear das colunas de A'. Esta visão por colunas é fundamental para entender espaços vetoriais."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "O sistema abaixo tem quantas soluções?\n2x + y = 4\n4x + 2y = 6",
+      "opts": [
+        "Solução única",
+        "Nenhuma solução",
+        "Infinitas soluções",
+        "Duas soluções"
+      ],
+      "correct": 1,
+      "exp": "Multiplicando a 1ª equação por 2: 4x+2y=8. Mas a 2ª diz 4x+2y=6. Contradição (8≠6)! As retas são paralelas, não se cruzam. Portanto: nenhuma solução."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a interpretação geométrica do sistema:\nx + y + z = 3\n2x + y - z = 1",
+      "opts": [
+        "Interseção de duas retas em R³",
+        "Interseção de dois planos em R³, geralmente uma reta",
+        "Um ponto no R³",
+        "O plano 3x + 2y = 4 em R³"
+      ],
+      "correct": 1,
+      "exp": "Em R³, cada equação linear representa um plano. Dois planos que não são paralelos se interceptam numa reta. Portanto este sistema 2×3 geralmente tem infinitas soluções (a reta de interseção dos planos)."
+    },
+    {
+      "type": "input",
+      "formula": "x + y = 5\nx - y = 1",
+      "stem": "Resolva o sistema. Qual é o valor de x · y? (Primeiro encontre x e y.)",
+      "correct": "6",
+      "exp": "Somando as equações: 2x = 6, logo x = 3. Substituindo: 3 + y = 5, logo y = 2. Portanto x·y = 3·2 = 6."
+    }
+  ]
+}

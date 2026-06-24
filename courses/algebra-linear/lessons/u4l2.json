@@ -1,0 +1,117 @@
+{
+  "id": "u4l2",
+  "title": "Núcleo, Imagem e Matriz Inversa",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Núcleo e Imagem de uma TL",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definições",
+          "text": "Dada T: Rⁿ → Rᵐ com matriz A, o <strong>núcleo</strong> (kernel) de T é o conjunto dos vetores levados para zero. A <strong>imagem</strong> (image) é o conjunto de todos os vetores atingidos por T. Ambos são subespaços vetoriais."
+        },
+        {
+          "type": "formula",
+          "text": "Nuc(T) = { x ∈ Rⁿ | T(x) = 0 } = { x | Ax = 0 }\nIm(T) = { T(x) | x ∈ Rⁿ } = { Ax | x ∈ Rⁿ }\n\n// Geometricamente:\n// Nuc(T): o que T 'colapsa' para 0\n// Im(T): o que T 'alcança' em Rᵐ\n\n// Nomes alternativos:\n// Nuc(T) = espaço nulo de A = Nul(A)\n// Im(T) = espaço coluna de A = Col(A)"
+        },
+        {
+          "type": "para",
+          "heading": "Teorema do Núcleo-Imagem",
+          "text": "Este é um dos teoremas mais importantes da Álgebra Linear: as dimensões do núcleo e da imagem somam exatamente a dimensão do domínio. Relaciona a 'perda de informação' (Nuc) com o 'alcance' (Im) da transformação."
+        },
+        {
+          "type": "formula",
+          "text": "Teorema do Núcleo-Imagem (T: Rⁿ → Rᵐ):\n\n  dim(Nuc T) + dim(Im T) = n\n\n  nullidade(A) + posto(A) = n (nº de colunas)\n\n// Consequências:\n// T injetiva ⟺ Nuc(T) = {0} ⟺ posto(A) = n\n// T sobrejetiva ⟺ Im(T) = Rᵐ ⟺ posto(A) = m"
+        },
+        {
+          "type": "example",
+          "label": "Calculando Núcleo e Imagem",
+          "body": "A = [ 1  2  3 ]\n    [ 0  1  2 ]\n    [ 0  0  0 ]\n\nNúcleo: resolve Ax=0.\nEscalonando: x₃=t livre, x₂=-2t, x₁=x₃-2x₂-3x₃... \nDa L2: x₂+2x₃=0 → x₂=-2t\nDa L1: x₁+2x₂+3x₃=0 → x₁=4t-3t=t\nNuc(A) = span{(1,-2,1)}, dim(Nuc)=1\n\nImagem = espaço coluna:\nPosto(A)=2 (2 pivôs), dim(Im)=2\nIm(A) = span{(1,0,0),(2,1,0)} (colunas com pivô)\n\nVerificação: dim(Nuc)+dim(Im)=1+2=3=n ✓"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Injetividade e Sobrejetividade",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Injetiva, Sobrejetiva, Bijetiva",
+          "text": "Uma TL T é <strong>injetiva</strong> (um-a-um) se T(u)=T(v) implica u=v: vetores distintos têm imagens distintas. É <strong>sobrejetiva</strong> (sobre) se todo vetor de Rᵐ tem preimagem. Quando ambas, T é uma <em>bijeção</em> e admite inversa."
+        },
+        {
+          "type": "formula",
+          "text": "T injetiva  ⟺  Nuc(T) = {0}  ⟺  posto(A) = n\nT sobrejetiva ⟺  Im(T) = Rᵐ  ⟺  posto(A) = m\n\n// Para T: Rⁿ→Rⁿ (quadrada):\nT bijetiva ⟺ T injetiva ⟺ T sobrejetiva\n           ⟺ det(A) ≠ 0\n           ⟺ A inversível"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Para matrizes quadradas (n×n), injetiva, sobrejetiva e inversível são equivalentes. Mas para matrizes retangulares (m×n, m≠n), isso não vale — uma pode ser injetiva sem ser sobrejetiva."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Matriz Inversa",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição e Existência",
+          "text": "A <strong>inversa</strong> de uma matriz quadrada A é a matriz A⁻¹ tal que AA⁻¹ = A⁻¹A = I. Ela existe se e somente se A é inversível, o que ocorre quando det(A) ≠ 0 (ou equivalentemente, posto(A) = n)."
+        },
+        {
+          "type": "formula",
+          "text": "Inversa de matriz 2×2:\nA = [ a  b ]   →   A⁻¹ = 1/(ad-bc) · [ d  -b ]\n    [ c  d ]                            [-c   a ]\n\n// Válido apenas se det(A) = ad-bc ≠ 0\n\nPropriedades:\n  (A⁻¹)⁻¹ = A\n  (AB)⁻¹ = B⁻¹A⁻¹  (inverte a ordem!)\n  (Aᵀ)⁻¹ = (A⁻¹)ᵀ"
+        },
+        {
+          "type": "para",
+          "heading": "Cálculo da Inversa pelo Escalonamento",
+          "text": "Para matrizes maiores, calculamos A⁻¹ escalonando a matriz aumentada [A | I]. Quando A vira a identidade pelo escalonamento, o lado direito vira A⁻¹."
+        },
+        {
+          "type": "formula",
+          "text": "Método: escalonar [A | I]\n\n[A | I] → ... → [I | A⁻¹]\n\n// Exemplo:\n[ 2 1 | 1 0 ]       [ 1 0 | 1/3  -1/3 ]\n[ 1 1 | 0 1 ]  →...→[ 0 1 |-1/3   2/3 ]\n\nLogo A⁻¹ = 1/3·[ 1 -1]\n               [-1  2]"
+        },
+        {
+          "type": "example",
+          "label": "Usando a Inversa para Resolver Sistemas",
+          "body": "Sistema: 2x+y=5, x+y=3\n  Forma matricial: Ax=b, com A=[2,1;1,1], b=(5,3)\n\n  det(A)=2·1-1·1=1 ≠ 0 → A inversível\n  A⁻¹ = 1/1·[1,-1;-1,2] = [1,-1;-1,2]\n\n  x = A⁻¹b = [1·5+(-1)·3, (-1)·5+2·3] = [2, 1]\n\n  Solução: (x,y) = (2,1) ✓\n  Verificação: 2·2+1=5 ✓ e 2+1=3 ✓"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Calcular A⁻¹ para resolver Ax=b é menos eficiente que o escalonamento direto! Use A⁻¹ quando precisar resolver múltiplos sistemas com a mesma matriz A mas diferentes lados direitos b."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Se T: R⁵ → R³ tem posto 3, qual é a dimensão do núcleo de T?",
+      "opts": ["0", "1", "2", "3"],
+      "correct": 2,
+      "exp": "Pelo Teorema do Núcleo-Imagem: dim(Nuc T) + dim(Im T) = 5. A imagem tem dim = posto(A) = 3. Portanto dim(Nuc T) = 5-3 = 2."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a inversa da matriz A = [1 2; 0 1]?",
+      "opts": [
+        "[1 -2; 0 1]",
+        "[1 2; 0 -1]",
+        "[1 0; -2 1]",
+        "[0 1; 1 2]"
+      ],
+      "correct": 0,
+      "exp": "det(A) = 1·1 - 2·0 = 1. Pela fórmula: A⁻¹ = 1/1·[1 -2; -0 1] = [1 -2; 0 1]. Verificação: [1 2; 0 1]·[1 -2; 0 1] = [1 0; 0 1] = I ✓."
+    },
+    {
+      "type": "input",
+      "formula": "A = [3 1]\n    [5 2]",
+      "stem": "Calcule det(A). Se det(A) ≠ 0, a matriz é inversível. Qual é o determinante?",
+      "correct": "1",
+      "exp": "det(A) = 3·2 - 1·5 = 6 - 5 = 1. Como det(A) = 1 ≠ 0, a matriz é inversível. De fato, A⁻¹ = [2 -1; -5 3], pois det=1 e A⁻¹ = [d -b; -c a]."
+    }
+  ]
+}

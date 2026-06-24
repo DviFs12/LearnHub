@@ -1,0 +1,118 @@
+{
+  "id": "u5l1",
+  "title": "Produto Interno e Ortogonalidade",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Produto Interno em Rⁿ",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição do Produto Interno (Produto Escalar)",
+          "text": "O <strong>produto interno</strong> (ou produto escalar) de dois vetores u e v em Rⁿ é a soma dos produtos das componentes correspondentes. O resultado é um <em>número real</em>, não um vetor. O produto interno conecta álgebra à geometria: ângulos e comprimentos."
+        },
+        {
+          "type": "formula",
+          "text": "⟨u, v⟩ = u₁v₁ + u₂v₂ + ... + uₙvₙ\n\n// Notações equivalentes: u·v ou uᵀv\n\n// Propriedades:\n⟨u, v⟩ = ⟨v, u⟩              (simetria)\n⟨αu+βv, w⟩ = α⟨u,w⟩+β⟨v,w⟩  (linearidade)\n⟨u, u⟩ ≥ 0, com = 0 ⟺ u=0   (positividade)\n\n// Norma via produto interno:\n‖u‖ = √⟨u, u⟩"
+        },
+        {
+          "type": "example",
+          "label": "Calculando Produto Interno",
+          "body": "u = (1, -2, 3),  v = (4, 0, -1)\n\n⟨u, v⟩ = 1·4 + (-2)·0 + 3·(-1) = 4 + 0 - 3 = 1\n\n⟨u, u⟩ = 1·1 + (-2)·(-2) + 3·3 = 1 + 4 + 9 = 14\n‖u‖ = √14\n\n⟨v, v⟩ = 16 + 0 + 1 = 17\n‖v‖ = √17"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Em notação matricial: ⟨u,v⟩ = uᵀv, onde u e v são vetores-coluna. Isso conecta produto interno com multiplicação de matrizes: uᵀv é uma matriz 1×n multiplicada por n×1, resultando em 1×1 (escalar)."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Ângulo entre Vetores e Desigualdade de Cauchy-Schwarz",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Fórmula do Ângulo",
+          "text": "Em R² e R³, o produto interno está ligado ao ângulo θ entre dois vetores pela fórmula ⟨u,v⟩ = ‖u‖·‖v‖·cos θ. Isso permite calcular ângulos em qualquer dimensão — mesmo que não consigamos 'visualizar' o ângulo."
+        },
+        {
+          "type": "formula",
+          "text": "cos θ = ⟨u, v⟩ / (‖u‖ · ‖v‖)\n\nDesigualdade de Cauchy-Schwarz:\n|⟨u, v⟩| ≤ ‖u‖ · ‖v‖\n\n// A igualdade vale ⟺ u e v são paralelos\n\n// Desigualdade Triangular:\n‖u + v‖ ≤ ‖u‖ + ‖v‖"
+        },
+        {
+          "type": "example",
+          "label": "Ângulo entre (1,1,0) e (1,0,1)",
+          "body": "u = (1,1,0),  v = (1,0,1)\n\n⟨u,v⟩ = 1·1 + 1·0 + 0·1 = 1\n‖u‖ = √(1+1+0) = √2\n‖v‖ = √(1+0+1) = √2\n\ncos θ = 1/(√2 · √2) = 1/2\n\nθ = arccos(1/2) = 60°\n\nOs vetores formam um ângulo de 60° entre si."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Ortogonalidade e Complemento Ortogonal",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Vetores Ortogonais",
+          "text": "Dois vetores u e v são <strong>ortogonais</strong> (perpendiculares) se ⟨u,v⟩ = 0. Em R² e R³ isso coincide com o ângulo de 90°. Um conjunto ortogonal é linearmente independente (exceto se contiver o vetor nulo)."
+        },
+        {
+          "type": "formula",
+          "text": "u ⊥ v  ⟺  ⟨u, v⟩ = 0\n\nConjunto ortonormal: {u₁,...,uₖ} com\n  ⟨uᵢ, uⱼ⟩ = δᵢⱼ  (= 1 se i=j, 0 se i≠j)\n\n// Base ortonormal canônica de Rⁿ:\n⟨eᵢ, eⱼ⟩ = δᵢⱼ ✓"
+        },
+        {
+          "type": "para",
+          "heading": "Complemento Ortogonal",
+          "text": "Dado um subespaço W de Rⁿ, o <strong>complemento ortogonal</strong> W⊥ é o conjunto de todos os vetores de Rⁿ que são ortogonais a todos os vetores de W. Importante: W⊕W⊥ = Rⁿ (decomposição ortogonal)."
+        },
+        {
+          "type": "formula",
+          "text": "W⊥ = { v ∈ Rⁿ | ⟨v, w⟩ = 0 para todo w ∈ W }\n\nPropriedades:\n  dim(W) + dim(W⊥) = n\n  (W⊥)⊥ = W\n  W ∩ W⊥ = {0}\n\n// Exemplos:\n// W = eixo x em R²  →  W⊥ = eixo y\n// W = plano xy em R³ → W⊥ = eixo z"
+        },
+        {
+          "type": "example",
+          "label": "Encontrando o Complemento Ortogonal",
+          "body": "W = span{(1,2,3)} em R³. Ache W⊥.\n\nW⊥ = {(x,y,z) | ⟨(x,y,z),(1,2,3)⟩ = 0}\n    = {(x,y,z) | x+2y+3z = 0}\n\nParametrizando: y=s, z=t livres, x=-2s-3t\n(x,y,z) = s(-2,1,0) + t(-3,0,1)\n\nW⊥ = span{(-2,1,0), (-3,0,1)}\ndim(W)+dim(W⊥) = 1+2 = 3 ✓"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Processo de Gram-Schmidt: dado qualquer conjunto LI {v₁,...,vₖ}, podemos construir uma base ortonormal {u₁,...,uₖ} do mesmo span. A ideia é subtrair as projeções para 'remover a parte não-ortogonal'."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual par de vetores é ortogonal em R³?",
+      "opts": [
+        "(1,2,3) e (1,1,1)",
+        "(1,-1,0) e (1,1,2)",
+        "(2,3,-1) e (1,-1,1)",
+        "(1,0,0) e (0,1,1)"
+      ],
+      "correct": 1,
+      "exp": "Calculamos ⟨(1,-1,0),(1,1,2)⟩ = 1·1+(-1)·1+0·2 = 1-1+0 = 0 ✓. São ortogonais! Verificamos as outras: (1,2,3)·(1,1,1)=1+2+3=6≠0; (2,3,-1)·(1,-1,1)=2-3-1=-2≠0; (1,0,0)·(0,1,1)=0 ✓ também! Mas (1,-1,0)·(1,1,2)=0 veio primeiro."
+    },
+    {
+      "type": "mcq",
+      "stem": "Se ‖u‖=3, ‖v‖=4 e ⟨u,v⟩=6, qual é o cosseno do ângulo entre u e v?",
+      "opts": [
+        "1/2",
+        "2/3",
+        "3/4",
+        "6/12 = 1/2"
+      ],
+      "correct": 0,
+      "exp": "cos θ = ⟨u,v⟩/(‖u‖·‖v‖) = 6/(3·4) = 6/12 = 1/2. Portanto θ = 60°. Note que a opção (a) e (d) são equivalentes (1/2 = 6/12), mas a forma reduzida é 1/2."
+    },
+    {
+      "type": "input",
+      "formula": "u = (1, 2, 2)\nv = (2, 1, -2)",
+      "stem": "Calcule ⟨u, v⟩. (produto interno de u e v)",
+      "correct": "0",
+      "exp": "⟨u,v⟩ = 1·2 + 2·1 + 2·(-2) = 2 + 2 - 4 = 0. Os vetores u e v são ortogonais! De bônus: ‖u‖=√(1+4+4)=3 e ‖v‖=√(4+1+4)=3, então u e v têm a mesma norma e são perpendiculares."
+    }
+  ]
+}

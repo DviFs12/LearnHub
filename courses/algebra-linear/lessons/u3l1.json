@@ -1,0 +1,115 @@
+{
+  "id": "u3l1",
+  "title": "Espaços e Subespaços Vetoriais",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Espaço Vetorial: Definição",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Abstração: Além do Rⁿ",
+          "text": "Polinômios, matrizes, funções contínuas — todos compartilham a mesma estrutura algébrica do Rⁿ: podemos somá-los e multiplicá-los por escalares. Um <strong>espaço vetorial</strong> captura essa estrutura de forma abstrata."
+        },
+        {
+          "type": "formula",
+          "text": "Um conjunto V com operações (+) e (·) é espaço vetorial se:\n\n(EV1) u+v ∈ V para todo u,v ∈ V          (fechado na soma)\n(EV2) α·u ∈ V para todo α∈ℝ, u∈V        (fechado no escalar)\n(EV3) u+v = v+u                           (comutatividade)\n(EV4) (u+v)+w = u+(v+w)                  (associatividade)\n(EV5) ∃ 0∈V: u+0 = u para todo u         (vetor nulo)\n(EV6) ∀u∈V ∃(-u)∈V: u+(-u)=0            (inverso aditivo)\n(EV7) α(u+v) = αu+αv                     (distributividade)\n(EV8) 1·u = u                            (escalar identidade)"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Espaços Vetoriais",
+          "body": "• Rⁿ: o exemplo clássico (vetores com n componentes)\n• Mₘₓₙ: matrizes m×n (soma e escalar componente a componente)\n• Pₙ: polinômios de grau ≤ n (ex: P₂ = {a+bx+cx² | a,b,c∈ℝ})\n• C[a,b]: funções contínuas em [a,b]\n• {0}: o espaço com apenas o vetor nulo\n\nNOT um espaço vetorial:\n• ℝ⁺ (positivos) — não fechado no escalar (-1·u < 0)\n• Retas não passando pela origem — não contém o 0"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "O vetor nulo 0 SEMPRE pertence a um espaço vetorial (pelas propriedades EV5 e EV6). Se um conjunto não contém o zero, não pode ser espaço vetorial!"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Subespaços Vetoriais",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Subespaço: Subconjunto com Estrutura",
+          "text": "Um <strong>subespaço</strong> W de um espaço vetorial V é um subconjunto não-vazio de V que é ele mesmo um espaço vetorial com as mesmas operações. Por ser subconjunto, propriedades como comutatividade e associatividade já valem — basta verificar apenas <em>três condições</em>."
+        },
+        {
+          "type": "formula",
+          "text": "W é subespaço de V ⟺ as 3 condições:\n\n(S1)  0 ∈ W                           (contém o zero)\n(S2)  u,v ∈ W ⟹ u+v ∈ W              (fechado na soma)\n(S3)  u ∈ W, α∈ℝ ⟹ αu ∈ W            (fechado no escalar)\n\n// Equivalentemente (S2 e S3 juntos):\n(S2') u,v ∈ W, α,β∈ℝ ⟹ αu+βv ∈ W"
+        },
+        {
+          "type": "example",
+          "label": "Exemplos de Subespaços de R³",
+          "body": "Subespaços de R³:\n• {(0,0,0)}: o subespaço trivial\n• Retas passando pela origem: {t(a,b,c) | t∈ℝ}\n• Planos passando pela origem: {(x,y,z) | ax+by+cz=0}\n• R³ inteiro\n\nNÃO são subespaços de R³:\n• Reta {(1,0,0)+t(0,1,0)} não passa pela origem\n• Plano {(x,y,z) | x+y+z=1} não contém (0,0,0)\n• Bola unitária {u | ‖u‖≤1} não fechada no escalar"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "O espaço gerado span{v₁,...,vₖ} é SEMPRE um subespaço de V. De fato, é o menor subespaço contendo v₁,...,vₖ. Esta é a forma mais comum de construir subespaços."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Dependência e Independência Linear",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Vetores Linearmente Independentes",
+          "text": "Vetores v₁, ..., vₖ são <strong>linearmente independentes (LI)</strong> se a única maneira de obter a combinação linear zero for usar todos os coeficientes iguais a zero. Caso contrário, são <strong>linearmente dependentes (LD)</strong> — algum vetor pode ser escrito em termos dos outros."
+        },
+        {
+          "type": "formula",
+          "text": "v₁,...,vₖ são LI ⟺\n  α₁v₁ + α₂v₂ + ... + αₖvₖ = 0  ⟹  α₁=...=αₖ=0\n\n// Equivalente: resolver o sistema homogêneo\n  [v₁|v₂|...|vₖ]·α = 0\n  Se só solução trivial (α=0): LI\n  Se há solução não-trivial: LD"
+        },
+        {
+          "type": "example",
+          "label": "Testando LI/LD",
+          "body": "São {(1,2,3), (0,1,2), (1,1,1)} LI ou LD?\n\nMontamos α₁(1,2,3)+α₂(0,1,2)+α₃(1,1,1)=0:\n  α₁+α₃=0\n  2α₁+α₂+α₃=0\n  3α₁+2α₂+α₃=0\n\nEscalonando:\n[ 1 0 1 | 0 ]        [ 1 0 1 | 0 ]\n[ 2 1 1 | 0 ] → ...→ [ 0 1 -1| 0 ]\n[ 3 2 1 | 0 ]        [ 0 0  0 | 0 ]\n\nα₃=t (livre) → α₂=t, α₁=-t\nSolução não trivial (ex: t=1): (-1)(1,2,3)+(1)(0,1,2)+(1)(1,1,1)=0 ✓\nPortanto: LD! De fato: (1,1,1) = (1,2,3)-(0,1,2)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Três fatos práticos: (1) qualquer conjunto contendo o vetor 0 é LD; (2) em Rⁿ, mais de n vetores são sempre LD; (3) dois vetores são LD se e só se um é múltiplo do outro."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual dos conjuntos abaixo é um subespaço de R²?",
+      "opts": [
+        "W = {(x,y) | x² + y² = 1} (círculo unitário)",
+        "W = {(x,y) | x + y = 0} (reta pela origem)",
+        "W = {(x,y) | x + y = 1} (reta não passa pela origem)",
+        "W = {(x,y) | x ≥ 0, y ≥ 0} (1º quadrante)"
+      ],
+      "correct": 1,
+      "exp": "W = {(x,y) | x+y=0}: (a) (0,0)∈W pois 0+0=0 ✓; (b) soma: (x₁+y₁=0)+(x₂+y₂=0) → (x₁+x₂)+(y₁+y₂)=0 ✓; (c) escalar: x+y=0 → α(x+y)=0 ✓. Logo W é subespaço. As outras opções falham: o círculo não contém 0; a reta x+y=1 não contém 0; o 1º quadrante não é fechado no escalar negativo."
+    },
+    {
+      "type": "mcq",
+      "stem": "Os vetores (1,0), (0,1) e (1,1) são LI ou LD em R²?",
+      "opts": [
+        "LI, pois nenhum é múltiplo dos outros",
+        "LD, pois em R² no máximo 2 vetores podem ser LI",
+        "LI, pois formam um triângulo no plano",
+        "LD apenas se (1,1) for nulo"
+      ],
+      "correct": 1,
+      "exp": "Em R², dim(R²)=2, portanto qualquer conjunto com mais de 2 vetores é LD. De fato: (1,1) = 1·(1,0) + 1·(0,1), então (1,1) é CL dos outros dois. A equação α(1,0)+β(0,1)+γ(1,1)=0 tem solução não trivial (α=1, β=1, γ=-1)."
+    },
+    {
+      "type": "input",
+      "formula": "v₁ = (1, 2),  v₂ = (3, k)",
+      "stem": "Para qual valor de k os vetores v₁ e v₂ são linearmente dependentes?",
+      "correct": "6",
+      "exp": "v₁ e v₂ são LD ⟺ um é múltiplo do outro. Se v₂ = α·v₁, então (3,k) = α(1,2). Logo α=3 e k = 2α = 6. Verificação: (3,6) = 3·(1,2) ✓."
+    }
+  ]
+}

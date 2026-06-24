@@ -1,0 +1,117 @@
+{
+  "id": "u7l1",
+  "title": "Autovalores e Autovetores",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "A Ideia Central: Direções Invariantes",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Motivação Geométrica",
+          "text": "Quando uma transformação linear T age sobre vetores, em geral muda tanto a direção quanto o comprimento. Mas alguns vetores especiais — os <strong>autovetores</strong> — apenas têm seu comprimento escalonado, sem mudar de direção. O fator de escala é o <strong>autovalor</strong> correspondente."
+        },
+        {
+          "type": "formula",
+          "text": "v é autovetor de T com autovalor λ ⟺\n  T(v) = λv,  com v ≠ 0\n\n// Em termos matriciais (T(x)=Ax):\n  Av = λv,  v ≠ 0\n\n// Exemplos geométricos:\n// Reflexão: vetores ‖ ao eixo: λ=1; ⊥ ao eixo: λ=-1\n// Projeção no eixo x: e₁ → λ=1; e₂ → (0,0), λ=0\n// Homotetia αI: todo vetor é autovetor com λ=α"
+        },
+        {
+          "type": "example",
+          "label": "Verificando um Autovetor",
+          "body": "A = [3 1; 0 2],  v = (1,0)\n\nAv = [3·1+1·0] = [3] = 3·[1] = 3v\n     [0·1+2·0]   [0]     [0]\n\nLogo v=(1,0) é autovetor de A com autovalor λ=3 ✓\n\nSeja w=(1,-1):\nAw = [3·1+1·(-1)] = [ 2] = 2·[ 1] = 2w\n     [0·1+2·(-1)]   [-2]     [-1]\n\nw=(1,-1) é autovetor com autovalor λ=2 ✓"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Atenção ao sinal: λ negativo é completamente válido — indica inversão de sentido. λ=0 também é válido — o autovetor está no núcleo de A (Av=0). Apenas o vetor nulo v=0 é excluído por definição."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Calculando Autovalores: Polinômio Característico",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "A Equação Característica",
+          "text": "Para encontrar os autovalores de A, reescrevemos Av = λv como (A − λI)v = 0. Esta equação tem solução não-trivial (v≠0) se e somente se a matriz A − λI é <em>singular</em>, ou seja, det(A − λI) = 0. Essa equação determina todos os autovalores."
+        },
+        {
+          "type": "formula",
+          "text": "Av = λv\n(A-λI)v = 0,  v ≠ 0\n\n// v≠0 existe ⟺ A-λI é singular:\n  det(A - λI) = 0   ← Equação Característica\n\n// p(λ) = det(A-λI) é o Polinômio Característico\n// Grau n para matriz n×n\n// Autovalores = raízes de p(λ)"
+        },
+        {
+          "type": "example",
+          "label": "Encontrando Autovalores (2×2)",
+          "body": "A = [ 4  1 ]\n    [ 2  3 ]\n\nA-λI = [ 4-λ   1  ]\n       [  2   3-λ ]\n\nEquação característica:\ndet(A-λI) = (4-λ)(3-λ) - 1·2 = 0\n= λ²-7λ+12-2 = 0\n= λ²-7λ+10 = 0\n= (λ-5)(λ-2) = 0\n\nAutovalores: λ₁=5, λ₂=2\n\nTraço: 4+3=7 = λ₁+λ₂=5+2 ✓\nDet: 4·3-1·2=10 = λ₁·λ₂=5·2 ✓"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Atalho para 2×2: det(A-λI) = λ² - tr(A)·λ + det(A), onde tr(A) = a₁₁+a₂₂ (traço). Os autovalores satisfazem λ₁+λ₂ = tr(A) e λ₁·λ₂ = det(A). Isso agiliza muito os cálculos!"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Calculando Autovetores: Autoespaços",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Autoespaço Associado a λ",
+          "text": "Uma vez encontrado o autovalor λ, os autovetores correspondentes são as soluções não-triviais de (A−λI)v = 0, ou seja, o núcleo de (A−λI). Esse núcleo é chamado <strong>autoespaço</strong> de A associado a λ e é sempre um subespaço."
+        },
+        {
+          "type": "formula",
+          "text": "Autoespaço de A associado a λ:\n  Vλ = Nuc(A - λI) = {v | (A-λI)v = 0}\n\n// Multiplicidade geométrica: dim(Vλ) ≥ 1\n// Multiplicidade algébrica: ordem de λ como raiz de p(λ)\n// Sempre: mult. geométrica ≤ mult. algébrica"
+        },
+        {
+          "type": "example",
+          "label": "Encontrando Autovetores",
+          "body": "Continuando o exemplo: A = [4 1; 2 3]\n\nPara λ₁=5: (A-5I)v=0\n  A-5I = [-1  1]\n         [ 2 -2]\n  L₂←L₂+2L₁: [-1 1; 0 0]\n  -v₁+v₂=0 → v₂=v₁=t\n  Autovetor: t(1,1),  t≠0\n  Vλ₁ = span{(1,1)}\n\nPara λ₂=2: (A-2I)v=0\n  A-2I = [2  1]\n         [2  1]\n  L₂←L₂-L₁: [2 1; 0 0]\n  2v₁+v₂=0 → v₂=-2v₁=t, v₁=-t/2\n  Autovetor: t(-1,2),  t≠0\n  Vλ₂ = span{(-1,2)}"
+        },
+        {
+          "type": "para",
+          "heading": "Autovetores e Independência Linear",
+          "text": "Uma propriedade poderosa: autovetores associados a autovalores <em>distintos</em> são sempre linearmente independentes. Isso garante que, se uma matriz n×n tem n autovalores distintos, ela possui n autovetores LI — base para a diagonalização."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Autovalores complexos podem ocorrer para matrizes reais (ex: rotação). Para matrizes simétricas reais (A=Aᵀ), todos os autovalores são reais e os autovetores de λ's distintos são ortogonais — o Teorema Espectral Real."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "formula": "A = [5 0]\n    [0 3]",
+      "stem": "Quais são os autovalores de A (matriz diagonal)?",
+      "opts": [
+        "λ₁=5 e λ₂=3",
+        "λ₁=0 e λ₂=0",
+        "λ=15 (produto) e λ=8 (soma)",
+        "λ₁=3 e λ₂=5 (em ordem crescente)"
+      ],
+      "correct": 0,
+      "exp": "Para matrizes diagonais, os autovalores são exatamente os elementos da diagonal! p(λ)=det[5-λ 0; 0 3-λ]=(5-λ)(3-λ), cujas raízes são λ₁=5 e λ₂=3. Os autovetores correspondentes são e₁=(1,0) e e₂=(0,1)."
+    },
+    {
+      "type": "mcq",
+      "formula": "A = [2 1]\n    [0 2]",
+      "stem": "A tem autovalor λ=2. Qual é a dimensão do autoespaço Vλ=2?",
+      "opts": ["0", "1", "2", "Depende do vetor escolhido"],
+      "correct": 1,
+      "exp": "A-2I = [0 1; 0 0]. Sistema: v₂=0, v₁ livre. Autoespaço = span{(1,0)}, com dim=1. Apesar de λ=2 ser raiz dupla (mult. algébrica=2), o autoespaço só tem dimensão 1 (mult. geométrica=1). Isso significa que A NÃO é diagonalizável!"
+    },
+    {
+      "type": "input",
+      "formula": "A = [1 2]\n    [2 1]",
+      "stem": "p(λ) = λ² - 2λ - 3 = (λ-3)(λ+1). Qual é a soma dos autovalores de A? (= traço de A)",
+      "correct": "2",
+      "exp": "Os autovalores são λ₁=3 e λ₂=-1. A soma é 3+(-1)=2. Confira: tr(A) = 1+1 = 2 = λ₁+λ₂ ✓. Produto: det(A)=1-4=-3=λ₁·λ₂=3·(-1) ✓."
+    }
+  ]
+}

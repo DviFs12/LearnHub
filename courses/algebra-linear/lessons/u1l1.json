@@ -1,0 +1,124 @@
+{
+  "id": "u1l1",
+  "title": "Vetores no Rⁿ e Operações",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "O que é um Vetor?",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Definição Algébrica",
+          "text": "Um <strong>vetor</strong> em Rⁿ é uma n-upla ordenada de números reais. Por exemplo, em R² temos pares como (3, −2) e em R³ temos triplas como (1, 0, 5). A <em>ordem importa</em>: (1, 2) ≠ (2, 1)."
+        },
+        {
+          "type": "formula",
+          "text": "u = (u₁, u₂, ..., uₙ) ∈ Rⁿ\n\n// Exemplos:\nu = (3, -2) ∈ R²\nv = (1, 0, 5) ∈ R³\nw = (2, -1, 4, 7) ∈ R⁴"
+        },
+        {
+          "type": "para",
+          "heading": "Igualdade de Vetores",
+          "text": "Dois vetores são iguais se e somente se todas as suas componentes correspondentes são iguais: (a₁, a₂, ..., aₙ) = (b₁, b₂, ..., bₙ) ⟺ a₁ = b₁, a₂ = b₂, ..., aₙ = bₙ."
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "A visão algébrica é simples e funciona em qualquer dimensão, mesmo dimensões que não conseguimos visualizar. Trabalharemos com R² e R³ para intuição geométrica, mas as definições valem para Rⁿ qualquer."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Operações com Vetores",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Soma de Vetores",
+          "text": "A soma de dois vetores de <strong>mesma dimensão</strong> é feita componente a componente. Geometricamente, corresponde à <em>Regra do Paralelogramo</em> (ou do Triângulo)."
+        },
+        {
+          "type": "formula",
+          "text": "u + v = (u₁+v₁, u₂+v₂, ..., uₙ+vₙ)\n\n// Exemplo em R³:\n(1, 2, -1) + (3, -1, 4) = (4, 1, 3)"
+        },
+        {
+          "type": "para",
+          "heading": "Produto por Escalar",
+          "text": "Multiplicar um vetor por um escalar α ∈ ℝ escala cada componente por α. Se α > 1, o vetor cresce; se 0 < α < 1, encolhe; se α < 0, inverte a direção."
+        },
+        {
+          "type": "formula",
+          "text": "αu = (αu₁, αu₂, ..., αuₙ)\n\n// Exemplos:\n2·(1, 3) = (2, 6)     // dobra o tamanho\n-1·(2, -1) = (-2, 1)  // inverte sentido\n0·u = (0, 0, ..., 0)  // vetor nulo"
+        },
+        {
+          "type": "example",
+          "label": "Exemplo: Soma e Produto Escalar",
+          "body": "Dados u = (2, -1, 3) e v = (0, 4, -2):\n\n• u + v = (2+0, -1+4, 3-2) = (2, 3, 1)\n• u - v = (2-0, -1-4, 3+2) = (2, -5, 5)\n• 3u = (6, -3, 9)\n• -2v = (0, -8, 4)\n• 2u + v = (4, -2, 6) + (0, 4, -2) = (4, 2, 4)"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Só podemos somar vetores de mesma dimensão! Tentar somar (1,2) + (1,2,3) não faz sentido."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Representação Geométrica e Norma",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Vetores Geométricos",
+          "text": "Em R² e R³, podemos representar vetores como <strong>setas partindo da origem</strong>. A soma u + v é obtida pela Regra do Paralelogramo: coloca-se a cauda de v na ponta de u, e a soma é o vetor da origem até a ponta de v."
+        },
+        {
+          "type": "para",
+          "heading": "Norma (Comprimento)",
+          "text": "A <strong>norma euclidiana</strong> de um vetor mede seu comprimento. Em R², é o Teorema de Pitágoras. Em Rⁿ, é a generalização natural."
+        },
+        {
+          "type": "formula",
+          "text": "‖u‖ = √(u₁² + u₂² + ... + uₙ²)\n\n// Exemplos:\n‖(3, 4)‖ = √(9+16) = √25 = 5\n‖(1, 1, 1)‖ = √3 ≈ 1,732\n‖(0, 0, ..., 0)‖ = 0"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Um vetor unitário tem norma 1. Para obter um vetor unitário na direção de u (não-nulo), basta dividir por sua norma: û = u/‖u‖."
+        },
+        {
+          "type": "example",
+          "label": "Norma e Vetor Unitário",
+          "body": "Dado u = (3, -4):\n\n‖u‖ = √(3² + (-4)²) = √(9+16) = √25 = 5\n\nVetor unitário na direção de u:\nû = u/‖u‖ = (3/5, -4/5)\n\nVerificação: ‖û‖ = √(9/25 + 16/25) = √(25/25) = 1 ✓"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é o resultado de 3·(1, -2, 0) + (-1)·(3, 0, 6)?",
+      "opts": [
+        "(3, -6, 0) + (-3, 0, -6) = (0, -6, -6)",
+        "(3, -6, 0) + (-3, 0, 6) = (0, -6, 6)",
+        "(6, -2, 6)",
+        "(0, 6, -6)"
+      ],
+      "correct": 0,
+      "exp": "3·(1,-2,0) = (3,-6,0) e (-1)·(3,0,6) = (-3,0,-6). Somando: (3-3, -6+0, 0-6) = (0,-6,-6). Resposta: (0,-6,-6)."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a norma do vetor u = (0, -5, 12)?",
+      "opts": ["17", "7", "13", "√169 = 13"],
+      "correct": 3,
+      "exp": "‖u‖ = √(0² + (-5)² + 12²) = √(0 + 25 + 144) = √169 = 13. As opções 'a' e 'c' são a mesma coisa; a resposta mais explícita é √169 = 13."
+    },
+    {
+      "type": "input",
+      "formula": "u = (6, 8)",
+      "stem": "Calcule a norma do vetor u = (6, 8). Digite apenas o número.",
+      "correct": "10",
+      "exp": "‖u‖ = √(6² + 8²) = √(36 + 64) = √100 = 10. O triângulo (6, 8, 10) é um triângulo pitagórico!"
+    }
+  ]
+}

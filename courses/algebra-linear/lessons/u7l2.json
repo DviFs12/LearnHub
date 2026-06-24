@@ -1,0 +1,139 @@
+{
+  "id": "u7l2",
+  "title": "Diagonalização e Aplicações",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "O que é Diagonalização?",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "A Ideia da Diagonalização",
+          "text": "Uma matriz A é <strong>diagonalizável</strong> se existe uma base de Rⁿ formada inteiramente por autovetores de A. Nessa base, A age como uma simples multiplicação escalar em cada direção — vira uma matriz diagonal. Isso simplifica enormemente cálculos como potências de matrizes e equações diferenciais."
+        },
+        {
+          "type": "formula",
+          "text": "A é diagonalizável ⟺ ∃ P inversível, D diagonal:\n  A = P D P⁻¹\n\nonde:\n  D = diag(λ₁, λ₂, ..., λₙ)  ← autovalores\n  P = [v₁ | v₂ | ... | vₙ]   ← autovetores (colunas)\n\n// Equivalência:\nA diagonalizável ⟺ A tem n autovetores LI\n                ⟺ dim(Vλ) = mult. algébrica (para cada λ)"
+        },
+        {
+          "type": "example",
+          "label": "Diagonalizando A = [4 1; 2 3]",
+          "body": "Do exemplo anterior: λ₁=5, v₁=(1,1); λ₂=2, v₂=(-1,2)\n\nD = [5 0]    P = [1 -1]\n    [0 2]        [1  2]\n\nVerifique: AP = PD?\n  AP = [4 1][1 -1] = [4+1  -4+2] = [5 -2]\n       [2 3][1  2]   [2+3  -2+6]   [5  4]\n\n  PD = [1 -1][5 0] = [5 -2]\n       [1  2][0 2]   [5  4] ✓ AP = PD\n\nLogo A = PDP⁻¹ (com P⁻¹ = 1/3·[2 1; -1 1])"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Matrizes simétricas (A=Aᵀ) são SEMPRE diagonalizáveis, com autovetores ortogonais entre si. Isso é o Teorema Espectral Real — uma das propriedades mais elegantes da Álgebra Linear."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Critério de Diagonalizabilidade",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Quando uma Matriz é Diagonalizável?",
+          "text": "Uma matriz n×n é diagonalizável se e somente se possui exatamente n autovetores linearmente independentes. Isso sempre ocorre quando os n autovalores são todos distintos. Se houver autovalores repetidos, é necessário verificar se a dimensão de cada autoespaço iguala a multiplicidade algébrica do autovalor."
+        },
+        {
+          "type": "formula",
+          "text": "Condições suficientes para diagonalização:\n  (1) A tem n autovalores distintos → sempre diagonalizável\n  (2) A é simétrica (Aᵀ=A) → sempre diagonalizável\n\nCondição necessária e suficiente:\n  dim(Vλ) = mult. algébrica de λ, para CADA autovalor λ\n\n// Contra-exemplo NÃO diagonalizável:\n  A = [2 1; 0 2] → λ=2 (mult.alg.=2, mult.geom.=1)"
+        },
+        {
+          "type": "example",
+          "label": "Verificando Diagonalizabilidade",
+          "body": "B = [3 0 0; 0 3 1; 0 0 3]\n\np(λ) = (3-λ)³ → λ=3 com mult. algébrica=3\n\nAutoespaço V₃ = Nuc(B-3I) = Nuc[0 0 0; 0 0 1; 0 0 0]\nSistema: v₃=0, v₁ e v₂ livres\nV₃ = span{(1,0,0),(0,1,0)} → dim(V₃)=2\n\nmult. geométrica=2 ≠ mult. algébrica=3\n→ B NÃO é diagonalizável!\n\nNeste caso, B se reduz a uma forma de Jordan."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Aplicações da Diagonalização",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Potências de Matrizes",
+          "text": "A diagonalização torna o cálculo de potências de matrizes trivial. Se A = PDP⁻¹, então Aᵏ = PDᵏP⁻¹, e Dᵏ é simplesmente os autovalores elevados à k-ésima potência. Isso tem aplicações em sequências recorrentes, cadeias de Markov e sistemas dinâmicos."
+        },
+        {
+          "type": "formula",
+          "text": "Se A = P D P⁻¹, então:\n\n  Aᵏ = P Dᵏ P⁻¹\n\n  Dᵏ = diag(λ₁ᵏ, λ₂ᵏ, ..., λₙᵏ)\n\n// Exemplo: sequência de Fibonacci via diagonalização\n// A matriz [1 1; 1 0] tem autovalores φ=(1+√5)/2 e ψ=(1-√5)/2\n// Fₙ = (φⁿ - ψⁿ)/√5   ← fórmula fechada!"
+        },
+        {
+          "type": "example",
+          "label": "Calculando A¹⁰ via Diagonalização",
+          "body": "A = [2 0; 0 3] já é diagonal!\n\nA¹⁰ = diag(2¹⁰, 3¹⁰) = diag(1024, 59049)\n\nAgora para B = [4 1; 2 3] = PDP⁻¹ com\nD=[5 0;0 2], P=[1 -1;1 2], P⁻¹=(1/3)[2 1;-1 1]\n\nB¹⁰ = P·D¹⁰·P⁻¹ = P·[5¹⁰ 0; 0 2¹⁰]·P⁻¹\n\nSem diagonalização, calcular B¹⁰ exigiria\n9 multiplicações de matrizes 2×2. Com ela:\napenas calcular 5¹⁰ e 2¹⁰ e uma operação PDP⁻¹!"
+        },
+        {
+          "type": "para",
+          "heading": "Equações Diferenciais Lineares",
+          "text": "Sistemas de equações diferenciais x'(t) = Ax(t) têm solução geral x(t) = e^(At)x(0). Com a diagonalização, e^(At) = P·e^(Dt)·P⁻¹, onde e^(Dt) = diag(e^(λ₁t), ..., e^(λₙt)). Isso transforma o sistema acoplado em n equações independentes."
+        },
+        {
+          "type": "formula",
+          "text": "Sistema x'(t) = Ax(t),  x(0) = x₀\n\nSolução: x(t) = e^{At} x₀\n\nCom A = PDP⁻¹:\n  e^{At} = P · e^{Dt} · P⁻¹\n  e^{Dt} = diag(e^{λ₁t}, e^{λ₂t}, ..., e^{λₙt})\n\n// Solução em termos dos autovetores:\n// x(t) = c₁e^{λ₁t}v₁ + c₂e^{λ₂t}v₂ + ... + cₙe^{λₙt}vₙ\n// onde cᵢ são determinados pelas condições iniciais"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "Diagonalização aparece em toda parte: compressão de imagens (SVD), análise de componentes principais (PCA em machine learning), análise de estabilidade de sistemas dinâmicos, modos normais de vibração em engenharia, e teoria quântica (operadores hermitianos)."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Teorema Espectral e Matrizes Simétricas",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Teorema Espectral Real",
+          "text": "Uma das joias da Álgebra Linear: toda matriz <strong>simétrica</strong> real (A = Aᵀ) é diagonalizável com autovalores reais e autovetores de autovalores distintos são ortogonais. Além disso, existe uma base ortonormal de Rⁿ formada por autovetores de A."
+        },
+        {
+          "type": "formula",
+          "text": "Teorema Espectral (A simétrica real):\n\n  A = Q D Qᵀ   (diagonalização ortogonal)\n\nonde:\n  D = diag(λ₁,...,λₙ)  ← autovalores reais\n  Q = [u₁|...|uₙ]      ← base ortonormal de autovetores\n  QᵀQ = QQᵀ = I        ← Q é ortogonal (Q⁻¹ = Qᵀ)\n\n// Autovalores de A simétrica:\n// A positiva definida ⟺ todos λᵢ > 0\n// A negativa definida ⟺ todos λᵢ < 0"
+        },
+        {
+          "type": "example",
+          "label": "Diagonalização de Matriz Simétrica",
+          "body": "A = [2  1]  (simétrica: a₁₂=a₂₁=1)\n    [1  2]\n\np(λ) = (2-λ)²-1 = λ²-4λ+3 = (λ-3)(λ-1)\nAutovalores: λ₁=3, λ₂=1\n\nV₃: (A-3I)v=0 → [-1 1;1 -1]v=0 → v₁=v₂\n  Autovetor normalizado: u₁ = (1/√2)(1,1)\n\nV₁: (A-I)v=0 → [1 1;1 1]v=0 → v₁=-v₂\n  Autovetor normalizado: u₂ = (1/√2)(1,-1)\n\nVerificação: ⟨u₁,u₂⟩ = (1/√2)(1/√2) + (1/√2)(-1/√2) = 0 ✓\n\nA = QDQᵀ com Q = (1/√2)[1 1; 1 -1], D = [3 0; 0 1]"
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "formula": "A = [1 0]\n    [0 4]",
+      "stem": "A é diagonal. Qual é A³ (A ao cubo)?",
+      "opts": [
+        "[3 0; 0 12]",
+        "[1 0; 0 64]",
+        "[1 0; 0 12]",
+        "[3 0; 0 64]"
+      ],
+      "correct": 1,
+      "exp": "Para matriz diagonal, Aᵏ = diag(λ₁ᵏ, λ₂ᵏ). Portanto A³ = diag(1³, 4³) = diag(1, 64) = [1 0; 0 64]. Os autovalores são λ₁=1 e λ₂=4, e 1³=1, 4³=64."
+    },
+    {
+      "type": "mcq",
+      "stem": "Uma matriz 3×3 tem autovalores λ₁=2 (mult. algébrica 2, mult. geométrica 1) e λ₂=5 (mult. algébrica 1). Ela é diagonalizável?",
+      "opts": [
+        "Sim, pois tem 3 autovalores (contando com multiplicidade)",
+        "Não, pois para λ₁=2 a mult. geométrica (1) < mult. algébrica (2)",
+        "Sim, pois tem pelo menos 2 autovalores distintos",
+        "Não é possível determinar sem conhecer as entradas da matriz"
+      ],
+      "correct": 1,
+      "exp": "Uma matriz é diagonalizável ⟺ para cada autovalor, mult. geométrica = mult. algébrica. Para λ₁=2: mult. geométrica=1 ≠ mult. algébrica=2. Portanto a matriz NÃO é diagonalizável. Ela se reduziria a uma forma de Jordan com um bloco 2×2 para λ=2."
+    },
+    {
+      "type": "input",
+      "formula": "A = PDP⁻¹\nD = [2 0]\n    [0 5]\nAplicação: Aᵏ = PDᵏP⁻¹",
+      "stem": "Se os autovalores de A são λ₁=2 e λ₂=5, qual é a soma dos autovalores de A² (cujos autovalores são λ₁² e λ₂²)?",
+      "correct": "29",
+      "exp": "Os autovalores de A² são λ₁²=4 e λ₂²=25 (pois Aᵏ tem autovalores λᵢᵏ). A soma é 4+25=29. Isso é também o traço de A²: tr(A²)=29."
+    }
+  ]
+}

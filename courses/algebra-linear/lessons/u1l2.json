@@ -1,0 +1,133 @@
+{
+  "id": "u1l2",
+  "title": "Equações, Retas e Combinações Lineares",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Equações Cartesianas de Retas e Planos",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Equação Cartesiana da Reta em R²",
+          "text": "Uma reta em R² pode ser descrita pela equação <strong>ax + by = c</strong>, onde pelo menos um de a, b é não-nulo. O conjunto solução é a reta {(x,y) ∈ R² | ax+by = c}. Diferentes pares (a,b,c) podem representar a mesma reta (equações equivalentes)."
+        },
+        {
+          "type": "formula",
+          "text": "Reta em R²:   ax + by = c\nPlano em R³:  ax + by + cz = d\n\n// Exemplo de equações equivalentes (mesma reta):\n2x - y = 4   e   -4x + 2y = -8  (mesma reta!)"
+        },
+        {
+          "type": "para",
+          "heading": "Parametrização da Reta",
+          "text": "A <strong>parametrização</strong> de uma reta é dada por r = {w + tu | t ∈ ℝ}, onde w é um ponto da reta e u é o vetor direção (não-nulo). O parâmetro t ∈ ℝ percorre todos os pontos da reta."
+        },
+        {
+          "type": "formula",
+          "text": "Reta em Rⁿ:  r = { w + tu | t ∈ ℝ }\n\nonde:\n  w = ponto inicial (qualquer ponto da reta)\n  u = vetor direção (u ≠ 0)\n  t = parâmetro real"
+        },
+        {
+          "type": "example",
+          "label": "Encontrando a Parametrização",
+          "body": "Reta por P₁=(1,2) e P₂=(-2,3):\n\nu = P₂ - P₁ = (-2-1, 3-2) = (-3, 1)\nr = {(1,2) + t(-3,1) | t ∈ ℝ}\n\nVerificação: t=0 → (1,2) ✓ e t=1 → (-2,3) ✓\n\nEquação cartesiana:\n  x = 1-3t → t = (1-x)/3\n  y = 2+t = 2+(1-x)/3 = (7-x)/3\n  3y = 7-x → x+3y = 7"
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Se a reta passa por dois pontos P₁ e P₂, o vetor direção é u = P₂ - P₁. A parametrização fica: r = {P₁ + t(P₂-P₁) | t ∈ ℝ}."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Retas e Planos no R³",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Parametrização de Plano em R³",
+          "text": "Um plano em R³ pode ser parametrizado por dois vetores LI. Dado um ponto w e dois vetores direção u e v não paralelos, o plano é {w + su + tv | s, t ∈ ℝ}. Também pode ser descrito pela equação cartesiana ax + by + cz = d, onde (a,b,c) é o vetor normal ao plano."
+        },
+        {
+          "type": "formula",
+          "text": "Plano em R³:  π = { w + su + tv | s,t ∈ ℝ }\n\nonde u e v são vetores NÃO PARALELOS no plano\ne w é um ponto qualquer do plano\n\nEquação cartesiana: ax + by + cz = d\n// (a,b,c) é perpendicular ao plano (vetor normal)"
+        },
+        {
+          "type": "example",
+          "label": "Plano pelos Pontos (1,0,0), (0,2,0) e (0,0,3)",
+          "body": "Determine a equação cartesiana do plano.\n\nSubstituindo cada ponto em ax+by+cz=d:\n  (1,0,0): a = d\n  (0,2,0): 2b = d → b = d/2\n  (0,0,3): 3c = d → c = d/3\n\nTomando d=6: a=6, b=3, c=2\nEquação: 6x + 3y + 2z = 6\n\nSimplificando: x/1 + y/2 + z/3 = 1 (forma intercepto)"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "A equação da reta em R³ NÃO é uma equação cartesiana simples — precisa de pelo menos 2 equações (interseção de dois planos). A parametrização é muito mais prática para retas em R³."
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Combinações Lineares e Espaço Gerado",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Combinação Linear",
+          "text": "Dados vetores v₁, v₂, ..., vₖ e escalares α₁, α₂, ..., αₖ ∈ ℝ, o vetor α₁v₁ + α₂v₂ + ... + αₖvₖ é chamado <strong>combinação linear</strong> de v₁, ..., vₖ. Pergunta central: dado um vetor b, ele é combinação linear de v₁, ..., vₖ?"
+        },
+        {
+          "type": "formula",
+          "text": "Combinação Linear: α₁v₁ + α₂v₂ + ... + αₖvₖ\n\n// b é CL de v₁,...,vₖ se existem α₁,...,αₖ tais que:\nα₁v₁ + α₂v₂ + ... + αₖvₖ = b\n// Isso é equivalente a resolver um sistema linear!"
+        },
+        {
+          "type": "para",
+          "heading": "Espaço Gerado (Span)",
+          "text": "O <strong>espaço gerado</strong> (span) de v₁, ..., vₖ é o conjunto de <em>todas</em> as combinações lineares desses vetores. Geometricamente: o span de um vetor não-nulo é uma reta; o span de dois vetores LI em R³ é um plano; o span de três vetores LI em R³ é o R³ inteiro."
+        },
+        {
+          "type": "formula",
+          "text": "span{v₁, ..., vₖ} = { α₁v₁ + ... + αₖvₖ | α₁,...,αₖ ∈ ℝ }\n\n// Geometria em R²:\nspan{(1,0)} = eixo x (reta)\nspan{(1,0),(0,1)} = R² inteiro\nspan{(1,0),(2,0)} = eixo x (são paralelos!)"
+        },
+        {
+          "type": "example",
+          "label": "b é CL de v₁ e v₂?",
+          "body": "v₁=(1,2), v₂=(3,1), b=(5,5)\n\nBuscamos α₁, α₂ tais que α₁(1,2) + α₂(3,1) = (5,5):\n  α₁ + 3α₂ = 5   (equação 1)\n  2α₁ + α₂ = 5   (equação 2)\n\nDa equação 2: α₂ = 5-2α₁. Substituindo:\n  α₁ + 3(5-2α₁) = 5\n  α₁ + 15 - 6α₁ = 5\n  -5α₁ = -10 → α₁ = 2, α₂ = 1\n\nVerificação: 2(1,2) + 1(3,1) = (2,4)+(3,1) = (5,5) ✓\nSim! b é CL de v₁ e v₂."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "Verificar se b ∈ span{v₁,...,vₖ} é exatamente resolver um sistema linear! Este é o elo fundamental entre combinações lineares e sistemas lineares — o próximo capítulo aprofunda isso."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual é a equação cartesiana da reta que passa por (0, 3) com vetor direção (2, -1)?",
+      "opts": [
+        "x + 2y = 6",
+        "x - 2y = -6",
+        "-x + 2y = 6",
+        "2x + y = 3"
+      ],
+      "correct": 0,
+      "exp": "A parametrização é (2t, 3-t). Então x = 2t → t = x/2, e y = 3-t = 3-x/2. Multiplicando por 2: 2y = 6-x, logo x+2y = 6. Verificação: (0,3) → 0+6=6 ✓; com t=1: (2,2) → 2+4=6 ✓."
+    },
+    {
+      "type": "mcq",
+      "stem": "O vetor b = (4, 6) pertence ao span{(2, 3)}?",
+      "opts": [
+        "Sim, pois b = 2·(2,3)",
+        "Não, pois (4,6) e (2,3) são diferentes",
+        "Sim, pois (4,6) = (2,3) + (2,3)",
+        "Não é possível determinar"
+      ],
+      "correct": 0,
+      "exp": "span{(2,3)} = {α(2,3) | α∈ℝ} = {(2α, 3α) | α∈ℝ}. Tomando α=2: 2·(2,3) = (4,6) = b. Logo b ∈ span{(2,3)}. Todo múltiplo escalar de (2,3) está no span."
+    },
+    {
+      "type": "input",
+      "formula": "v₁ = (1, 0),  v₂ = (0, 1),  b = (5, -3)",
+      "stem": "Escreva b = α₁·v₁ + α₂·v₂. Qual é o valor de α₁ + α₂?",
+      "correct": "2",
+      "exp": "b = α₁(1,0) + α₂(0,1) = (α₁, α₂). Como b = (5,-3), temos α₁=5 e α₂=-3. Portanto α₁+α₂ = 5+(-3) = 2."
+    }
+  ]
+}

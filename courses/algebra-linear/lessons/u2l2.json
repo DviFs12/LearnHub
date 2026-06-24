@@ -1,0 +1,116 @@
+{
+  "id": "u2l2",
+  "title": "Escalonamento e Solução de Sistemas",
+  "steps": [
+    {
+      "type": "theory",
+      "title": "Operações Elementares",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Três Operações que Preservam a Solução",
+          "text": "Para resolver sistemas lineares, usamos <strong>operações elementares</strong> que transformam o sistema em outro equivalente (mesmo conjunto-solução). As operações são realizadas diretamente na <em>matriz aumentada</em>."
+        },
+        {
+          "type": "formula",
+          "text": "Operação 1: Trocar linhas\n  Lᵢ ↔ Lⱼ\n\nOperação 2: Multiplicar linha por escalar não-nulo\n  Lᵢ ← α·Lᵢ   (α ≠ 0)\n\nOperação 3: Somar múltiplo de outra linha\n  Lᵢ ← Lᵢ + α·Lⱼ"
+        },
+        {
+          "type": "callout",
+          "kind": "warn",
+          "icon": "⚠️",
+          "text": "Essas operações são aplicadas nas LINHAS da matriz, não nas colunas. Operações em colunas mudariam o problema!"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "O Algoritmo de Escalonamento (Eliminação de Gauss)",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Forma Escalonada",
+          "text": "O objetivo é transformar a matriz aumentada numa <strong>forma escalonada</strong>: cada linha tem zeros à esquerda do seu <em>pivô</em> (primeiro elemento não-nulo), e os pivôs ficam em posições estritamente à direita dos pivôs das linhas acima."
+        },
+        {
+          "type": "formula",
+          "text": "Forma Escalonada:\n  [ p  *  *  * | * ]\n  [ 0  p  *  * | * ]   p = pivô (≠ 0)\n  [ 0  0  p  * | * ]   * = qualquer valor\n  [ 0  0  0  0 | 0 ]\n\nVariáveis com pivô: variáveis básicas (determinadas)\nVariáveis sem pivô: variáveis livres (parâmetros)"
+        },
+        {
+          "type": "example",
+          "label": "Escalonamento Passo a Passo",
+          "body": "Sistema:  2x+y-z=1,  4x+y=5,  -2x+y+2z=-1\n\nMatriz aumentada:\n[ 2  1 -1 | 1 ]\n[ 4  1  0 | 5 ]\n[-2  1  2 |-1 ]\n\nPasso 1: L₂ ← L₂ - 2L₁:\n[ 2  1 -1 | 1 ]\n[ 0 -1  2 | 3 ]\n[-2  1  2 |-1 ]\n\nPasso 2: L₃ ← L₃ + L₁:\n[ 2  1 -1 | 1 ]\n[ 0 -1  2 | 3 ]\n[ 0  2  1 | 0 ]\n\nPasso 3: L₃ ← L₃ + 2L₂:\n[ 2  1 -1 | 1 ]\n[ 0 -1  2 | 3 ]\n[ 0  0  5 | 6 ]  ← Escalonado!"
+        },
+        {
+          "type": "callout",
+          "kind": "info",
+          "icon": "💡",
+          "text": "O escalonamento é o algoritmo central de toda a Álgebra Linear: serve para resolver sistemas, calcular determinantes, inverter matrizes, encontrar autovetores, calcular projeção ortogonal e muito mais!"
+        }
+      ]
+    },
+    {
+      "type": "theory",
+      "title": "Análise Pós-Escalonamento",
+      "blocks": [
+        {
+          "type": "para",
+          "heading": "Lendo a Solução",
+          "text": "Após escalonar, analisamos a forma escalonada. Três casos são possíveis, identificáveis pela última coluna (lado direito) e pelo número de pivôs."
+        },
+        {
+          "type": "formula",
+          "text": "Caso 1 — Inconsistente (sem solução):\n  linha [ 0 0 ... 0 | b ] com b ≠ 0\n  (equação 0 = b, impossível!)\n\nCaso 2 — Solução Única:\n  n pivôs para n incógnitas, sem linha impossível\n  (todas variáveis são básicas)\n\nCaso 3 — Infinitas Soluções:\n  menos de n pivôs, sem linha impossível\n  (existem variáveis livres)"
+        },
+        {
+          "type": "example",
+          "label": "Sistema com Infinitas Soluções",
+          "body": "Após escalonamento:\n[ 1  2 -1 | 3 ]\n[ 0  1  2 | 1 ]\n[ 0  0  0 | 0 ]\n\nVariáveis: x₁ (pivô), x₂ (pivô), x₃ (LIVRE → parâmetro t)\n\nDa L₂: x₂ + 2x₃ = 1 → x₂ = 1-2t\nDa L₁: x₁ + 2x₂ - x₃ = 3 → x₁ = 3-2(1-2t)+t = 1+5t\n\nSolução geral:\n  (x₁, x₂, x₃) = (1, 1, 0) + t(5, -2, 1),  t ∈ ℝ\n  (solução particular + múltiplos da solução homogênea)"
+        },
+        {
+          "type": "para",
+          "heading": "Sistemas Homogêneos",
+          "text": "Um sistema <strong>homogêneo</strong> tem a forma Ax = <strong>0</strong> (lado direito nulo). Sempre admite a solução trivial x = 0. Se tem variável livre, possui infinitas soluções não-triviais. O conjunto-solução é sempre um subespaço vetorial."
+        },
+        {
+          "type": "callout",
+          "kind": "tip",
+          "icon": "✅",
+          "text": "A solução geral de Ax=b é: x = x_particular + x_homogênea. A solução particular satisfaz Ax=b; as soluções homogêneas (Ax=0) formam o espaço de translação."
+        }
+      ]
+    },
+    {
+      "type": "mcq",
+      "formula": "[ 1  2  3 | 4 ]\n[ 0  1 -1 | 2 ]\n[ 0  0  0 | 0 ]",
+      "stem": "Após escalonamento, obtemos a matriz acima. Qual é a classificação do sistema?",
+      "opts": [
+        "Sistema sem solução, pois a última linha é nula",
+        "Sistema com solução única (3 pivôs para 3 variáveis)",
+        "Sistema com infinitas soluções (variável livre x₃)",
+        "Sistema inconsistente pois tem mais equações que incógnitas"
+      ],
+      "correct": 2,
+      "exp": "A última linha é [0 0 0 | 0], ou seja 0=0 (sempre verdadeiro, não contradição). Há 2 pivôs para 3 variáveis — x₃ é variável livre. Logo: infinitas soluções. Atribuindo x₃=t: x₂=2+t, x₁=4-2(2+t)-3t=−5t. Solução: (0,2,0)+t(-5,1,1)."
+    },
+    {
+      "type": "mcq",
+      "stem": "Qual operação elementar não preserva o conjunto-solução de um sistema?",
+      "opts": [
+        "Trocar as linhas 1 e 3 de posição",
+        "Multiplicar a linha 2 por -3",
+        "Somar o dobro da linha 1 à linha 2",
+        "Somar a linha 1 à linha 2 E também à coluna 2"
+      ],
+      "correct": 3,
+      "exp": "Operações em COLUNAS alteram o sistema! As três operações elementares válidas são apenas sobre linhas: troca, multiplicação por escalar e combinação linear de linhas. Operar em colunas mudaria as incógnitas e invalidaria o sistema."
+    },
+    {
+      "type": "input",
+      "formula": "x + 2y = 7\n3x - y = 7",
+      "stem": "Resolva o sistema pelo escalonamento. Qual é o valor de x²+y²?",
+      "correct": "13",
+      "exp": "L₂ ← L₂-3L₁: [0 -7 | -14], logo y=2. De L₁: x+4=7, x=3. Verificação: 3+4=7✓ e 9-2=7✓. Portanto x²+y² = 9+4 = 13."
+    }
+  ]
+}
